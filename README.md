@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(9)](#easy)
+* [Easy(10)](#easy)
 * [Median(1)](#median)
 * [Hard(1)](#hard)
 
@@ -16,6 +16,7 @@ Leetcode
 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/ "Valid Parentheses")
 21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/ "Merge Two Sorted Lists")
 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/ "Remove Duplicates from Sorted Array")
+27. [Remove Element](https://leetcode.com/problems/remove-element/ "Remove Element")
 
 ### Median  
 ------
