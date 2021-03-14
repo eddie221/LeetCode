@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(1)](#easy)
-* [Median(0)](#median)
+* [Median(1)](#median)
 * [Hard(0)](#hard)
 
 ### Easy
@@ -11,7 +11,7 @@ Leetcode
 
 ### Median  
 ------
-
+3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/ "Longest Substring Without Repeating Characters")
 
 ### Hard  
 ------
