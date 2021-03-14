@@ -6,33 +6,51 @@ using namespace std;
 
 class Solution {
 public:
-    bool detectCapitalUse(string word) {
-        bool capital = false;
-        if (word[0] >= 'A' && word[0] <= 'Z') {
-            if (word[1] >= 'A' && word[1] <= 'Z') {
-                capital = true;
+    bool canPlaceFlowers(vector<int>& flowerbed, int n) {
+        int legal_place = 0;
+        if (flowerbed.size() == 1) {
+            if (flowerbed[0] == 0 && n == 1 || n == 0) {
+                return true;
             }
+            else {
+                return false;
+            }
+        }
+        for (int i = 0; i < flowerbed.size(); i++) {
+            if (flowerbed[i] == 0) {
+                if (i - 1 >= 0 && i + 1 < flowerbed.size()) {
+                    if (flowerbed[i - 1] == 0 && flowerbed[i + 1] == 0) {
+                        flowerbed[i] = 1;
+                        legal_place++;
+                    }
+                }
+                else if (i - 1 < 0) {
+                    if (flowerbed[i + 1] == 0) {
+                        flowerbed[i] = 1;
+                        legal_place++;
+                    }
+                }
+                else if (i + 1 >= flowerbed.size()) {
+                    if (flowerbed[i - 1] == 0) {
+                        flowerbed[i] = 1;
+                        legal_place++;
+                    }
+                }
+            }
+        }
+        if (legal_place >= n) {
+            return true;
         }
         else {
-            if (word[1] >= 'A' && word[1] <= 'Z') {
-                return false;
-            }
+            return false;
         }
-        for (int i = 2; i < word.length(); i++) {
-            if (capital && (word[i] >= 'a' && word[i] <= 'z')) {
-                return false;
-            }
-            if (!capital && (word[i] >= 'A' && word[i] <= 'Z')) {
-                return false;
-            }
-        }
-        return true;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.detectCapitalUse("USA");
+    vector<int> nums = { 1,0,0,0,1 };
+    cout << s.canPlaceFlowers(nums, 1);
 }
 

@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(25)](#easy)
+* [Easy(27)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -33,6 +33,7 @@ Leetcode
 228. [Summary Ranges](https://leetcode.com/problems/summary-ranges/ "Summary Ranges")
 414. [Third Maximum Number](https://leetcode.com/problemset/all/?status=Solved "Third Maximum Number")
 520. [Detect Capital](https://leetcode.com/problems/detect-capital/ "Detect Capital")
+605. [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/ "Can Place Flowers")
 
 ### Median  
 ------
