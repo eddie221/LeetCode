@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(6)](#easy)
+* [Easy(8)](#easy)
 * [Median(1)](#median)
 * [Hard(1)](#hard)
 
@@ -14,6 +14,7 @@ Leetcode
 13. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/ "Roman to Integer")
 14. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/ "Longest Common Prefix")
 20. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/ "Valid Parentheses")
+21. [Merge Two Sorted Lists]( "Merge Two Sorted Lists")
 
 ### Median  
 ------
