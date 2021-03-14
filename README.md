@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(20)](#easy)
+* [Easy(21)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -27,6 +27,7 @@ Leetcode
 204. [Count Primes](https://leetcode.com/problems/count-primes/ "Count Primes")
 205. [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/ "Isomorphic Strings")
 206. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/ "Reverse Linked List")
+217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/ "Contains Duplicate")
 
 ### Median  
 ------

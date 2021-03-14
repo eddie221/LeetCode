@@ -1,44 +1,29 @@
 #include <iostream>
+#include <vector>
 #include <map>
 
 using namespace std;
 
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
- 
 class Solution {
 public:
-    ListNode* reverseList(ListNode* head) {
-        ListNode* front = nullptr;
-        ListNode* back = nullptr;
-        while (head != nullptr && head->next != nullptr) {
-            back = head->next;
-            head->next = front;
-            front = head;
-            head = back;
-
+    bool containsDuplicate(vector<int>& nums) {
+        map<int, bool> check_list;
+        for (int i = 0; i < nums.size(); i++) {
+            if (!check_list[nums[i]]) {
+                check_list[nums[i]] = true;
+            }
+            else {
+                return true;
+            }
         }
-        if (back != nullptr) {
-            back->next = front;
-            return back;
-        }
-        else {
-            return head;
-        }
+        return false;
     }
 };
 
 int main()
 {
     Solution s;
-    ListNode* two = new ListNode(2);
-    ListNode* one = new ListNode(1, two);
-
-    cout << s.reverseList(one);
+    vector<int> num = { 1, 2, 3, 1 };
+    cout << s.containsDuplicate(num);
 }
 
