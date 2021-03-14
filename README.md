@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(29)](#easy)
+* [Easy(30)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -36,6 +36,7 @@ Leetcode
 605. [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/ "Can Place Flowers")
 617. [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/ "Merge Two Binary Trees")
 657. [Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/ "Robot Return to Origin")
+700. [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/ "Search in a Binary Search Tree")
 
 ### Median  
 ------
