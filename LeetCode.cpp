@@ -1,36 +1,39 @@
 #include <iostream>
-#include <vector>
+#include <stack>
 #include <string>
 
 using namespace std;
 
 class Solution {
 public:
-    string longestCommonPrefix(vector<string>& strs) {
-        if (strs.empty()) {
-            return "";
-        }
-        string result = strs[0];
-        for (int i = 1; i < strs.size(); i++) {
-            string result_t = "";
-            for (int j = 0; j < strs[i].size() || j < result.size(); j++) {
-                if (result[j] != strs[i][j]) {
-                    break;
+    bool isValid(string s) {
+        stack<char> container;
+        for (int i = 0; i < s.length(); i++) {
+            if (container.empty()) {
+                container.push(s[i]);
+            }
+            else {
+                if (container.top() == '(' && s[i] == ')' || container.top() == '[' && s[i] == ']' || container.top() == '{' && s[i] == '}') {
+                    container.pop();
                 }
-                result_t += result[j];
-            }
-            if (result.length() > result_t.length() || i == 1) {
-                result = result_t;
+                else {
+                    container.push(s[i]);
+                }
             }
         }
-        return result;
+
+        if (container.empty()) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 };
 
 int main()
 {
     Solution s;
-    vector<string> strs = { "flower","flow","flight" };
-    cout << s.longestCommonPrefix(strs);
+    cout << s.isValid("()[]{}");
 }
 
