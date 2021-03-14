@@ -1,19 +1,18 @@
 #include <iostream>
-#include <vector>
-#include <map>
+#include <unordered_map>
 
 using namespace std;
 
 class Solution {
 public:
-    bool containsDuplicate(vector<int>& nums) {
-        map<int, bool> check_list;
+    bool containsNearbyDuplicate(vector<int>& nums, int k) {
+        unordered_map<int, int> num_map;
         for (int i = 0; i < nums.size(); i++) {
-            if (!check_list[nums[i]]) {
-                check_list[nums[i]] = true;
+            if (num_map.count(nums[i]) && (i - num_map[nums[i]]) <= k) {
+                return true;
             }
             else {
-                return true;
+                num_map[nums[i]] = i;
             }
         }
         return false;
@@ -24,6 +23,6 @@ int main()
 {
     Solution s;
     vector<int> num = { 1, 2, 3, 1 };
-    cout << s.containsDuplicate(num);
+    cout << s.containsNearbyDuplicate(num, 3);
 }
 
