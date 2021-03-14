@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(3)](#easy)
+* [Easy(5)](#easy)
 * [Median(1)](#median)
 * [Hard(1)](#hard)
 
@@ -11,6 +11,7 @@ Leetcode
 7. [Reverse Integer](https://leetcode.com/problems/reverse-integer/ "Reverse Integer")
 9. [Palindrome Number](https://leetcode.com/problems/palindrome-number/ "Palindrome Number")
 13. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/ "Roman to Integer")
+14. [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/ "Longest Common Prefix")
 ### Median  
 ------
 3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/ "Longest Substring Without Repeating Characters")

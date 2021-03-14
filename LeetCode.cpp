@@ -1,63 +1,26 @@
 #include <iostream>
+#include <vector>
+#include <string>
 
 using namespace std;
 
 class Solution {
 public:
-    int romanToInt(string s) {
-        int result = 0;
-        for (int i = 0; i < s.length(); i++) {
-            cout << s[i] << endl;
-            if (s[i] == 'I') {
-                if (i != s.length() - 1 && s[i + 1] == 'V') {
-                    result += 4;
-                    i++;
+    string longestCommonPrefix(vector<string>& strs) {
+        if (strs.empty()) {
+            return "";
+        }
+        string result = strs[0];
+        for (int i = 1; i < strs.size(); i++) {
+            string result_t = "";
+            for (int j = 0; j < strs[i].size() || j < result.size(); j++) {
+                if (result[j] != strs[i][j]) {
+                    break;
                 }
-                else if (i != s.length() - 1 && s[i + 1] == 'X') {
-                    result += 9;
-                    i++;
-                }
-                else {
-                    result += 1;
-                }
+                result_t += result[j];
             }
-            else if (s[i] == 'V') {
-                result += 5;
-            }
-            else if (s[i] == 'X') {
-                if (i != s.length() - 1 && s[i + 1] == 'L') {
-                    result += 40;
-                    i++;
-                }
-                else if (i != s.length() - 1 && s[i + 1] == 'C') {
-                    result += 90;
-                    i++;
-                }
-                else {
-                    result += 10;
-                }
-            }
-            else if (s[i] == 'L') {
-                result += 50;
-            }
-            else if (s[i] == 'C') {
-                if (i != s.length() - 1 && s[i + 1] == 'D') {
-                    result += 400;
-                    i++;
-                }
-                else if (i != s.length() - 1 && s[i + 1] == 'M') {
-                    result += 900;
-                    i++;
-                }
-                else {
-                    result += 100;
-                }
-            }
-            else if (s[i] == 'D') {
-                result += 500;
-            }
-            else if (s[i] == 'M') {
-                result += 1000;
+            if (result.length() > result_t.length() || i == 1) {
+                result = result_t;
             }
         }
         return result;
@@ -67,6 +30,7 @@ public:
 int main()
 {
     Solution s;
-    cout << s.romanToInt("MCMXCIV");
+    vector<string> strs = { "flower","flow","flight" };
+    cout << s.longestCommonPrefix(strs);
 }
 
