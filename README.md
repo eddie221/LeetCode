@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(22)](#easy)
+* [Easy(25)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -31,6 +31,7 @@ Leetcode
 219. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/ "Contains Duplicate II")
 225. [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/ "Implement Stack using Queues")
 228. [Summary Ranges](https://leetcode.com/problems/summary-ranges/ "Summary Ranges")
+414. [Third Maximum Number](https://leetcode.com/problemset/all/?status=Solved "Third Maximum Number")
 
 ### Median  
 ------
