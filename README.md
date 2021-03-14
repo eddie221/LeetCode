@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(38)](#easy)
+* [Easy(41)](#easy)
 * [Median(3)](#median)
 * [Hard(1)](#hard)
 
@@ -47,6 +47,7 @@ Leetcode
 1431. [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/ "Kids With the Greatest Number of Candies")
 1470. [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/ "Shuffle the Array")
 1480. [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/ "Running Sum of 1d Array")
+1512. [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/ "Number of Good Pairs")
 
 ### Median  
 ------
