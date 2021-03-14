@@ -6,30 +6,33 @@ using namespace std;
 
 class Solution {
 public:
-    int thirdMax(vector<int>& nums) {
-        if (nums.size() == 1) {
-            return nums[0];
-        }
-        sort(nums.begin(), nums.end(), std::greater<int>());
-
-        int count = 0, result;
-        for (int i = 0; i < nums.size() - 1 && count < 2; i++) {
-            if (nums[i] != nums[i + 1]) {
-                result = nums[i + 1];
-                count++;
+    bool detectCapitalUse(string word) {
+        bool capital = false;
+        if (word[0] >= 'A' && word[0] <= 'Z') {
+            if (word[1] >= 'A' && word[1] <= 'Z') {
+                capital = true;
             }
         }
-        if (count != 2) {
-            return nums[0];
+        else {
+            if (word[1] >= 'A' && word[1] <= 'Z') {
+                return false;
+            }
         }
-        return result;
+        for (int i = 2; i < word.length(); i++) {
+            if (capital && (word[i] >= 'a' && word[i] <= 'z')) {
+                return false;
+            }
+            if (!capital && (word[i] >= 'A' && word[i] <= 'Z')) {
+                return false;
+            }
+        }
+        return true;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { 3, 2 ,1 };
-    cout << s.thirdMax(nums);
+    cout << s.detectCapitalUse("USA");
 }
 

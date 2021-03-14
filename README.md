@@ -32,6 +32,7 @@ Leetcode
 225. [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/ "Implement Stack using Queues")
 228. [Summary Ranges](https://leetcode.com/problems/summary-ranges/ "Summary Ranges")
 414. [Third Maximum Number](https://leetcode.com/problemset/all/?status=Solved "Third Maximum Number")
+520. [Detect Capital](https://leetcode.com/problems/detect-capital/ "Detect Capital")
 
 ### Median  
 ------
