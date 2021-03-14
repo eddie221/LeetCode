@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(15)](#easy)
+* [Easy(19)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -25,6 +25,7 @@ Leetcode
 168. [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/ "Excel Sheet Column Title")
 190. [Reverse Bits](https://leetcode.com/problems/reverse-bits/ "Reverse Bits")
 204. [Count Primes](https://leetcode.com/problems/count-primes/ "Count Primes")
+205. [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/ "Isomorphic Strings")
 
 ### Median  
 ------

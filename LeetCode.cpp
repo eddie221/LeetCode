@@ -1,36 +1,30 @@
 #include <iostream>
+#include <map>
 
 using namespace std;
 
 class Solution {
 public:
-    int countPrimes(int n) {
-        int count = 0;
-        for (int i = 2; i < n; i++) {
-            bool prime = true;
-            if (i % 2 == 0 && i != 2) {
-                prime = false;
+    bool isIsomorphic(string s, string t) {
+        map<char, int> s_count;
+        map<char, int> t_count;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (s_count[s[i]] != t_count[t[i]]) {
+                return false;
             }
-            else {
-                for (int j = 3; j * j <= i; j += 2) {
-                    if (i % j == 0) {
-                        prime = false;
-                        break;
-                    }
-                }
-            }
-            if (prime) {
-                count++;
-            }
+            s_count[s[i]] = i + 1;
+            t_count[t[i]] = i + 1;
         }
 
-        return count;
+        return true;
+
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.countPrimes(10);
+    cout << s.isIsomorphic("egg", "add");
 }
 
