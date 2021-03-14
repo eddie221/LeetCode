@@ -5,19 +5,18 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> shuffle(vector<int>& nums, int n) {
-        vector<int> result;
-        for (int i = 0; i < nums.size() / 2; i++) {
-            result.push_back(nums[i]);
-            result.push_back(nums[i + n]);
+    vector<int> runningSum(vector<int>& nums) {
+        for (int i = 1; i < nums.size(); i++) {
+            nums[i] += nums[i - 1];
         }
-        return result;
+        return nums;
     }
 };
+
 int main()
 {
     Solution s;
-    vector<int> nums = { 1,2,3,4,4,3,2,1 };
-    s.shuffle(nums, 4);
+    vector<int> nums = { 1,2,3,4 };
+    s.runningSum(nums);
 }
 

@@ -46,6 +46,7 @@ Leetcode
 1108. [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/ "Defanging an IP Address")
 1431. [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/ "Kids With the Greatest Number of Candies")
 1470. [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/ "Shuffle the Array")
+1480. [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/ "Running Sum of 1d Array")
 
 ### Median  
 ------
