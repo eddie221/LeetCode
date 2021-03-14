@@ -17,6 +17,7 @@ Leetcode
 21. [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/ "Merge Two Sorted Lists")
 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/ "Remove Duplicates from Sorted Array")
 27. [Remove Element](https://leetcode.com/problems/remove-element/ "Remove Element")
+28. [Implement strStr()][https://leetcode.com/problems/implement-strstr/ "Implement strStr()"]
 
 ### Median  
 ------

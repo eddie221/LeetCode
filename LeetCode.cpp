@@ -5,23 +5,33 @@ using namespace std;
 
 class Solution {
 public:
-    int removeElement(vector<int>& nums, int val) {
-        for (int i = 0; i < nums.size();) {
-            if (nums[i] == val) {
-                nums.erase(nums.begin() + i);
+    int strStr(string haystack, string needle) {
+        if (needle.length() == 0) {
+            return 0;
+        }
+        if (haystack.length() == 0) {
+            return -1;
+        }
+        int number = haystack.length() - needle.length();
+        for (int i = 0; i <= number; i++) {
+            bool same = true;
+            for (int j = 0; j < needle.length(); j++) {
+                if (haystack[i + j] != needle[j]) {
+                    same = false;
+                    break;
+                }
             }
-            else {
-                i++;
+            if (same) {
+                return i;
             }
         }
-        return nums.size();
+        return -1;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { 3,2,2,3 };
-    s.removeElement(nums, 3);
+    cout << s.strStr("hello", "ll");
 }
 
