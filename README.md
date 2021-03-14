@@ -34,6 +34,7 @@ Leetcode
 414. [Third Maximum Number](https://leetcode.com/problemset/all/?status=Solved "Third Maximum Number")
 520. [Detect Capital](https://leetcode.com/problems/detect-capital/ "Detect Capital")
 605. [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/ "Can Place Flowers")
+617. [Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/ "Merge Two Binary Trees")
 
 ### Median  
 ------

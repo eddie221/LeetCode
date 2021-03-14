@@ -4,53 +4,52 @@
 
 using namespace std;
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right){}
+};
+ 
 class Solution {
 public:
-    bool canPlaceFlowers(vector<int>& flowerbed, int n) {
-        int legal_place = 0;
-        if (flowerbed.size() == 1) {
-            if (flowerbed[0] == 0 && n == 1 || n == 0) {
-                return true;
-            }
-            else {
-                return false;
-            }
+    TreeNode* merge(TreeNode* t1, TreeNode* t2) {
+
+        if (t1 == nullptr && t2 == nullptr) {
+            return nullptr;
         }
-        for (int i = 0; i < flowerbed.size(); i++) {
-            if (flowerbed[i] == 0) {
-                if (i - 1 >= 0 && i + 1 < flowerbed.size()) {
-                    if (flowerbed[i - 1] == 0 && flowerbed[i + 1] == 0) {
-                        flowerbed[i] = 1;
-                        legal_place++;
-                    }
-                }
-                else if (i - 1 < 0) {
-                    if (flowerbed[i + 1] == 0) {
-                        flowerbed[i] = 1;
-                        legal_place++;
-                    }
-                }
-                else if (i + 1 >= flowerbed.size()) {
-                    if (flowerbed[i - 1] == 0) {
-                        flowerbed[i] = 1;
-                        legal_place++;
-                    }
-                }
-            }
+        else if (t1 == nullptr) {
+            std::cout << t2->val << std::endl;
+            return t2;
         }
-        if (legal_place >= n) {
-            return true;
+        else if (t2 == nullptr) {
+            std::cout << t1->val << std::endl;
+            return t1;
         }
         else {
-            return false;
+            TreeNode* result_l, * result_r;
+            t1->val = t1->val + t2->val;
+            std::cout << t1->val << " : " << t2->val << std::endl;
+            t1->left = merge(t1->left, t2->left);
+            t1->right = merge(t1->right, t2->right);
+            return t1;
         }
+    }
+
+    TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
+        TreeNode* result = new TreeNode();
+        return merge(t1, t2);
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { 1,0,0,0,1 };
-    cout << s.canPlaceFlowers(nums, 1);
+    TreeNode* one = new TreeNode(1);
+    TreeNode* two = new TreeNode(2);
+    TreeNode* one2 = new TreeNode(1, two, nullptr);
+    cout << s.merge(one, one2);
 }
 
