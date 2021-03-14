@@ -1,54 +1,52 @@
 #include <iostream>
-#include <stack>
-#include <algorithm>
+#include <vector>
+#include <set>
 
 using namespace std;
 
 class Solution {
 public:
-    bool buddyStrings(string A, string B) {
-        if (A.length() != B.length() || A.length() == 0 || B.length() == 0) {
-            return false;
-        }
-        else if (A == B) {
 
-            for (int i = 0; i < A.length(); i++) {
-                for (int j = i + 1; j < A.length(); j++) {
-                    if (A[i] == A[j]) {
-                        return true;
+    int robotSim(vector<int>& commands, vector<vector<int>>& obstacles) {
+        int dir = 0, x = 0, y = 0, result = 0;
+        int dx[] = { 0, 1, 0, -1 };
+        int dy[] = { 1, 0, -1, 0 };
+
+        set<pair<int, int>> obstacleSet;
+        for (int i = 0; i < obstacles.size(); i++) {
+            obstacleSet.insert(make_pair(obstacles[i][0], obstacles[i][1]));
+        }
+
+
+        for (int i = 0; i < commands.size(); i++) {
+            if (commands[i] == -1) {
+                dir = (dir + 1) % 4;
+            }
+            else if (commands[i] == -2) {
+                dir = (dir + 3) % 4;
+            }
+            else {
+                for (int j = 0; j < commands[i]; j++) {
+                    int tmp_x = x + dx[dir];
+                    int tmp_y = y + dy[dir];
+                    if (obstacleSet.find(make_pair(tmp_x, tmp_y)) == obstacleSet.end()) {
+                        x = tmp_x;
+                        y = tmp_y;
+                        result = max(result, x * x + y * y);
                     }
                 }
             }
-            return false;
         }
-        else {
-            int first_diff_idx = -1;
-            for (int i = 0; i < A.length(); i++) {
-                if (A[i] != B[i] && first_diff_idx == -1) {
-                    first_diff_idx = i;
-                    continue;
-                }
-                if (A[i] != B[i]) {
-                    string tmp_A = A;
-                    char tmp_f = A[first_diff_idx];
-                    tmp_A[first_diff_idx] = tmp_A[i];
-                    tmp_A[i] = tmp_f;
-                    if (tmp_A == B) {
-                        return true;
-                    }
-                    else {
-                        return false;
-                    }
-                }
-            }
-        }
-        return false;
+
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.buddyStrings("ab", "ba");
+    vector<int> commands = { 4,-1,4,-2,4 };
+    vector<vector<int>> obstacles = { {2, 4 } };
+    cout << s.robotSim(commands, obstacles);
 }
 

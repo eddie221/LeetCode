@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(31)](#easy)
+* [Easy(3)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -38,6 +38,7 @@ Leetcode
 657. [Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/ "Robot Return to Origin")
 700. [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/ "Search in a Binary Search Tree")
 859. [Buddy Strings](https://leetcode.com/problems/buddy-strings/ "Buddy Strings")
+874. [Walking Robot Simulation](https://leetcode.com/problems/walking-robot-simulation/ "Walking Robot Simulation")
 
 ### Median  
 ------
