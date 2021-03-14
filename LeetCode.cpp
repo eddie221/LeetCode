@@ -4,28 +4,69 @@ using namespace std;
 
 class Solution {
 public:
-    long long reverse(int x) {
-        long long rev = 0;
-        while (x) {
-            rev = rev * 10 + x % 10;
-            x /= 10;
+    int romanToInt(string s) {
+        int result = 0;
+        for (int i = 0; i < s.length(); i++) {
+            cout << s[i] << endl;
+            if (s[i] == 'I') {
+                if (i != s.length() - 1 && s[i + 1] == 'V') {
+                    result += 4;
+                    i++;
+                }
+                else if (i != s.length() - 1 && s[i + 1] == 'X') {
+                    result += 9;
+                    i++;
+                }
+                else {
+                    result += 1;
+                }
+            }
+            else if (s[i] == 'V') {
+                result += 5;
+            }
+            else if (s[i] == 'X') {
+                if (i != s.length() - 1 && s[i + 1] == 'L') {
+                    result += 40;
+                    i++;
+                }
+                else if (i != s.length() - 1 && s[i + 1] == 'C') {
+                    result += 90;
+                    i++;
+                }
+                else {
+                    result += 10;
+                }
+            }
+            else if (s[i] == 'L') {
+                result += 50;
+            }
+            else if (s[i] == 'C') {
+                if (i != s.length() - 1 && s[i + 1] == 'D') {
+                    result += 400;
+                    i++;
+                }
+                else if (i != s.length() - 1 && s[i + 1] == 'M') {
+                    result += 900;
+                    i++;
+                }
+                else {
+                    result += 100;
+                }
+            }
+            else if (s[i] == 'D') {
+                result += 500;
+            }
+            else if (s[i] == 'M') {
+                result += 1000;
+            }
         }
-        return rev;
-    }
-
-    bool isPalindrome(int x) {
-        if (x < 0) {
-            return false;
-        }
-        else {
-            return x == reverse(x);
-        }
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.reverse(121);
+    cout << s.romanToInt("MCMXCIV");
 }
 
