@@ -45,6 +45,7 @@ Leetcode
 989. [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/ "Add to Array-Form of Integer")
 1108. [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/ "Defanging an IP Address")
 1431. [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/ "Kids With the Greatest Number of Candies")
+1470. [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/ "Shuffle the Array")
 
 ### Median  
 ------

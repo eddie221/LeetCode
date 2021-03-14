@@ -5,31 +5,19 @@ using namespace std;
 
 class Solution {
 public:
-    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
-        vector<bool> result;
-        int max = 0;
-        for (int i = 0; i < candies.size(); i++) {
-            if (max < candies[i]) {
-                max = candies[i];
-            }
-        }
-
-        for (int i = 0; i < candies.size(); i++) {
-            if (max <= candies[i] + extraCandies) {
-                result.push_back(true);
-            }
-            else {
-                result.push_back(false);
-            }
+    vector<int> shuffle(vector<int>& nums, int n) {
+        vector<int> result;
+        for (int i = 0; i < nums.size() / 2; i++) {
+            result.push_back(nums[i]);
+            result.push_back(nums[i + n]);
         }
         return result;
     }
 };
-
 int main()
 {
     Solution s;
-    vector<int> candies = { 2, 3, 5, 1, 3 };
-    s.kidsWithCandies(candies, 3);
+    vector<int> nums = { 1,2,3,4,4,3,2,1 };
+    s.shuffle(nums, 4);
 }
 
