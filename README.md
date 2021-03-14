@@ -29,6 +29,7 @@ Leetcode
 206. [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/ "Reverse Linked List")
 217. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/ "Contains Duplicate")
 219. [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/ "Contains Duplicate II")
+225. [Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/ "Implement Stack using Queues")
 
 ### Median  
 ------
