@@ -3,7 +3,7 @@ Leetcode
 ## Statistics
 * [Easy(1)](#easy)
 * [Median(1)](#median)
-* [Hard(0)](#hard)
+* [Hard(1)](#hard)
 
 ### Easy
 ------
@@ -15,4 +15,4 @@ Leetcode
 
 ### Hard  
 ------
-
+4. [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/ "Median of Two Sorted Arrays")
