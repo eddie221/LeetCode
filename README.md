@@ -23,6 +23,7 @@ Leetcode
 58. [Length of Last Word](https://leetcode.com/problems/length-of-last-word/ "Length of Last Word")
 69. [Sqrt(x)](https://leetcode.com/problems/sqrtx/ "Sqrt(x)")
 168. [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/ "Excel Sheet Column Title")
+190. [Reverse Bits](https://leetcode.com/problems/reverse-bits/ "Reverse Bits")
 
 ### Median  
 ------
