@@ -40,6 +40,7 @@ Leetcode
 859. [Buddy Strings](https://leetcode.com/problems/buddy-strings/ "Buddy Strings")
 874. [Walking Robot Simulation](https://leetcode.com/problems/walking-robot-simulation/ "Walking Robot Simulation")
 914. [X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/ "X of a Kind in a Deck of Cards")
+941. [Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/ "Valid Mountain Array")
 
 ### Median  
 ------

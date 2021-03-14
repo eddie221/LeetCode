@@ -6,39 +6,43 @@ using namespace std;
 
 class Solution {
 public:
-    bool hasGroupsSizeX(vector<int>& deck) {
-        map<int, int> count;
-        vector<int> number;
-        for (int i = 0; i < deck.size(); i++) {
-            count[deck[i]]++;
-            if (count[deck[i]] == 1) {
-                number.push_back(deck[i]);
-            }
+    bool validMountainArray(vector<int>& arr) {
+        bool climb = true;
+        if (arr.size() < 3) {
+            return false;
         }
-        bool stop = false;
-        for (int i = 2; !stop; i++) {
-            bool available = true;
-            for (int j = 0; j < number.size(); j++) {
-                if (count[number[j]] < i) {
-                    stop = true;
+        for (int i = 1; i < arr.size(); i++) {
+            if (climb) {
+                if (arr[i] < arr[i - 1]) {
+                    if (i == 1) {
+                        return false;
+                    }
+                    else {
+                        climb = false;
+                    }
                 }
-                if (count[number[j]] % i != 0) {
-                    available = false;
-                    break;
+                if (arr[i] == arr[i - 1]) {
+                    return false;
                 }
             }
-            if (available) {
-                return true;
+            else {
+                if (arr[i] >= arr[i - 1]) {
+                    return false;
+                }
             }
         }
-        return false;
+        if (climb) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 };
-
 int main()
 {
     Solution s;
-    vector<int> deck = { 1,2,3,4,4,3,2,1 };
-    cout << s.hasGroupsSizeX(deck);
+    vector<int> arr = { 2, 1 };
+    cout << s.validMountainArray(arr);
 }
 
