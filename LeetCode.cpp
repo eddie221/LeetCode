@@ -5,25 +5,23 @@ using namespace std;
 
 class Solution {
 public:
-    int maximumWealth(vector<vector<int>>& accounts) {
-        int max = 0;
-        for (int i = 0; i < accounts.size(); i++) {
-            int sum = 0;
-            for (int j = 0; j < accounts[i].size(); j++) {
-                sum += accounts[i][j];
-            }
-            if (max < sum) {
-                max = sum;
+    vector<int> minOperations(string boxes) {
+        vector<int> result;
+        for (int i = 0; i < boxes.size(); i++) {
+            result.push_back(0);
+            for (int j = 0; j < boxes.size(); j++) {
+                if (i != j && boxes[j] == '1') {
+                    result[i] += abs(i - j);
+                }
             }
         }
-        return max;
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<vector<int>> nums = { {1, 2, 3}, {3, 2, 1} };
-    cout << s.maximumWealth(nums);
+    s.minOperations("110");
 }
 

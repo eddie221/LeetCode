@@ -8,7 +8,6 @@ Leetcode
 ### Easy
 ------
 1. [Two Sum](https://leetcode.com/problems/two-sum/ "Two Sum")
-2. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/ "Add Two Numbers")
 7. [Reverse Integer](https://leetcode.com/problems/reverse-integer/ "Reverse Integer")
 9. [Palindrome Number](https://leetcode.com/problems/palindrome-number/ "Palindrome Number")
 13. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/ "Roman to Integer")
@@ -52,9 +51,11 @@ Leetcode
 
 ### Median  
 ------
+2. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/ "Add Two Numbers")
 3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/ "Longest Substring Without Repeating Characters")
 92. [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/ "Reverse Linked List II")
 1035. [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/ "Uncrossed Lines")
+1769. [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/ "Minimum Number of Operations to Move All Balls to Each Box")
 
 ### Hard  
 ------
