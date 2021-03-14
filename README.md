@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(10)](#easy)
+* [Easy(12)](#easy)
 * [Median(1)](#median)
 * [Hard(1)](#hard)
 
@@ -18,6 +18,7 @@ Leetcode
 26. [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/ "Remove Duplicates from Sorted Array")
 27. [Remove Element](https://leetcode.com/problems/remove-element/ "Remove Element")
 28. [Implement strStr()][https://leetcode.com/problems/implement-strstr/ "Implement strStr()"]
+35. [Search Insert Position](https://leetcode.com/problems/search-insert-position/ "Search Insert Position")
 
 ### Median  
 ------

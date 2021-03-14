@@ -5,33 +5,25 @@ using namespace std;
 
 class Solution {
 public:
-    int strStr(string haystack, string needle) {
-        if (needle.length() == 0) {
-            return 0;
-        }
-        if (haystack.length() == 0) {
-            return -1;
-        }
-        int number = haystack.length() - needle.length();
-        for (int i = 0; i <= number; i++) {
-            bool same = true;
-            for (int j = 0; j < needle.length(); j++) {
-                if (haystack[i + j] != needle[j]) {
-                    same = false;
-                    break;
-                }
+    int searchInsert(vector<int>& nums, int target) {
+        int low_idx = 0, high_idx = nums.size();
+        while (low_idx < high_idx) {
+            int mid = (low_idx + high_idx) >> 1;
+            if (nums[mid] < target) {
+                low_idx = mid + 1;
             }
-            if (same) {
-                return i;
+            else {
+                high_idx = mid;
             }
         }
-        return -1;
+        return low_idx;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.strStr("hello", "ll");
+    vector<int> nums = { 1,3,5,6 };
+    cout << s.searchInsert(nums, 5);
 }
 
