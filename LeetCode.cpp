@@ -1,19 +1,25 @@
 #include <iostream>
-#include <map>
 #include <vector>
 
 using namespace std;
 
 class Solution {
 public:
-    string defangIPaddr(string address) {
-        string result = "";
-        for (int i = 0; i < address.length(); i++) {
-            if (address[i] == '.') {
-                result += "[.]";
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+        vector<bool> result;
+        int max = 0;
+        for (int i = 0; i < candies.size(); i++) {
+            if (max < candies[i]) {
+                max = candies[i];
+            }
+        }
+
+        for (int i = 0; i < candies.size(); i++) {
+            if (max <= candies[i] + extraCandies) {
+                result.push_back(true);
             }
             else {
-                result += address[i];
+                result.push_back(false);
             }
         }
         return result;
@@ -23,6 +29,7 @@ public:
 int main()
 {
     Solution s;
-    cout << s.defangIPaddr("1.1.1.1");
+    vector<int> candies = { 2, 3, 5, 1, 3 };
+    s.kidsWithCandies(candies, 3);
 }
 

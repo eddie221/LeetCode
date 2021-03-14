@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(37)](#easy)
+* [Easy(38)](#easy)
 * [Median(3)](#median)
 * [Hard(1)](#hard)
 
@@ -44,6 +44,7 @@ Leetcode
 961. [N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ "N-Repeated Element in Size 2N Array")
 989. [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/ "Add to Array-Form of Integer")
 1108. [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/ "Defanging an IP Address")
+1431. [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/ "Kids With the Greatest Number of Candies")
 
 ### Median  
 ------
