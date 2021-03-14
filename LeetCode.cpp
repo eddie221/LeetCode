@@ -3,28 +3,42 @@
 
 using namespace std;
 
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+ 
 class Solution {
 public:
-    bool isIsomorphic(string s, string t) {
-        map<char, int> s_count;
-        map<char, int> t_count;
+    ListNode* reverseList(ListNode* head) {
+        ListNode* front = nullptr;
+        ListNode* back = nullptr;
+        while (head != nullptr && head->next != nullptr) {
+            back = head->next;
+            head->next = front;
+            front = head;
+            head = back;
 
-        for (int i = 0; i < s.length(); i++) {
-            if (s_count[s[i]] != t_count[t[i]]) {
-                return false;
-            }
-            s_count[s[i]] = i + 1;
-            t_count[t[i]] = i + 1;
         }
-
-        return true;
-
+        if (back != nullptr) {
+            back->next = front;
+            return back;
+        }
+        else {
+            return head;
+        }
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.isIsomorphic("egg", "add");
+    ListNode* two = new ListNode(2);
+    ListNode* one = new ListNode(1, two);
+
+    cout << s.reverseList(one);
 }
 
