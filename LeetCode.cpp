@@ -1,39 +1,28 @@
 #include <iostream>
-#include <stack>
-#include <string>
+#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
-    bool isValid(string s) {
-        stack<char> container;
-        for (int i = 0; i < s.length(); i++) {
-            if (container.empty()) {
-                container.push(s[i]);
-            }
-            else {
-                if (container.top() == '(' && s[i] == ')' || container.top() == '[' && s[i] == ']' || container.top() == '{' && s[i] == '}') {
-                    container.pop();
-                }
-                else {
-                    container.push(s[i]);
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> result;
+        for (int i = 0; i < nums.size(); i++) {
+            for (int j = i + 1; j < nums.size(); j++) {
+                if (nums[i] + nums[j] == target) {
+                    result.push_back(i);
+                    result.push_back(j);
                 }
             }
         }
-
-        if (container.empty()) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.isValid("()[]{}");
+    vector<int> nums = { 2,7,11,15 };
+    s.twoSum(nums, 9);
 }
 

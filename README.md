@@ -7,6 +7,7 @@ Leetcode
 
 ### Easy
 ------
+1. [Two Sum](https://leetcode.com/problems/two-sum/ "Two Sum")
 2. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/ "Add Two Numbers")
 7. [Reverse Integer](https://leetcode.com/problems/reverse-integer/ "Reverse Integer")
 9. [Palindrome Number](https://leetcode.com/problems/palindrome-number/ "Palindrome Number")
