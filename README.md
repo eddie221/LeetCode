@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(3)](#easy)
+* [Easy(33)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -39,6 +39,7 @@ Leetcode
 700. [Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/ "Search in a Binary Search Tree")
 859. [Buddy Strings](https://leetcode.com/problems/buddy-strings/ "Buddy Strings")
 874. [Walking Robot Simulation](https://leetcode.com/problems/walking-robot-simulation/ "Walking Robot Simulation")
+914. [X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/ "X of a Kind in a Deck of Cards")
 
 ### Median  
 ------
