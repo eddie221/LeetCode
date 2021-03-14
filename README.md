@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(33)](#easy)
+* [Easy(35)](#easy)
 * [Median(2)](#median)
 * [Hard(1)](#hard)
 
@@ -41,6 +41,7 @@ Leetcode
 874. [Walking Robot Simulation](https://leetcode.com/problems/walking-robot-simulation/ "Walking Robot Simulation")
 914. [X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/ "X of a Kind in a Deck of Cards")
 941. [Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/ "Valid Mountain Array")
+961. [N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ "N-Repeated Element in Size 2N Array")
 
 ### Median  
 ------

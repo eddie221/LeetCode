@@ -6,43 +6,33 @@ using namespace std;
 
 class Solution {
 public:
-    bool validMountainArray(vector<int>& arr) {
-        bool climb = true;
-        if (arr.size() < 3) {
-            return false;
-        }
-        for (int i = 1; i < arr.size(); i++) {
-            if (climb) {
-                if (arr[i] < arr[i - 1]) {
-                    if (i == 1) {
-                        return false;
-                    }
-                    else {
-                        climb = false;
-                    }
-                }
-                if (arr[i] == arr[i - 1]) {
-                    return false;
-                }
+    int repeatedNTimes(vector<int>& A) {
+        std::map<int, int> record;
+        int max = 0;
+        int max_key = 0;
+        for (int i = 0; i < A.size(); i++) {
+            if (record.find(A[i]) == record.end()) {
+                record[A[i]] = 1;
             }
             else {
-                if (arr[i] >= arr[i - 1]) {
-                    return false;
-                }
+                record[A[i]] += 1;
             }
         }
-        if (climb) {
-            return false;
+        for (std::map<int, int>::iterator it = record.begin(); it != record.end(); it++) {
+            if (it->second > max) {
+                max = it->second;
+                max_key = it->first;
+            }
+            //std::cout << it->first << " : " << it->second << std::endl;
         }
-        else {
-            return true;
-        }
+        return max_key;
     }
 };
+
 int main()
 {
     Solution s;
-    vector<int> arr = { 2, 1 };
-    cout << s.validMountainArray(arr);
+    vector<int> arr = { 1,2,3,3 };
+    cout << s.repeatedNTimes(arr);
 }
 
