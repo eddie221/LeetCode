@@ -24,6 +24,7 @@ Leetcode
 69. [Sqrt(x)](https://leetcode.com/problems/sqrtx/ "Sqrt(x)")
 168. [Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/ "Excel Sheet Column Title")
 190. [Reverse Bits](https://leetcode.com/problems/reverse-bits/ "Reverse Bits")
+204. [Count Primes](https://leetcode.com/problems/count-primes/ "Count Primes")
 
 ### Median  
 ------

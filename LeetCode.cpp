@@ -1,27 +1,36 @@
 #include <iostream>
-#include <math.h>
 
 using namespace std;
 
-
 class Solution {
 public:
-    uint32_t reverseBits(uint32_t n) {
-        uint32_t result = 0;
-        int power = 31;
-        while (n != 0) {
-            result += (n & 1) << power;
-            power -= 1;
-            n = n >> 1;
+    int countPrimes(int n) {
+        int count = 0;
+        for (int i = 2; i < n; i++) {
+            bool prime = true;
+            if (i % 2 == 0 && i != 2) {
+                prime = false;
+            }
+            else {
+                for (int j = 3; j * j <= i; j += 2) {
+                    if (i % j == 0) {
+                        prime = false;
+                        break;
+                    }
+                }
+            }
+            if (prime) {
+                count++;
+            }
         }
-        return result;
+
+        return count;
     }
 };
 
 int main()
 {
     Solution s;
-    uint32_t n = 43261596;
-    cout << s.reverseBits(n);
+    cout << s.countPrimes(10);
 }
 
