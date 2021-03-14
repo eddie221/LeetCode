@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(12)](#easy)
+* [Easy(13)](#easy)
 * [Median(1)](#median)
 * [Hard(1)](#hard)
 
@@ -19,6 +19,7 @@ Leetcode
 27. [Remove Element](https://leetcode.com/problems/remove-element/ "Remove Element")
 28. [Implement strStr()][https://leetcode.com/problems/implement-strstr/ "Implement strStr()"]
 35. [Search Insert Position](https://leetcode.com/problems/search-insert-position/ "Search Insert Position")
+53. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/ "Maximum Subarray")
 
 ### Median  
 ------

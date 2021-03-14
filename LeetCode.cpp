@@ -5,25 +5,26 @@ using namespace std;
 
 class Solution {
 public:
-    int searchInsert(vector<int>& nums, int target) {
-        int low_idx = 0, high_idx = nums.size();
-        while (low_idx < high_idx) {
-            int mid = (low_idx + high_idx) >> 1;
-            if (nums[mid] < target) {
-                low_idx = mid + 1;
+    int maxSubArray(vector<int>& nums) {
+        int max = nums[0], sum = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            sum += nums[i];
+
+            if (max < sum) {
+                max = sum;
             }
-            else {
-                high_idx = mid;
+            if (sum < 0) {
+                sum = 0;
             }
         }
-        return low_idx;
+        return max;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { 1,3,5,6 };
-    cout << s.searchInsert(nums, 5);
+    vector<int> nums = { -2,1,-3,4,-1,2,1,-5,4 };
+    cout << s.maxSubArray(nums);
 }
 
