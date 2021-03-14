@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(36)](#easy)
+* [Easy(37)](#easy)
 * [Median(3)](#median)
 * [Hard(1)](#hard)
 
@@ -42,7 +42,8 @@ Leetcode
 914. [X of a Kind in a Deck of Cards](https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/ "X of a Kind in a Deck of Cards")
 941. [Valid Mountain Array](https://leetcode.com/problems/valid-mountain-array/ "Valid Mountain Array")
 961. [N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/ "N-Repeated Element in Size 2N Array")
-989. [Add to Array-Form of Integer]( "Add to Array-Form of Integer")
+989. [Add to Array-Form of Integer](https://leetcode.com/problems/add-to-array-form-of-integer/ "Add to Array-Form of Integer")
+1108. [Defanging an IP Address](https://leetcode.com/problems/defanging-an-ip-address/ "Defanging an IP Address")
 
 ### Median  
 ------
