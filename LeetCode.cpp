@@ -6,33 +6,37 @@ using namespace std;
 
 class Solution {
 public:
-    std::vector<int> addToArrayForm(std::vector<int>& A, int K) {
-        std::vector<int> result;
-        int carry = 0;
-        for (int i = A.size() - 1; i >= 0 || K != 0 || carry != 0; i--) {
-            if (i < 0) {
-                // std::cout << i << " : " << K % 10 + carry << " ";
-                result.push_back((K % 10 + carry) % 10);
-                carry = (K % 10 + carry) / 10;
+    int maxUncrossedLines(std::vector<int>& A, std::vector<int>& B) {
+        int m = A.size(), n = B.size();
+        int** result = new int*[m + 1];
+        for (int i = 0; i < m + 1; i++) {
+            result[i] = new int[n + 1];
+            for (int j = 0; j < n + 1; j++) {
+                result[i][j] = 0;
             }
-            else {
-                //std::cout << i << " : " << A[i] + K % 10 + carry << " ";
-                result.push_back((A[i] + K % 10 + carry) % 10);
-                carry = (K % 10 + A[i] + carry) / 10;
-            }
-            K = K / 10;
-            //std::cout << "K : " << K << std::endl;
         }
 
-        std::reverse(result.begin(), result.end());
-        return result;
+
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (A[i - 1] == B[j - 1]) {
+                    result[i][j] = result[i - 1][j - 1] + 1;
+                    //cout << result[i][j] << endl;
+                }
+                else {
+                    result[i][j] = std::max(result[i][j - 1], result[i - 1][j]);
+                }
+            }
+        }
+        return result[m][n];
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> arr = { 1,2,0,0 };
-    s.addToArrayForm(arr, 34);
+    vector<int> A = { 1, 4, 2 };
+    vector<int> B = { 1, 2, 4 };
+    s.maxUncrossedLines(A, B);
 }
 
