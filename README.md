@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(1)](#easy)
+* [Easy(3)](#easy)
 * [Median(1)](#median)
 * [Hard(1)](#hard)
 
@@ -9,6 +9,7 @@ Leetcode
 ------
 2. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/ "Add Two Numbers")
 7. [Reverse Integer](https://leetcode.com/problems/reverse-integer/ "Reverse Integer")
+9. [Palindrome Number](https://leetcode.com/problems/palindrome-number/ "Palindrome Number")
 ### Median  
 ------
 3. [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/ "Longest Substring Without Repeating Characters")
