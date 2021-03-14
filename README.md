@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(13)](#easy)
+* [Easy(14)](#easy)
 * [Median(1)](#median)
 * [Hard(1)](#hard)
 
@@ -20,6 +20,7 @@ Leetcode
 28. [Implement strStr()][https://leetcode.com/problems/implement-strstr/ "Implement strStr()"]
 35. [Search Insert Position](https://leetcode.com/problems/search-insert-position/ "Search Insert Position")
 53. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/ "Maximum Subarray")
+58. [Length of Last Word](https://leetcode.com/problems/length-of-last-word/ "Length of Last Word")
 
 ### Median  
 ------
