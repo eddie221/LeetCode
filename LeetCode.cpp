@@ -1,54 +1,44 @@
 #include <iostream>
-#include <unordered_map>
-#include <queue>
+#include <vector>
+#include <string>
 
 using namespace std;
 
-class MyStack {
+class Solution {
 public:
-    /** Initialize your data structure here. */
-    MyStack() {
-
-    }
-
-    /** Push element x onto stack. */
-    void push(int x) {
-        container.push(x);
-    }
-
-    /** Removes the element on top of the stack and returns that element. */
-    int pop() {
-        queue<int> _c;
-        while (container.size() > 1) {
-            _c.push(container.front());
-            container.pop();
+    vector<string> summaryRanges(vector<int>& nums) {
+        if (nums.empty()) {
+            return {};
         }
-        int r = container.back();
-        container.swap(_c);
-        return r;
-    }
+        vector<string> result;
+        long long i_start = 0;
 
-    /** Get the top element. */
-    int top() {
-        return container.back();
-    }
+        for (long long i = 0; i < nums.size() - 1; i++) {
+            if (nums[i + 1] != nums[i_start] + i + 1 - i_start) {
 
-    /** Returns whether the stack is empty. */
-    bool empty() {
-        return container.empty();
+                if (i + 1 - i_start == 1) {
+                    result.push_back(to_string(nums[i_start]));
+                }
+                else {
+                    result.push_back(to_string(nums[i_start]) + "->" + to_string(nums[i]));
+                }
+                i_start = i + 1;
+            }
+        }
+        if (nums.size() - i_start == 1) {
+            result.push_back(to_string(nums[i_start]));
+        }
+        else {
+            result.push_back(to_string(nums[i_start]) + "->" + to_string(nums[nums.size() - 1]));
+        }
+        return result;
     }
-private:
-    queue<int> container;
 };
-
 
 int main()
 {
-    MyStack* myStack = new MyStack();
-    myStack->push(1);
-    myStack->push(2);
-    myStack->top(); // return 2
-    myStack->pop(); // return 2
-    myStack->empty(); // return False
+    Solution s;
+    vector<int> nums = { 0,1,2,4,5,7 };
+    s.summaryRanges(nums);
 }
 
