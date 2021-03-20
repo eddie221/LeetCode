@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(42)](#easy)
+* [Easy(43)](#easy)
 * [Median(6)](#median)
 * [Hard(1)](#hard)
 
@@ -49,6 +49,7 @@ Leetcode
 40. [Number of Good Pairs](https://leetcode.com/problems/number-of-good-pairs/ "Number of Good Pairs")
 41. [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/ "Richest Customer Wealth")
 42. [Happy Number](https://leetcode.com/problems/happy-number/ "Happy Number")
+43. [Plus One](https://leetcode.com/problems/plus-one/ "Plus One")
 
 ### Median  
 ------

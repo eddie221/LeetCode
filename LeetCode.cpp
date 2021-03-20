@@ -1,35 +1,37 @@
 #include <iostream>
-#include <algorithm>
-#include <set>
+#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
-    bool isHappy(int n) {
-        set<int> record;
-        while (n != 1) {
-            int tmp = 0;
-            while (n / 10 != 0) {
-                tmp = pow(n % 10, 2) + tmp;
-                n = n / 10;
-            }
-            n = pow(n, 2) + tmp;
-            if (record.find(n) == record.end()) {
-                record.insert(n);
+    vector<int> plusOne(vector<int>& digits) {
+        int carry = 0;
+        for (int i = digits.size() - 1; i >= 0; i--) {
+            if (i == digits.size() - 1) {
+                carry = (digits[i] + 1) / 10;
+                digits[i] = (digits[i] + 1) % 10;
             }
             else {
-                return false;
+                int sum = (digits[i] + carry);
+                carry = sum / 10;
+                digits[i] = sum % 10;
             }
         }
-        return true;
+        if (carry != 0) {
+            digits.insert(digits.begin(), carry);
+        }
+        return digits;
     }
 };
 
 int main()
 {
     Solution s;
-
-    cout << s.isHappy(2);
+    vector<int> digits = { 9, 9, 9 };
+    digits = s.plusOne(digits);
+    for (int i = 0; i < digits.size(); i++) {
+        cout << digits[i];
+    }
 }
 
