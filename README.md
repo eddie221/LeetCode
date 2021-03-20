@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(43)](#easy)
+* [Easy(44)](#easy)
 * [Median(6)](#median)
 * [Hard(1)](#hard)
 
@@ -50,6 +50,7 @@ Leetcode
 41. [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/ "Richest Customer Wealth")
 42. [Happy Number](https://leetcode.com/problems/happy-number/ "Happy Number")
 43. [Plus One](https://leetcode.com/problems/plus-one/ "Plus One")
+44. [Add Binary](https://leetcode.com/problems/add-binary/ "Add Binary")
 
 ### Median  
 ------

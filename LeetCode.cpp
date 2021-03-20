@@ -1,37 +1,77 @@
 #include <iostream>
-#include <vector>
+#include <string>
 
 using namespace std;
 
 class Solution {
 public:
-    vector<int> plusOne(vector<int>& digits) {
-        int carry = 0;
-        for (int i = digits.size() - 1; i >= 0; i--) {
-            if (i == digits.size() - 1) {
-                carry = (digits[i] + 1) / 10;
-                digits[i] = (digits[i] + 1) % 10;
+    string addBinary(string a, string b) {
+        string result = "";
+        bool carry = false;
+        for (int i = 0; i < a.length() || i < b.length(); i++) {
+            if(a.length() > i && b.length() > i){
+                if (a[a.length() - i - 1] == '1' && b[b.length() - i - 1] == '1') {
+                    if (carry) {
+                        result = '1' + result;
+                    }
+                    else {
+                        result = '0' + result;
+                    }
+                    carry = true;
+                }
+                else if (a[a.length() - i - 1] == '1' || b[b.length() - i - 1] == '1') {
+                    if (carry) {
+                        result = '0' + result;
+                    }
+                    else {
+                        result = '1' + result;
+                    }
+                }
+                else{
+                    if (carry) {
+                        result = '1' + result;
+                    }
+                    else {
+                        result = '0' + result;
+                    }
+                    carry = false;
+                }
             }
-            else {
-                int sum = (digits[i] + carry);
-                carry = sum / 10;
-                digits[i] = sum % 10;
+            else if (a.length() > i) {
+                if (a[a.length() - i - 1] == '1' && carry) {
+                    result = '0' + result;
+                }
+                else if(a[a.length() - i - 1] == '0' && carry){
+                    result = '1' + result;
+                    carry = false;
+                }
+                else {
+                    result = a[a.length() - i - 1] + result;
+                }
+            }
+            else if (b.length() > i) {
+                if (b[b.length() - i - 1] == '1' && carry) {
+                    result = '0' + result;
+                }
+                else if (b[b.length() - i - 1] == '0' && carry) {
+                    result = '1' + result;
+                    carry = false;
+                }
+                else {
+                    result = b[b.length() - i - 1] + result;
+                }
             }
         }
-        if (carry != 0) {
-            digits.insert(digits.begin(), carry);
+        if (carry) {
+            result = "1" + result;
         }
-        return digits;
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> digits = { 9, 9, 9 };
-    digits = s.plusOne(digits);
-    for (int i = 0; i < digits.size(); i++) {
-        cout << digits[i];
-    }
+    cout << s.addBinary("10", "101111");
 }
 
