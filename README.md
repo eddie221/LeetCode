@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(41)](#easy)
-* [Median(5)](#median)
+* [Median(6)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -56,6 +56,7 @@ Leetcode
 3. [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/ "Reverse Linked List II")
 4. [Uncrossed Lines](https://leetcode.com/problems/uncrossed-lines/ "Uncrossed Lines")
 5. [Minimum Number of Operations to Move All Balls to Each Box](https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/ "Minimum Number of Operations to Move All Balls to Each Box")
+6. [Valid Square](https://leetcode.com/problems/valid-square/ "Valid Square")
 
 ### Hard  
 ------
