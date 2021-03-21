@@ -51,6 +51,7 @@ Leetcode
 42. [Happy Number](https://leetcode.com/problems/happy-number/ "Happy Number")
 43. [Plus One](https://leetcode.com/problems/plus-one/ "Plus One")
 44. [Add Binary](https://leetcode.com/problems/add-binary/ "Add Binary")
+45. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/ "Climbing Stairs")
 
 ### Median  
 ------
