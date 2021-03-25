@@ -5,28 +5,30 @@ using namespace std;
 
 class Solution {
 public:
-    int climbStairs(int n) {
-        if (n == 1) {
-            return 1;
+    int secondHighest(string s) {
+        int first_large = -1;
+        int second_large = -1;
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] >= 48 && s[i] <= 57) {
+                if (second_large < s[i] - 48) {
+                    if (first_large < s[i] - 48) {
+                        second_large = first_large;
+                        first_large = s[i] - 48;
+                        
+                    }
+                    else if(first_large != s[i] - 48){
+                        second_large = s[i] - 48;
+                    }
+                }
+            }
         }
-        if (n == 2) {
-            return 2;
-        }
-        int* path = new int[n + 1];
-        path[0] = 0;
-        path[1] = 1;
-        path[2] = 2;
-        for (int i = 3; i <= n; i++) {
-            path[i] = path[i - 1] + path[i - 2];
-        }
-
-        return path[n];
+        return second_large;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.climbStairs(21);
+    cout << s.secondHighest("abc1111");
 }
 
