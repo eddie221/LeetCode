@@ -5,30 +5,21 @@ using namespace std;
 
 class Solution {
 public:
-    int secondHighest(string s) {
-        int first_large = -1;
-        int second_large = -1;
-        for (int i = 0; i < s.length(); i++) {
-            if (s[i] >= 48 && s[i] <= 57) {
-                if (second_large < s[i] - 48) {
-                    if (first_large < s[i] - 48) {
-                        second_large = first_large;
-                        first_large = s[i] - 48;
-                        
-                    }
-                    else if(first_large != s[i] - 48){
-                        second_large = s[i] - 48;
-                    }
-                }
+    int maximum69Number(int num) {
+        string num_s = to_string(num);
+        for (int i = 0; i < num_s.length(); i++) {
+            if (num_s[i] == '6') {
+                num_s[i] = '9';
+                break;
             }
         }
-        return second_large;
+        return stoi(num_s);
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.secondHighest("abc1111");
+    cout << s.maximum69Number(9669);
 }
 

@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(46)](#easy)
+* [Easy(47)](#easy)
 * [Median(6)](#median)
 * [Hard(1)](#hard)
 
@@ -53,6 +53,7 @@ Leetcode
 44. [Add Binary](https://leetcode.com/problems/add-binary/ "Add Binary")
 45. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/ "Climbing Stairs")
 46. [Second Largest Digit in a String](https://leetcode.com/problems/second-largest-digit-in-a-string/ "Second Largest Digit in a String")
+47. [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/ "Maximum 69 Number")
 
 ### Median  
 ------
