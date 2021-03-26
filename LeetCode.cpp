@@ -1,25 +1,30 @@
 #include <iostream>
-#include <string>
+#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
-    int maximum69Number(int num) {
-        string num_s = to_string(num);
-        for (int i = 0; i < num_s.length(); i++) {
-            if (num_s[i] == '6') {
-                num_s[i] = '9';
-                break;
+    int maxAscendingSum(vector<int>& nums) {
+        int result = nums[0], tmp = nums[0];
+
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums[i] > nums[i - 1]) {
+                tmp += nums[i];
             }
+            else {
+                tmp = nums[i];
+            }
+            result = max(result, tmp);
         }
-        return stoi(num_s);
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.maximum69Number(9669);
+    vector<int> nums = { 10,20,30,5,10,50 };
+    cout << s.maxAscendingSum(nums);
 }
 
