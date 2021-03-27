@@ -5,30 +5,27 @@ using namespace std;
 
 class Solution {
 public:
-    int tribonacci(int n) {
+    int fib(int n) {
         int* result;
-        if (n > 3) {
+        if (n >= 2) {
             result = new int[n + 1];
         }
         else {
-            result = new int[3];
+            result = new int[2];
         }
-        
         result[0] = 0;
         result[1] = 1;
-        result[2] = 1;
-        for (int i = 3; i <= n; i++) {
-            result[i] = result[i - 1] + result[i - 2] + result[i - 3];
+        for (int i = 2; i <= n; i++) {
+            result[i] = result[i - 1] + result[i - 2];
         }
         return result[n];
-
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.tribonacci(25);
+    cout << s.fib(3);
     /*result = s.decompressRLElist(nums);
     for (int r : result) {
         cout << r << endl;
