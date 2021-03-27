@@ -57,6 +57,7 @@ Leetcode
 48. [Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum/ "Maximum Ascending Subarray Sum")
 49. [Count Items Matching a Rule](https://leetcode.com/problems/count-items-matching-a-rule/ "Count Items Matching a Rule")
 50. [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/ "Check if One String Swap Can Make Strings Equal")
+51. [Decompress Run-Length Encoded List](https://leetcode.com/problems/decompress-run-length-encoded-list/ "Decompress Run-Length Encoded List")
 
 ### Median  
 ------
