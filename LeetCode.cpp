@@ -5,26 +5,28 @@ using namespace std;
 
 class Solution {
 public:
-    int maxAscendingSum(vector<int>& nums) {
-        int result = nums[0], tmp = nums[0];
-
-        for (int i = 1; i < nums.size(); i++) {
-            if (nums[i] > nums[i - 1]) {
-                tmp += nums[i];
-            }
-            else {
-                tmp = nums[i];
-            }
-            result = max(result, tmp);
+    int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {
+        int index = 0;
+        if (ruleKey == "color") {
+            index = 1;
         }
-        return result;
+        else if (ruleKey == "name") {
+            index = 2;
+        }
+        int count = 0;
+        for (int i = 0; i < items.size(); i++) {
+            if (items[i][index] == ruleValue) {
+                count++;
+            }
+        }
+        return count;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { 10,20,30,5,10,50 };
-    cout << s.maxAscendingSum(nums);
+    vector<vector<string>> items = {{"phone","blue","pixel" }, { "computer","silver","lenovo" }, { "phone","gold","iphone" }};
+    cout << s.countMatches(items, "color", "silver");
 }
 

@@ -55,6 +55,7 @@ Leetcode
 46. [Second Largest Digit in a String](https://leetcode.com/problems/second-largest-digit-in-a-string/ "Second Largest Digit in a String")
 47. [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/ "Maximum 69 Number")
 48. [Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum/ "Maximum Ascending Subarray Sum")
+49. [Count Items Matching a Rule](https://leetcode.com/problems/count-items-matching-a-rule/ "Count Items Matching a Rule")
 
 ### Median  
 ------
