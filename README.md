@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(48)](#easy)
+* [Easy(50)](#easy)
 * [Median(6)](#median)
 * [Hard(1)](#hard)
 
@@ -56,6 +56,7 @@ Leetcode
 47. [Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/ "Maximum 69 Number")
 48. [Maximum Ascending Subarray Sum](https://leetcode.com/problems/maximum-ascending-subarray-sum/ "Maximum Ascending Subarray Sum")
 49. [Count Items Matching a Rule](https://leetcode.com/problems/count-items-matching-a-rule/ "Count Items Matching a Rule")
+50. [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/ "Check if One String Swap Can Make Strings Equal")
 
 ### Median  
 ------

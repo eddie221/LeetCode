@@ -1,32 +1,49 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
 public:
-    int countMatches(vector<vector<string>>& items, string ruleKey, string ruleValue) {
-        int index = 0;
-        if (ruleKey == "color") {
-            index = 1;
+    bool areAlmostEqual(string s1, string s2) {
+        if (s1.length() != s2.length()) {
+            return false;
         }
-        else if (ruleKey == "name") {
-            index = 2;
-        }
-        int count = 0;
-        for (int i = 0; i < items.size(); i++) {
-            if (items[i][index] == ruleValue) {
-                count++;
+        else {
+            int diff_i1 = -1, diff_i2 = -1;
+            for (int i = 0; i < s1.length(); i++) {
+                if (s1[i] != s2[i]) {
+                    if (diff_i1 == -1) {
+                        diff_i1 = i;
+                    }
+                    else if (diff_i2 == -1) {
+                        diff_i2 = i;
+                        swap(s1[diff_i1], s1[diff_i2]);
+                        if (s1 == s2) {
+                            return true;
+                        }
+                        else {
+                            return false;
+                        }
+                        
+                    }
+                    else {
+                        return false;
+                    }
+                }
+            }
+            if (diff_i1 != -1 && diff_i2 == -1) {
+                return false;
             }
         }
-        return count;
+        return true;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<vector<string>> items = {{"phone","blue","pixel" }, { "computer","silver","lenovo" }, { "phone","gold","iphone" }};
-    cout << s.countMatches(items, "color", "silver");
+    cout << s.areAlmostEqual("bank", "kanb");
 }
 
