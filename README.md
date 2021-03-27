@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(50)](#easy)
+* [Easy(51)](#easy)
 * [Median(6)](#median)
 * [Hard(1)](#hard)
 
@@ -58,6 +58,7 @@ Leetcode
 49. [Count Items Matching a Rule](https://leetcode.com/problems/count-items-matching-a-rule/ "Count Items Matching a Rule")
 50. [Check if One String Swap Can Make Strings Equal](https://leetcode.com/problems/check-if-one-string-swap-can-make-strings-equal/ "Check if One String Swap Can Make Strings Equal")
 51. [Decompress Run-Length Encoded List](https://leetcode.com/problems/decompress-run-length-encoded-list/ "Decompress Run-Length Encoded List")
+52. [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/ "N-th Tribonacci Number")
 
 ### Median  
 ------
