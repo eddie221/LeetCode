@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(51)](#easy)
+* [Easy(54)](#easy)
 * [Median(6)](#median)
 * [Hard(1)](#hard)
 
@@ -60,6 +60,7 @@ Leetcode
 51. [Decompress Run-Length Encoded List](https://leetcode.com/problems/decompress-run-length-encoded-list/ "Decompress Run-Length Encoded List")
 52. [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/ "N-th Tribonacci Number")
 53. [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/ "Fibonacci Number")
+54. [*Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/ "Average of Levels in Binary Tree")
 
 ### Median  
 ------
