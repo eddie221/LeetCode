@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(56)](#easy)
+* [Easy(57)](#easy)
 * [Median(6)](#median)
 * [Hard(1)](#hard)
 
@@ -63,6 +63,7 @@ Leetcode
 54. [*Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/ecf0fcac9144ddf9e3af5f519c669405b05e4b1d/LeetCode.cpp "Solution Link")
 55. [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/751df07e4de62b797133fdcdbde73e731d69ece5/LeetCode.cpp "Solution Link")
 56. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/4155c135920133edd15fe96f4a862dd2b96fcb68/LeetCode.cpp "Solution Link")
+57. [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/4155c135920133edd15fe96f4a862dd2b96fcb68/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
