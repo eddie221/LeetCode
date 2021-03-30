@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
+
 
 struct ListNode {
     int val;
@@ -11,19 +11,27 @@ struct ListNode {
     ListNode(int x) : val(x), next(nullptr) {}
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
+
 class Solution {
 public:
-    ListNode* deleteDuplicates(ListNode* head) {
-        ListNode* recent = head;
-        if (head == nullptr) {
+    ListNode* removeElements(ListNode* head, int val) {
+        ListNode* r = head;
+        if (r == nullptr) {
             return head;
         }
-        while (recent->next != nullptr) {
-            if(recent->val == recent->next->val){
-                recent->next = recent->next->next;
+        while (r->val == val) {
+            r = r->next;
+            if (r == nullptr) {
+                return r;
+            }
+        }
+        head = r;
+        while (r->next != nullptr) {
+            if (r->next->val == val) {
+                r->next = r->next->next;
             }
             else {
-                recent = recent->next;
+                r = r->next;
             }
         }
         return head;
@@ -33,16 +41,22 @@ public:
 int main()
 {
     Solution s;
-    ListNode* three2 = new ListNode(3);
-    ListNode* three1 = new ListNode(3, three2);
-    ListNode* two = new ListNode(2, three1);
-    ListNode* one2 = new ListNode(1, two);
-    ListNode* one1 = new ListNode(1, one2);
-    ListNode* r = s.deleteDuplicates(one1);
+    ListNode* six2 = new ListNode(6);
+    ListNode* five = new ListNode(5, six2);
+    ListNode* four = new ListNode(4, five);
+    ListNode* three = new ListNode(3, four);
+    ListNode* six1 = new ListNode(6, three);
+    ListNode* two = new ListNode(2, six1);
+    ListNode* one = new ListNode(1, two);
+    ListNode* r = s.removeElements(nullptr, 6);
     while (r != nullptr) {
         cout << r->val << endl;
         r = r->next;
     }
+    /*while (r != nullptr) {
+        cout << r->val << endl;
+        r = r->next;
+    }*/
     /*vector<double> result;
     result = s.averageOfLevels(five);
     for (double r : result) {
