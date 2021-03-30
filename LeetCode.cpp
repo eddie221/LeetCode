@@ -1,57 +1,28 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
 class Solution {
 public:
-    ListNode* removeElements(ListNode* head, int val) {
-        ListNode* r = head;
-        if (r == nullptr) {
-            return head;
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+        if (nums2.size() != 0 && nums1.size() != 0) {
+            swap_ranges(nums1.begin() + m, nums1.end(), nums2.begin());
+            sort(nums1.begin(), nums1.end());
         }
-        while (r->val == val) {
-            r = r->next;
-            if (r == nullptr) {
-                return r;
-            }
-        }
-        head = r;
-        while (r->next != nullptr) {
-            if (r->next->val == val) {
-                r->next = r->next->next;
-            }
-            else {
-                r = r->next;
-            }
-        }
-        return head;
+        
     }
 };
 
 int main()
 {
     Solution s;
-    ListNode* six2 = new ListNode(6);
-    ListNode* five = new ListNode(5, six2);
-    ListNode* four = new ListNode(4, five);
-    ListNode* three = new ListNode(3, four);
-    ListNode* six1 = new ListNode(6, three);
-    ListNode* two = new ListNode(2, six1);
-    ListNode* one = new ListNode(1, two);
-    ListNode* r = s.removeElements(nullptr, 6);
-    while (r != nullptr) {
-        cout << r->val << endl;
-        r = r->next;
+    vector<int> nums1 = { 1,2,3,0,0,0 };
+    vector<int> nums2 = { 2, 4, 5 };
+    s.merge(nums1, 3, nums2, 3);
+    for (int i = 0; i < nums1.size(); i++) {
+        cout << nums1[i] << endl;
     }
     /*while (r != nullptr) {
         cout << r->val << endl;
