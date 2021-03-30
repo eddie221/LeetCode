@@ -6,21 +6,23 @@ using namespace std;
 
 class Solution {
 public:
-    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
-        if (nums2.size() != 0 && nums1.size() != 0) {
-            swap_ranges(nums1.begin() + m, nums1.end(), nums2.begin());
-            sort(nums1.begin(), nums1.end());
+    vector<int> sortedSquares(vector<int>& nums) {
+        for (int i = 0; i < nums.size(); i++) {
+            nums[i] = pow(nums[i], 2);
+        }
+        if (nums.size() != 0) {
+            sort(nums.begin(), nums.end());
         }
         
+        return nums;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums1 = { 1,2,3,0,0,0 };
-    vector<int> nums2 = { 2, 4, 5 };
-    s.merge(nums1, 3, nums2, 3);
+    vector<int> nums1 = { -4,-1,0,3,10 };
+    s.sortedSquares(nums1);
     for (int i = 0; i < nums1.size(); i++) {
         cout << nums1[i] << endl;
     }
