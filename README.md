@@ -64,6 +64,7 @@ Leetcode
 55. [Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/751df07e4de62b797133fdcdbde73e731d69ece5/LeetCode.cpp "Solution Link")
 56. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/4155c135920133edd15fe96f4a862dd2b96fcb68/LeetCode.cpp "Solution Link")
 57. [Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/384a3b75cb93f4e51355c4ab58758c4a6efbe49f/LeetCode.cpp "Solution Link")
+58. [Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/329824e8ecf238d6236b0536a2cf7cfd7557b8f6/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
