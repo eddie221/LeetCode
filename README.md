@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(61)](#easy)
+* [Easy(62)](#easy)
 * [Median(7)](#median)
 * [Hard(1)](#hard)
 
@@ -68,6 +68,7 @@ Leetcode
 59. [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/337ff8505caf5fb561552bd831af0717d05753ac/LeetCode.cpp "Solution Link")
 60. [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/01e8a77c866aaf5883036b02976739970f5e0465/LeetCode.cpp "Solution Link")
 61. [Design Parking System](https://leetcode.com/problems/design-parking-system/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/28857003a3366699ac37d31c4c4d4e962a5b7421/LeetCode.cpp "Solution Link")
+62. [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bd9cf79f1c6eba22f20b548c4e4a8bad914c531b/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
