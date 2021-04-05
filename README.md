@@ -71,6 +71,7 @@ Leetcode
 62. [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bd9cf79f1c6eba22f20b548c4e4a8bad914c531b/LeetCode.cpp "Solution Link")
 63. [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/2dc86b62de5ca98d35e4264f9a3029a1210dbf75/LeetCode.cpp "Solution Link")
 64. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/93c2ae1a7be55f219fdb8cecc7449ead5e5a2ac0/LeetCode.cpp "Solution Link")
+65. [Rotate String](https://leetcode.com/problems/rotate-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8e70b8c86d7ffefc129b3ca81dcbeb03bb0c9992/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
