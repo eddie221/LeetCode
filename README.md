@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(63)](#easy)
+* [Easy(64)](#easy)
 * [Median(7)](#median)
 * [Hard(1)](#hard)
 
@@ -70,6 +70,7 @@ Leetcode
 61. [Design Parking System](https://leetcode.com/problems/design-parking-system/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/28857003a3366699ac37d31c4c4d4e962a5b7421/LeetCode.cpp "Solution Link")
 62. [How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bd9cf79f1c6eba22f20b548c4e4a8bad914c531b/LeetCode.cpp "Solution Link")
 63. [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/2dc86b62de5ca98d35e4264f9a3029a1210dbf75/LeetCode.cpp "Solution Link")
+64. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/93c2ae1a7be55f219fdb8cecc7449ead5e5a2ac0/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
