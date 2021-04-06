@@ -5,26 +5,11 @@ using namespace std;
 
 class Solution {
 public:
-    bool rotateString(string A, string B) {
-        if (A.length() == B.length()) {
-            if (A == B) {
+    bool isPerfectSquare(int num) {
+        for (long long i = 1; i <= num / 2 + 1; i++) {
+            if (i * i == num) {
                 return true;
             }
-            for (int i = 1; i < A.length(); i++) {
-                string tmp = "";
-                for (int j = i; j < A.length(); j++) {
-                    tmp = tmp + A[j];
-                }
-                for (int k = 0; k < i; k++) {
-                    tmp = tmp + A[k];
-                }
-                if (tmp == B) {
-                    return true;
-                }
-            }
-        }
-        else {
-            return false;
         }
         return false;
     }
@@ -34,7 +19,7 @@ int main()
 {
     Solution s;
     
-    cout << s.rotateString("", "");
+    cout << s.isPerfectSquare(16);
     /*while (r != nullptr) {
         cout << r->val << endl;
         r = r->next;
