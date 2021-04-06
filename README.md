@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(64)](#easy)
+* [Easy(65)](#easy)
 * [Median(7)](#median)
 * [Hard(1)](#hard)
 
@@ -72,7 +72,7 @@ Leetcode
 63. [Check If N and Its Double Exist](https://leetcode.com/problems/check-if-n-and-its-double-exist/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/2dc86b62de5ca98d35e4264f9a3029a1210dbf75/LeetCode.cpp "Solution Link")
 64. [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/93c2ae1a7be55f219fdb8cecc7449ead5e5a2ac0/LeetCode.cpp "Solution Link")
 65. [Rotate String](https://leetcode.com/problems/rotate-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8e70b8c86d7ffefc129b3ca81dcbeb03bb0c9992/LeetCode.cpp "Solution Link")
-
+66. [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/ "Problem Link")(https://github.com/eddie221/LeetCode/blob/aa08cd58b4749a08b61a80eee839f8098785b5a5/LeetCode.cpp "Solution Link")
 ### Median  
 ------
 1. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/fe7a4c6eb5c0c931bb9eae18dd3761385c52c0d2/LeetCode.cpp "Solution Link")
