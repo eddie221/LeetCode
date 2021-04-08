@@ -74,6 +74,7 @@ Leetcode
 65. [Rotate String](https://leetcode.com/problems/rotate-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8e70b8c86d7ffefc129b3ca81dcbeb03bb0c9992/LeetCode.cpp "Solution Link")
 66. [Valid Perfect Square](https://leetcode.com/problems/valid-perfect-square/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/aa08cd58b4749a08b61a80eee839f8098785b5a5/LeetCode.cpp "Solution Link")
 67. [Maximum Score After Splitting a String](https://leetcode.com/problems/maximum-score-after-splitting-a-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/15960fa3597b37b03713f99d4345cf4b4eeace96/LeetCode.cpp "Solution Link")
+68. [Perfect Number](https://leetcode.com/problems/perfect-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/26f75c58003531b38c5207ac02396ffabeb2c5dc/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
