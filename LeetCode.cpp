@@ -2,30 +2,45 @@
 
 using namespace std;
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
-    bool checkPerfectNumber(int num) {
-        int sum = 0;
-        if (num == 1) {
+    bool hasPathSum(TreeNode* root, int targetSum) {
+        if (root == nullptr) {
             return false;
         }
-        for (int i = 1; i * i <= num; i++) {
-            if (num % i == 0) {
-                sum = sum + i;
-                if (i * i != num) {
-                    sum = sum + num / i;
-                }
-            }
+        else if (root != nullptr && root->right == root->left) {
+            return root->val == targetSum;
         }
-        return sum - num == num;
+        else {
+            return hasPathSum(root->left, targetSum - root->val) || hasPathSum(root->right, targetSum - root->val);
+        }
     }
 };
 
 int main()
 {
     Solution s;
-    
-    cout << s.checkPerfectNumber(1);
+    TreeNode *seven = new TreeNode(7);
+    TreeNode* two = new TreeNode(2);
+    TreeNode* eleven = new TreeNode(11, seven, two);
+    TreeNode* four = new TreeNode(4, eleven, nullptr);
+
+    TreeNode* one = new TreeNode(1);
+    TreeNode* four2 = new TreeNode(4, nullptr, one);
+    TreeNode* thirteen = new TreeNode(13);
+    TreeNode* eight = new TreeNode(8, thirteen, four);
+
+    TreeNode* five = new TreeNode(5, four, eight);
+    cout << s.hasPathSum(five, 22);
     /*while (r != nullptr) {
         cout << r->val << endl;
         r = r->next;
