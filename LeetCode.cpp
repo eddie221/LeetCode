@@ -1,46 +1,61 @@
 #include <iostream>
+#include <vector>
+#include <utility>
 
 using namespace std;
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
 class Solution {
 public:
-    bool hasPathSum(TreeNode* root, int targetSum) {
-        if (root == nullptr) {
+    bool isLongPressedName(string name, string typed) {
+        int i = 1;
+        int j = 1;
+        for (; i < name.size();i++, j++) {
+            if (name[i - 1] == typed[j - 1]) {
+                int name_c = 1;
+                int typed_c = 1;
+                while (name[i] == name[i - 1] && i < name.size()) {
+                    name_c++;
+                    i++;
+                }
+                while (typed[j] == typed[j - 1] && j < typed.size()) {
+                    typed_c++;
+                    j++;
+                }
+                if (name_c > typed_c) {
+                    return false;
+                }
+            }
+            else {
+                return false;
+            }
+        }
+        
+        if (name[i - 1] != typed[j - 1]) {
             return false;
         }
-        else if (root != nullptr && root->right == root->left) {
-            return root->val == targetSum;
+        if (i < name.size() || j < typed.size()) {
+            int name_c = 1;
+            int typed_c = 1;
+            while (i < name.size() && name[i] == name[i - 1]) {
+                name_c++;
+                i++;
+            }
+            while (j < typed.size() && typed[j] == typed[j - 1]) {
+                typed_c++;
+                j++;
+            }
+            if (name_c > typed_c || j != typed.size()) {
+                return false;
+            }
         }
-        else {
-            return hasPathSum(root->left, targetSum - root->val) || hasPathSum(root->right, targetSum - root->val);
-        }
+        return true;
     }
 };
 
 int main()
 {
     Solution s;
-    TreeNode *seven = new TreeNode(7);
-    TreeNode* two = new TreeNode(2);
-    TreeNode* eleven = new TreeNode(11, seven, two);
-    TreeNode* four = new TreeNode(4, eleven, nullptr);
-
-    TreeNode* one = new TreeNode(1);
-    TreeNode* four2 = new TreeNode(4, nullptr, one);
-    TreeNode* thirteen = new TreeNode(13);
-    TreeNode* eight = new TreeNode(8, thirteen, four);
-
-    TreeNode* five = new TreeNode(5, four, eight);
-    cout << s.hasPathSum(five, 22);
+    cout << s.isLongPressedName("vtkgn", "vttkgnn");
     /*while (r != nullptr) {
         cout << r->val << endl;
         r = r->next;
