@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(70)](#easy)
+* [Easy(71)](#easy)
 * [Median(7)](#median)
 * [Hard(1)](#hard)
 
@@ -77,6 +77,7 @@ Leetcode
 68. [Perfect Number](https://leetcode.com/problems/perfect-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/26f75c58003531b38c5207ac02396ffabeb2c5dc/LeetCode.cpp "Solution Link")
 69. [Path Sum](https://leetcode.com/problems/path-sum/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/c7ef48c1e8930c44e311eab22924f55bcb27fd3a/LeetCode.cpp "Solution Link")
 70. [Long Pressed Name](https://leetcode.com/problems/long-pressed-name/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/ada550af52d078a26c864d378c2a712a3f5f7780/LeetCode.cpp "Solution Link")
+71. [Binary Prefix Divisible By 5](https://leetcode.com/problems/binary-prefix-divisible-by-5/ "Problem") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b8ac09a634184fca8b4cbf9dac523dcd7c5473df/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
