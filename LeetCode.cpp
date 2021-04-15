@@ -5,107 +5,46 @@ using namespace std;
 
 class Solution {
 public:
-    string intToRoman(int num) {
-        string result = "";
-        while (num > 0) {
-            int tmp = 0;
-            if (num / 1000 != 0) {
-                tmp = num / 1000;
-                for (int i = 0; i < num / 1000; i++) {
-                    result = result + "M";
-                }
-                num = num % 1000;
-
-            }
-            else if (num / 100 != 0) {
-                tmp = num / 100;
-                if (tmp == 9) {
-                    result = result + "CM";
-                }
-                else{
-                    if (tmp >= 5) {
-                        result = result + "D";
-                        for (int i = 0; i < tmp - 5; i++) {
-                            result = result + "C";
-                        }
-                    }
-                    else {
-                        if (tmp == 4) {
-                            result = result + "CD";
-                        }
-                        else {
-                            for (int i = 0; i < tmp; i++) {
-                                result = result + "C";
-                            }
-                        }
-                        
-                    }
-                    
-                }
-                num = num % 100;
-            }
-            else if (num / 10 != 0) {
-                tmp = num / 10;
-                if (tmp == 9) {
-                    result = result + "XC";
-                }
-                else {
-                    if (tmp >= 5) {
-                        result = result + "L";
-                        for (int i = 0; i < tmp - 5; i++) {
-                            result = result + "X";
-                        }
-                    }
-                    else {
-                        if (tmp == 4) {
-                            result = result + "XL";
-                        }
-                        else {
-                            for (int i = 0; i < tmp; i++) {
-                                result = result + "X";
-                            }
-                        }
-                        
-                    }
-                }
-                num = num % 10;
-            }
-            else {
-                tmp = num;
-                if (tmp == 9) {
-                    result = result + "IX";
-                }
-                else {
-                    if (tmp >= 5) {
-                        result = result + "V";
-                        for (int i = 0; i < tmp - 5; i++) {
-                            result = result + "I";
-                        }
-                    }
-                    else {
-                        if (tmp == 4) {
-                            result = result + "IV";
-                        }
-                        else {
-                            for (int i = 0; i < tmp; i++) {
-                                result = result + "I";
-                            }
-                        }
-
-                    }
-                }
-                num = num % 1;
-            }
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+        if (image[sr][sc] == newColor) {
+            return image;
         }
-        return result;
+        else {
+            return floodFill(image, sr, sc, image[sr][sc], newColor);
+        }
+    }
+
+    vector<vector<int>> floodFill(vector<vector<int>>& image, int rr, int rc, int oldColor, int newColor) {
+        image[rr][rc] = newColor;
+        if (rr + 1 < image.size() && image[rr + 1][rc] == oldColor) {
+            image = floodFill(image, rr + 1, rc, oldColor, newColor);
+        }
+        if (rr - 1 >= 0 && image[rr - 1][rc] == oldColor) {
+            image = floodFill(image, rr - 1, rc, oldColor, newColor);
+        }
+        if (rc + 1 < image[0].size() && image[rr][rc + 1] == oldColor) {
+            image = floodFill(image, rr, rc + 1, oldColor, newColor);
+        }
+        if (rc - 1 >= 0 && image[rr][rc - 1] == oldColor) {
+            image = floodFill(image, rr, rc - 1, oldColor, newColor);
+        }
+        return image;
     }
 };
 
 int main()
 {
     Solution s;
+
+    vector<vector<int>> image = { {0, 0, 0}, {0, 1,1}};
+    vector<vector<int>> result = s.floodFill(image, 1, 1, 1);
+    for (int i = 0; i < result.size(); i++) {
+        for (int j = 0; j < result[i].size(); j++) {
+            cout << result[i][j] << " ";
+        }
+        cout << endl;
+    }
     
-    cout << s.intToRoman(11);
     /*while (r != nullptr) {
         cout << r->val << endl;
         r = r->next;
