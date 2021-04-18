@@ -5,42 +5,23 @@ using namespace std;
 
 class Solution {
 public:
-    int myAtoi(string s) {
-        int sign = 1;
-        int result = 0;
-        int start = 0;
-
-        while (start < s.length() && s[start] == ' ') {
-            start++;
+    void reverseString(vector<char>& s) {
+        for (int i = 0; i < s.size() / 2; i++) {
+            s[i] = s[s.size() - i - 1] ^ s[i];
+            s[s.size() - i - 1] = s[s.size() - i - 1] ^ s[i];
+            s[i] = s[s.size() - i - 1] ^ s[i];
         }
-        if (s[start] == '-') {
-            sign = -1;
-            start++;
-        }
-        else if (s[start] == '+') {
-            sign = 1;
-            start++;
-        }
-        
-        for (int i = start; i < s.length() && s[i] >= '0' && s[i] <= '9'; i++) {
-            if (result > INT_MAX / 10 || (result == INT_MAX / 10 && s[i] > '7' && s[i] <= '9')) {
-                if (sign == 1) {
-                    return INT_MAX;
-                }
-                else {
-                    return INT_MIN;
-                }
-            }
-            result = result * 10 + (s[i] - '0');
-        }
-        return result * sign;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.myAtoi(" -42");
+    vector<char> cs = {'h','e','l','l','o' };
+    s.reverseString(cs);
+    for (int i = 0; i < cs.size(); i++) {
+        cout << cs[i] << endl;
+    }
     
     /*while (r != nullptr) {
         cout << r->val << endl;
