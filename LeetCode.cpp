@@ -5,23 +5,34 @@ using namespace std;
 
 class Solution {
 public:
-    void reverseString(vector<char>& s) {
-        for (int i = 0; i < s.size() / 2; i++) {
-            s[i] = s[s.size() - i - 1] ^ s[i];
-            s[s.size() - i - 1] = s[s.size() - i - 1] ^ s[i];
-            s[i] = s[s.size() - i - 1] ^ s[i];
+    bool isPalindrome(string s) {
+        vector<int> container;
+        for (int i = 0; i < s.size(); i++) {
+            if ((s[i] >= 'a' && s[i] <= 'z')) {
+                container.push_back(s[i]);
+            }
+            else if (s[i] >= 'A' && s[i] <= 'Z') {
+                container.push_back(s[i] - 'A' + 'a');
+            }
+            if (s[i] >= '0' && s[i] <= '9') {
+                container.push_back(s[i]);
+            }
         }
+
+        for (int i = 0; i < container.size() / 2; i++) {
+            if (container[i] != container[container.size() - i - 1]) {
+                return false;
+            }
+        }
+        
+        return true;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<char> cs = {'h','e','l','l','o' };
-    s.reverseString(cs);
-    for (int i = 0; i < cs.size(); i++) {
-        cout << cs[i] << endl;
-    }
+    s.isPalindrome("A man, a plan, a canal: Panama");
     
     /*while (r != nullptr) {
         cout << r->val << endl;
