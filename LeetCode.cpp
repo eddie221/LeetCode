@@ -5,45 +5,42 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
-        if (image[sr][sc] == newColor) {
-            return image;
-        }
-        else {
-            return floodFill(image, sr, sc, image[sr][sc], newColor);
-        }
-    }
+    int myAtoi(string s) {
+        int sign = 1;
+        int result = 0;
+        int start = 0;
 
-    vector<vector<int>> floodFill(vector<vector<int>>& image, int rr, int rc, int oldColor, int newColor) {
-        image[rr][rc] = newColor;
-        if (rr + 1 < image.size() && image[rr + 1][rc] == oldColor) {
-            image = floodFill(image, rr + 1, rc, oldColor, newColor);
+        while (start < s.length() && s[start] == ' ') {
+            start++;
         }
-        if (rr - 1 >= 0 && image[rr - 1][rc] == oldColor) {
-            image = floodFill(image, rr - 1, rc, oldColor, newColor);
+        if (s[start] == '-') {
+            sign = -1;
+            start++;
         }
-        if (rc + 1 < image[0].size() && image[rr][rc + 1] == oldColor) {
-            image = floodFill(image, rr, rc + 1, oldColor, newColor);
+        else if (s[start] == '+') {
+            sign = 1;
+            start++;
         }
-        if (rc - 1 >= 0 && image[rr][rc - 1] == oldColor) {
-            image = floodFill(image, rr, rc - 1, oldColor, newColor);
+        
+        for (int i = start; i < s.length() && s[i] >= '0' && s[i] <= '9'; i++) {
+            if (result > INT_MAX / 10 || (result == INT_MAX / 10 && s[i] > '7' && s[i] <= '9')) {
+                if (sign == 1) {
+                    return INT_MAX;
+                }
+                else {
+                    return INT_MIN;
+                }
+            }
+            result = result * 10 + (s[i] - '0');
         }
-        return image;
+        return result * sign;
     }
 };
 
 int main()
 {
     Solution s;
-
-    vector<vector<int>> image = { {0, 0, 0}, {0, 1,1}};
-    vector<vector<int>> result = s.floodFill(image, 1, 1, 1);
-    for (int i = 0; i < result.size(); i++) {
-        for (int j = 0; j < result[i].size(); j++) {
-            cout << result[i][j] << " ";
-        }
-        cout << endl;
-    }
+    cout << s.myAtoi(" -42");
     
     /*while (r != nullptr) {
         cout << r->val << endl;
