@@ -5,34 +5,33 @@ using namespace std;
 
 class Solution {
 public:
-    bool isPalindrome(string s) {
-        vector<int> container;
-        for (int i = 0; i < s.size(); i++) {
-            if ((s[i] >= 'a' && s[i] <= 'z')) {
-                container.push_back(s[i]);
-            }
-            else if (s[i] >= 'A' && s[i] <= 'Z') {
-                container.push_back(s[i] - 'A' + 'a');
-            }
-            if (s[i] >= '0' && s[i] <= '9') {
-                container.push_back(s[i]);
-            }
+    bool isPowerOfThree(int n) {
+        if (n <= 0) {
+            return false;
         }
-
-        for (int i = 0; i < container.size() / 2; i++) {
-            if (container[i] != container[container.size() - i - 1]) {
+        while (n > 3) {
+            if (n % 3 != 0) {
                 return false;
             }
+            n = n / 3;
         }
-        
-        return true;
+        if (n == 1 || n == 3) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 };
 
 int main()
 {
     Solution s;
-    s.isPalindrome("A man, a plan, a canal: Panama");
+    cout << s.isPowerOfThree(1);
+    cout << s.isPowerOfThree(2);
+    cout << s.isPowerOfThree(3);
+    cout << s.isPowerOfThree(4);
+
     
     /*while (r != nullptr) {
         cout << r->val << endl;
