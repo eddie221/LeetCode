@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(74)](#easy)
+* [Easy(76)](#easy)
 * [Median(9)](#median)
 * [Hard(1)](#hard)
 
@@ -81,6 +81,8 @@ Leetcode
 72. [Flood Fill](https://leetcode.com/problems/flood-fill/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/689f5d3092e32f74167a8b4dbc1952927b926d43/LeetCode.cpp "Solution Link")
 73. [Reverse String](https://leetcode.com/problems/reverse-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d708b8de2f170cbde73f539d1c57634bc2f34704/LeetCode.cpp "Solution Link")
 74. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/614eca495b89ad8470a263c30f9a78c26d6a4525/LeetCode.cpp "Solution Link")
+75. [Power of Three](https://leetcode.com/problems/power-of-three/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e008d1cb6b3050be0682d80e0748828ca1700a22/LeetCode.cpp "Solution Link")
+76. []
 
 ### Median  
 ------
