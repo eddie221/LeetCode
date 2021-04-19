@@ -82,7 +82,7 @@ Leetcode
 73. [Reverse String](https://leetcode.com/problems/reverse-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d708b8de2f170cbde73f539d1c57634bc2f34704/LeetCode.cpp "Solution Link")
 74. [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/614eca495b89ad8470a263c30f9a78c26d6a4525/LeetCode.cpp "Solution Link")
 75. [Power of Three](https://leetcode.com/problems/power-of-three/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e008d1cb6b3050be0682d80e0748828ca1700a22/LeetCode.cpp "Solution Link")
-76. []
+76. [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/45416f89f8a192138d1f416b3263857ee0b278df/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
