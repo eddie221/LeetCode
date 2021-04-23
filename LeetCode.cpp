@@ -1,47 +1,38 @@
 #include <iostream>
-#include <vector>
-#include <stack>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> permute(vector<int>& nums) {
-        vector<vector<int>> r;
-        r = permute(nums, 0);
-        return r;
-    }
-
-    vector<vector<int>> permute(vector<int> nums, int n) {
-        if (n == nums.size() - 1) {
-            return { nums };
+    int numJewelsInStones(string jewels, string stones) {
+        int count = 0;
+        sort(stones.begin(), stones.end());
+        sort(jewels.begin(), jewels.end());
+        cout << stones << endl;
+        for (int i = 0, j = 0; i < jewels.size() && j < stones.size();) {
+            if (jewels[i] > stones[j]) {
+                j++;
+            }
+            else if (jewels[i] < stones[j]) {
+                i++;
+            }
+            else{
+                while (jewels[i] == stones[j]) {
+                    count++;
+                    j++;
+                }
+                i++;
+            }
         }
-        vector<vector<int>> tmp1 = permute(nums, n + 1);
-        vector<vector<int>> result = tmp1;
-        for (int i = n + 1; i < nums.size(); i++) {
-            nums[n] = nums[i] ^ nums[n];
-            nums[i] = nums[i] ^ nums[n];
-            nums[n] = nums[i] ^ nums[n];
-            vector<vector<int>> tmp2 = permute(nums, n + 1);
-            result.reserve(tmp2.size() + result.size());
-            result.insert(result.end(), tmp2.begin(), tmp2.end());
-        }
-        return result;
-        
+        return count;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { 1,2,3 };
-    vector<vector<int>> r = s.permute(nums);
-    for (int i = 0; i < r.size(); i++) {
-        for (int j = 0; j < r[i].size(); j++) {
-            cout << r[i][j];
-        }
-        cout << endl;
-    }
+    cout << s.numJewelsInStones("aA", "aAAbbbb");
     
     /*while (r != nullptr) {
         cout << r->val << endl;
