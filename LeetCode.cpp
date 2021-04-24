@@ -1,39 +1,38 @@
 #include <iostream>
-#include <algorithm>
+#include <vector>
+#include <string>
 
 using namespace std;
 
 class Solution {
 public:
-    int numJewelsInStones(string jewels, string stones) {
-        int count = 0;
-        sort(stones.begin(), stones.end());
-        sort(jewels.begin(), jewels.end());
-        cout << stones << endl;
-        for (int i = 0, j = 0; i < jewels.size() && j < stones.size();) {
-            if (jewels[i] > stones[j]) {
-                j++;
+    vector<string> fizzBuzz(int n) {
+        vector<string>r;
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                r.push_back("FizzBuzz");
             }
-            else if (jewels[i] < stones[j]) {
-                i++;
+            else if (i % 3 == 0) {
+                r.push_back("Fizz");
             }
-            else{
-                while (jewels[i] == stones[j]) {
-                    count++;
-                    j++;
-                }
-                i++;
+            else if (i % 5 == 0) {
+                r.push_back("Buzz");
+            }
+            else {
+                r.push_back(to_string(i));
             }
         }
-        return count;
+        return r;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.numJewelsInStones("aA", "aAAbbbb");
-    
+    vector<string> r = s.fizzBuzz(15);
+    for (int i = 0; i < r.size(); i++) {
+        cout << r[i] << endl;
+    }
     /*while (r != nullptr) {
         cout << r->val << endl;
         r = r->next;

@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(77)](#easy)
+* [Easy(78)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -84,6 +84,7 @@ Leetcode
 75. [Power of Three](https://leetcode.com/problems/power-of-three/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e008d1cb6b3050be0682d80e0748828ca1700a22/LeetCode.cpp "Solution Link")
 76. [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/45416f89f8a192138d1f416b3263857ee0b278df/LeetCode.cpp "Solution Link")
 77. [Single Number](https://leetcode.com/problems/single-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/adde22133e8d45f3f2a81e47ff66fdd299443306/LeetCode.cpp "Solution Link")
+78. [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/a01b28ae601160215bd0f3c3b4c5b6fc02566db2/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
@@ -97,6 +98,7 @@ Leetcode
 8. [Integer to Roman](https://leetcode.com/problems/integer-to-roman/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0525e5ab31a19b6d5548dd9ce00d86db7980f170/LeetCode.cpp "Solution Link")
 9. [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/, "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/82da4b9b5db990d49b208eacae92d330287d8949/LeetCode.cpp "Solution Link")
 10. [Permutations](https://leetcode.com/problems/permutations/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6d66006afdda3e4a86aed19140db0390b319f167/LeetCode.cpp "Solution Link")
+
 ### Hard  
 ------
 1. [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b0f3a9e47ad0bd5155acc9cdfcb94e8256567c1a/LeetCode.cpp "Solution Link")
