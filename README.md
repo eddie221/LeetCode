@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(78)](#easy)
+* [Easy(79)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -85,6 +85,7 @@ Leetcode
 76. [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/45416f89f8a192138d1f416b3263857ee0b278df/LeetCode.cpp "Solution Link")
 77. [Single Number](https://leetcode.com/problems/single-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/adde22133e8d45f3f2a81e47ff66fdd299443306/LeetCode.cpp "Solution Link")
 78. [Jewels and Stones](https://leetcode.com/problems/jewels-and-stones/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/a01b28ae601160215bd0f3c3b4c5b6fc02566db2/LeetCode.cpp "Solution Link")
+79. [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/4b1f249f7321bb503dd086c9869fa78312f8b9af/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
