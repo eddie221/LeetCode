@@ -4,74 +4,62 @@
 
 using namespace std;
 
-struct TreeNode {
+
+struct ListNode {
     int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
 class Solution {
 public:
-    TreeNode* sortedArrayToBST(vector<int>::iterator start, vector<int>::iterator end) {
-        int len = end - start;
-        if (len == 0) {
-            return nullptr;
+    bool isPalindrome(ListNode* head) {
+        ListNode* ptr1 = head, * ptr2 = head;
+        bool odd = true;
+        while (ptr2->next != nullptr) {
+            ptr1 = ptr1->next;
+            ptr2 = ptr2->next->next;
+            if (ptr2 == nullptr) {
+                odd = false;
+                break;
+            }
         }
-        else {
-            return new TreeNode(*(start + len / 2), sortedArrayToBST(start, start + len / 2), sortedArrayToBST(start + len / 2, end));
+        ptr2 = reverse(ptr1);
+        
+        while (head != ptr1) {
+            if (head->val != ptr2->val) {
+                return false;
+            }
+            head = head->next;
+            ptr2 = ptr2->next;
         }
+        return true;
     }
-
-    TreeNode* sortedArrayToBST(vector<int>& nums) {
-        return sortedArrayToBST(nums.begin(), nums.end());
-        /*if (nums.size() == 0) {
-            return nullptr;
+    ListNode* reverse(ListNode* head) {
+        ListNode* last = nullptr, * next;
+        while (head != nullptr) {
+            next = head->next;
+            head->next = last;
+            if (next == nullptr) {
+                head->next = last;
+                return head;
+            }
+            last = head;
+            head = next;
         }
-        TreeNode* head = new TreeNode(nums[int(nums.size() / 2)]);
-        if (nums.size() == 2) {
-            TreeNode* tmp = new TreeNode(nums[int(nums.size() / 2 - 1)]);
-            head->left = tmp;
-        }
-        else {
-            vector<int> left;
-            vector<int> right;
-            left.reserve(nums.size() / 2);
-            left.insert(left.end(), nums.begin(), nums.begin() + nums.size() / 2);
-            right.reserve(nums.size() / 2);
-            right.insert(right.end(), nums.begin() + nums.size() / 2 + 1, nums.end());
-            TreeNode* right_tree = sortedArrayToBST(right);
-            TreeNode* left_tree = sortedArrayToBST(left);
-            head->left = left_tree;
-            head->right = right_tree;
-        }
-        return head;*/
+        head->next = last;
+        return head;
     }
-    
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = {-10, -3, 0, 5, 9};
-    TreeNode* r = s.sortedArrayToBST(nums);
-    stack<TreeNode*> container;
-    container.push(r);
-    while (container.size() != 0) {
-        TreeNode* t = container.top();
-        container.pop();
-        if (t != nullptr) {
-            cout << t->val << " ";
-            container.push(t->left);
-            container.push(t->right);
-        }
-        else {
-            cout << "nullptr" << " ";
-        }
+    ListNode* one = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
+    cout << s.isPalindrome(one);
 
-    }
    /* vector<bool> result;
     vector<int> nums = { 8,1,2,2,3 };
     result = s.intToRoman(nums);
