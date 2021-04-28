@@ -13,58 +13,36 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
+
 class Solution {
 public:
-    bool isPalindrome(ListNode* head) {
-        ListNode* ptr1 = head, * ptr2 = head;
-        bool odd = true;
-        while (ptr2->next != nullptr) {
-            ptr1 = ptr1->next;
-            ptr2 = ptr2->next->next;
-            if (ptr2 == nullptr) {
-                odd = false;
-                break;
+    bool hasCycle(ListNode* head) {
+        if (head == NULL || head->next == NULL) {
+            return false;
+        }
+        ListNode* fast = head, * slow = head;
+        while (fast->next != nullptr && fast->next->next != nullptr) {
+            fast = fast->next->next;
+            slow = slow->next;
+            if (fast == slow) {
+                return true;
             }
         }
-        ptr2 = reverse(ptr1);
-        
-        while (head != ptr1) {
-            if (head->val != ptr2->val) {
-                return false;
-            }
-            head = head->next;
-            ptr2 = ptr2->next;
-        }
-        return true;
-    }
-    ListNode* reverse(ListNode* head) {
-        ListNode* last = nullptr, * next;
-        while (head != nullptr) {
-            next = head->next;
-            head->next = last;
-            if (next == nullptr) {
-                head->next = last;
-                return head;
-            }
-            last = head;
-            head = next;
-        }
-        head->next = last;
-        return head;
+        return false;
     }
 };
 
 int main()
 {
     Solution s;
-    ListNode* one = new ListNode(1, new ListNode(2, new ListNode(2, new ListNode(1))));
-    cout << s.isPalindrome(one);
+    ListNode* head = new ListNode(3, new ListNode(2, new ListNode(0, new ListNode(-4))));
+    //head->next->next->next->next = head;
+    cout << s.hasCycle(head);
 
-   /* vector<bool> result;
-    vector<int> nums = { 8,1,2,2,3 };
-    result = s.intToRoman(nums);
-    for (double r : result) {
-        cout << r << endl;
-    }*/
+    /* vector<bool> result;
+     vector<int> nums = { 8,1,2,2,3 };
+     result = s.intToRoman(nums);
+     for (double r : result) {
+         cout << r << endl;
+     }*/
 }
-
