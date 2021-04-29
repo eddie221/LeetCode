@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(80)](#easy)
+* [Easy(82)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -88,7 +88,8 @@ Leetcode
 79. [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/4b1f249f7321bb503dd086c9869fa78312f8b9af/LeetCode.cpp "Solution Link")
 80. [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/89d9e930732c6cf20ea6dbbe9507737352a7530e/LeetCode.cpp "Solution Link")
 81. [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e9e4fad88945c4828cf4f1f49529e445c3366ba9/LeetCode.cpp "Solution Link")
-
+82. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/25e50ceb34624cc2c75f4ad62b960b4d6b734b9f/LeetCode.cpp "Solution Link")
+83. []
 ### Median  
 ------
 1. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/fe7a4c6eb5c0c931bb9eae18dd3761385c52c0d2/LeetCode.cpp "Solution Link")

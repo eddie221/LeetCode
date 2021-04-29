@@ -1,43 +1,36 @@
 #include <iostream>
 #include <vector>
-#include <stack>
+#include <algorithm>
 
 using namespace std;
 
 
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-
 class Solution {
 public:
-    bool hasCycle(ListNode* head) {
-        if (head == NULL || head->next == NULL) {
-            return false;
-        }
-        ListNode* fast = head, * slow = head;
-        while (fast->next != nullptr && fast->next->next != nullptr) {
-            fast = fast->next->next;
-            slow = slow->next;
-            if (fast == slow) {
-                return true;
+    int majorityElement(vector<int>& nums) {
+        int count = 1;
+        int major = nums[0];
+        for (int i = 1; i < nums.size(); i++) {
+            if (count == 0) {
+                major = nums[i];
             }
+            if (major != nums[i]) {
+                count -= 1;
+            }
+            else {
+                count += 1;
+            }
+            
         }
-        return false;
+        return major;
     }
 };
 
 int main()
 {
     Solution s;
-    ListNode* head = new ListNode(3, new ListNode(2, new ListNode(0, new ListNode(-4))));
-    //head->next->next->next->next = head;
-    cout << s.hasCycle(head);
+    vector<int> nums = { 2,2,1,1,1,2,2 };
+    cout << s.majorityElement(nums);
 
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
