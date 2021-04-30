@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(83)](#easy)
+* [Easy(84)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -90,6 +90,7 @@ Leetcode
 81. [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e9e4fad88945c4828cf4f1f49529e445c3366ba9/LeetCode.cpp "Solution Link")
 82. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/25e50ceb34624cc2c75f4ad62b960b4d6b734b9f/LeetCode.cpp "Solution Link")
 83. [Majority Element](https://leetcode.com/problems/majority-element/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/32260c5e9bc6851bb04093287be1a6aaa0ccc10c/LeetCode.cpp "Solution Link")
+84. [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/3ea7a90a06438dea31956fe058fe3e3d4ca8f139/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
