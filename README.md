@@ -91,6 +91,7 @@ Leetcode
 82. [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/25e50ceb34624cc2c75f4ad62b960b4d6b734b9f/LeetCode.cpp "Solution Link")
 83. [Majority Element](https://leetcode.com/problems/majority-element/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/32260c5e9bc6851bb04093287be1a6aaa0ccc10c/LeetCode.cpp "Solution Link")
 84. [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/3ea7a90a06438dea31956fe058fe3e3d4ca8f139/LeetCode.cpp "Solution Link")
+85. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/377188463809e5e990e7210024f6b592d894aa11/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
