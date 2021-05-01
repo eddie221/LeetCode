@@ -1,25 +1,45 @@
 #include <iostream>
-#include <string>
-#include <algorithm>
+#include <vector>
 
 using namespace std;
 
 class Solution {
 public:
-    int titleToNumber(string columnTitle) {
-        int number = 0;
-        for (int i = 0; i < columnTitle.size(); i++) {
-            number = (columnTitle[i] - 'A' + 1) + number * 26;
+    vector<vector<int>> generate(int numRows) {
+        vector<vector<int>> result;
+        result.push_back({ 1 });
+        if (numRows == 1) {
+            return result;
         }
-        return number;
+
+        for (int i = 1; i < numRows; i++) {
+            vector<int> tmp;
+            for (int j = 0; j < i + 1; j++) {
+                if (j == 0 || j == i) {
+                    tmp.push_back({ 1 });
+                }
+                else {
+                    tmp.push_back(result[i - 1][j - 1] + result[i - 1][j]);
+                }
+            }
+            result.push_back(tmp);
+        }
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.titleToNumber("AB");
+    vector<vector<int>> r = s.generate(5);
 
+    for (int i = 0; i < r.size(); i++) {
+        for (int j = 0; j < r[i].size(); j++) {
+            cout << r[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);

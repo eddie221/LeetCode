@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(84)](#easy)
+* [Easy(87)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -93,6 +93,7 @@ Leetcode
 84. [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/3ea7a90a06438dea31956fe058fe3e3d4ca8f139/LeetCode.cpp "Solution Link")
 85. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/377188463809e5e990e7210024f6b592d894aa11/LeetCode.cpp "Solution Link")
 86. [Valid Anagram](https://leetcode.com/problems/valid-anagram/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9753b684a66ccc604080ea1646e3f00b34e27258/LeetCode.cpp "Solution Link")
+87. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cb347f933bf623bcbcc8e496774ee2f6092f2904/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
