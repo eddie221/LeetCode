@@ -6,25 +6,19 @@ using namespace std;
 
 class Solution {
 public:
-    bool isAnagram(string s, string t) {
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
-        if (s.size() != t.size()) {
-            return false;
+    int titleToNumber(string columnTitle) {
+        int number = 0;
+        for (int i = 0; i < columnTitle.size(); i++) {
+            number = (columnTitle[i] - 'A' + 1) + number * 26;
         }
-        for (int i = 0; i < s.size(); i++) {
-            if (s[i] != t[i]) {
-                return false;
-            }
-        }
-        return true;
+        return number;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.isAnagram("anagram", "nagaram");
+    cout << s.titleToNumber("AB");
 
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
