@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(87)](#easy)
+* [Easy(88)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -94,6 +94,7 @@ Leetcode
 85. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/377188463809e5e990e7210024f6b592d894aa11/LeetCode.cpp "Solution Link")
 86. [Valid Anagram](https://leetcode.com/problems/valid-anagram/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9753b684a66ccc604080ea1646e3f00b34e27258/LeetCode.cpp "Solution Link")
 87. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cb347f933bf623bcbcc8e496774ee2f6092f2904/LeetCode.cpp "Solution Link")
+88. [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/08f6388cacf074e4ff148ca5b5b1b988974beb2e/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
