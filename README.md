@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(88)](#easy)
+* [Easy(89)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -95,6 +95,7 @@ Leetcode
 86. [Valid Anagram](https://leetcode.com/problems/valid-anagram/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9753b684a66ccc604080ea1646e3f00b34e27258/LeetCode.cpp "Solution Link")
 87. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cb347f933bf623bcbcc8e496774ee2f6092f2904/LeetCode.cpp "Solution Link")
 88. [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/08f6388cacf074e4ff148ca5b5b1b988974beb2e/LeetCode.cpp "Solution Link")
+89. [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bd3f12d4df50837c44e6a0c03a5e23801e94ae82/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

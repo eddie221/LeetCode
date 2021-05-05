@@ -2,33 +2,32 @@
 #include <vector>
 
 using namespace std;
-
 class Solution {
 public:
-    int maxProfit(vector<int>& prices) {
-        int price = 0;
-        int i = 0;
-        int min = 0, max = 0;
-        while (i < prices.size() - 1) {
-            while (i < prices.size() - 1 && prices[i + 1] <= prices[i]) {
-                i++;
+    void moveZeroes(vector<int>& nums) {
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] == 0) {
+                for (int j = i + 1; j < nums.size(); j++) {
+                    if (nums[j] != 0) {
+                        nums[i] = nums[i] ^ nums[j];
+                        nums[j] = nums[i] ^ nums[j];
+                        nums[i] = nums[i] ^ nums[j];
+                        break;
+                    }
+                }
             }
-            min = prices[i];
-            while (i < prices.size() - 1 && prices[i + 1] >= prices[i]) {
-                i++;
-            }
-            max = prices[i];
-            price += max - min;
         }
-        return price;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> price = { 7,1,5,3,6,4 };
-    cout << s.maxProfit(price);
+    vector<int> nums = { 1, 3, 0, 4, 12 ,0 };
+    s.moveZeroes(nums);
+    for (int i = 0; i < nums.size(); i++) {
+        cout << nums[i] << endl;
+    }
 
     /*for (int i = 0; i < r.size(); i++) {
         for (int j = 0; j < r[i].size(); j++) {
