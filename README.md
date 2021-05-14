@@ -97,6 +97,7 @@ Leetcode
 88. [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/08f6388cacf074e4ff148ca5b5b1b988974beb2e/LeetCode.cpp "Solution Link")
 89. [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bd3f12d4df50837c44e6a0c03a5e23801e94ae82/LeetCode.cpp "Solution Link")
 90. [Move Zeroes](https://leetcode.com/problems/move-zeroes/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5ca36ca3a3966efd5e9f04e6c49d1b2db8de56c4/LeetCode.cpp "Solution Link")
+91. [Min Stack](https://leetcode.com/problems/min-stack/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/062188ccfe25617fa3b0e0cf6f83715bcc7a552d/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
