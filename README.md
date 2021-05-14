@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(89)](#easy)
+* [Easy(90)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -96,6 +96,7 @@ Leetcode
 87. [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cb347f933bf623bcbcc8e496774ee2f6092f2904/LeetCode.cpp "Solution Link")
 88. [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/08f6388cacf074e4ff148ca5b5b1b988974beb2e/LeetCode.cpp "Solution Link")
 89. [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bd3f12d4df50837c44e6a0c03a5e23801e94ae82/LeetCode.cpp "Solution Link")
+90. [Move Zeroes](https://leetcode.com/problems/move-zeroes/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5ca36ca3a3966efd5e9f04e6c49d1b2db8de56c4/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
