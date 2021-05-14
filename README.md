@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(90)](#easy)
+* [Easy(92)](#easy)
 * [Median(10)](#median)
 * [Hard(1)](#hard)
 
@@ -98,6 +98,7 @@ Leetcode
 89. [Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bd3f12d4df50837c44e6a0c03a5e23801e94ae82/LeetCode.cpp "Solution Link")
 90. [Move Zeroes](https://leetcode.com/problems/move-zeroes/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5ca36ca3a3966efd5e9f04e6c49d1b2db8de56c4/LeetCode.cpp "Solution Link")
 91. [Min Stack](https://leetcode.com/problems/min-stack/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/062188ccfe25617fa3b0e0cf6f83715bcc7a552d/LeetCode.cpp "Solution Link")
+92. [First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9c172019c463af7fe5e026ff3b903113422d6b77/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

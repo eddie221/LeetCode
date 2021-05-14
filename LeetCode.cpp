@@ -1,35 +1,43 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
 public:
-    int firstUniqChar(string s) {
-        int character[26] = { 0 };
-        for (int i = 0; i < s.size(); i++) {
-            character[s[i] - 'a']++;
-        }
-        for (int i = 0; i < s.size(); i++) {
-            if (character[s[i] - 'a'] == 1) {
-                return i;
+    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+        vector<int> result;
+        sort(nums1.begin(), nums1.end());
+        sort(nums2.begin(), nums2.end());
+
+        for (int i = 0, j = 0; i < nums1.size() && j < nums2.size();) {
+            while (i < nums1.size() && j < nums2.size() && nums1[i] == nums2[j]) {
+                result.push_back(nums1[i]);
+                i++;
+                j++;
+            }
+            if (i < nums1.size() && j < nums2.size() && nums1[i] > nums2[j]) {
+                j++;
+            }
+            else if(i < nums1.size() && j < nums2.size() && nums1[i] < nums2[j]){
+                i++;
             }
         }
-        return -1;
+        return result;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.firstUniqChar("dddccdbba");
+    vector<int> nums1 = { 1, 2, 2, 1 };
+    vector<int> nums2 = { 2, 2 };
+    vector<int> r = s.intersect(nums1, nums2);
 
-    /*for (int i = 0; i < r.size(); i++) {
-        for (int j = 0; j < r[i].size(); j++) {
-            cout << r[i][j] << " ";
-        }
-        cout << endl;
-    }*/
+    for (int i = 0; i < r.size(); i++) {
+        cout << r[i] << " ";
+    }
     
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
