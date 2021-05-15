@@ -6,24 +6,22 @@ using namespace std;
 
 class Solution {
 public:
-    int hammingWeight(uint32_t n) {
-        int count = 0;
-        int i = 0;
-        uint32_t mask = 1;
-        for (int i = 0; i < 32; i++) {
-            if (mask & n) {
-                count++;
+    int missingNumber(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != i) {
+                return i;
             }
-            mask = mask << 1;
         }
-        return count;
+        return nums.size();
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.hammingWeight(00000000000000000000010000001011);
+    vector<int> nums = { 3, 0, 1 };
+    cout << s.missingNumber(nums);
 
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
