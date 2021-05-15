@@ -6,39 +6,25 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
-        vector<int> result;
-        sort(nums1.begin(), nums1.end());
-        sort(nums2.begin(), nums2.end());
-
-        for (int i = 0, j = 0; i < nums1.size() && j < nums2.size();) {
-            while (i < nums1.size() && j < nums2.size() && nums1[i] == nums2[j]) {
-                result.push_back(nums1[i]);
-                i++;
-                j++;
+    int hammingWeight(uint32_t n) {
+        int count = 0;
+        int i = 0;
+        uint32_t mask = 1;
+        for (int i = 0; i < 32; i++) {
+            if (mask & n) {
+                count++;
             }
-            if (i < nums1.size() && j < nums2.size() && nums1[i] > nums2[j]) {
-                j++;
-            }
-            else if(i < nums1.size() && j < nums2.size() && nums1[i] < nums2[j]){
-                i++;
-            }
+            mask = mask << 1;
         }
-        return result;
+        return count;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums1 = { 1, 2, 2, 1 };
-    vector<int> nums2 = { 2, 2 };
-    vector<int> r = s.intersect(nums1, nums2);
+    cout << s.hammingWeight(00000000000000000000010000001011);
 
-    for (int i = 0; i < r.size(); i++) {
-        cout << r[i] << " ";
-    }
-    
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
