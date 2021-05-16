@@ -102,7 +102,7 @@ Leetcode
 93. [Intersection of Two Arrays II](https://leetcode.com/problems/intersection-of-two-arrays-ii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/52e6e26d40063d655092c1866228ebbe2aee1cc3/LeetCode.cpp "Solution Link")
 94. [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/ead903f4cb340adf2bbb579514266ee57e2bb169/LeetCode.cpp "Solution Link")
 95. [Missing Number](https://leetcode.com/problems/missing-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5179b7c26a88550cff8db9297dc1ca40cb4a12d8/LeetCode.cpp "Solution Link")
-
+96. [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/2fc2996e15e7aa1cb71220adfc22d418bcee718b/LeetCode.cpp "Solution Link")
 ### Median  
 ------
 1. [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/fe7a4c6eb5c0c931bb9eae18dd3761385c52c0d2/LeetCode.cpp "Solution Link")
