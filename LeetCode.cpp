@@ -7,41 +7,32 @@ using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums) {
-        vector<vector<int>> result;
-        sort(nums.begin(), nums.end());
+    map<int, vector<string>> keypad = { {2, {"a", "b", "c"}},
+                                        {3, {"d", "e", "f"}},
+                                        {4, {"g", "h", "i"}},
+                                        {5, {"j", "k", "l"}},
+                                        {6, {"m", "n", "o"}},
+                                        {7, {"p", "q", "r", "s"}},
+                                        {8, {"t", "u", "v"}},
+                                        {9, {"w", "x", "y", "z"}}};
 
-        for (int i = 0; i < nums.size(); i++) {
-            cout << nums[i] << endl;
+    vector<string> letterCombinations(string digits) {
+        vector<string> result;
+        if (digits.length() == 0) {
+            return result;
         }
-
-        for (int i = 0; i < nums.size(); i++) {
-            if (i != 0 && nums[i] == nums[i - 1]) {
-                continue;
-            }
-            int left = i + 1, right = nums.size() - 1;
-            while (left < right) {
-                if (nums[i] + nums[left] + nums[right] == 0) {
-                    result.push_back({ nums[i] , nums[left], nums[right] });
-                    while (left < right && nums[left + 1] == nums[left]) {
-                        left++;
-                    }
-                    left++;
-                    while (left < right && nums[right - 1] == nums[right]) {
-                        right--;
-                    }
-                    right--;
+        else if (digits.length() == 1) {
+            return keypad[digits[0] - '0'];
+        }
+        else {
+            vector<string> child_substr = letterCombinations(digits.substr(1, digits.length()));
+            for (int i = 0; i < keypad[digits[0] - '0'].size(); i++) {
+                for (int j = 0; j < child_substr.size(); j++) {
+                    result.push_back(keypad[digits[0] - '0'][i] + child_substr[j]);
                 }
-                else if (nums[i] + nums[left] + nums[right] > 0) {
-                    right--;
-                }
-                else {
-                    left++;
-                }
-                
             }
         }
-
+        
         return result;
     }
 };
@@ -50,7 +41,7 @@ int main()
 {
     Solution s;
     vector<int> nums = { -1,0,1,2,-1,-4 };
-    vector<vector<int>> r = s.threeSum(nums);
+    vector<string> r = s.letterCombinations("");
     for (int i = 0; i < r.size(); i++) {
         for (int j = 0; j < r[i].size(); j++) {
             cout << r[i][j] << " ";
