@@ -5,48 +5,46 @@
 
 using namespace std;
 
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
 class Solution {
 public:
-    map<int, vector<string>> keypad = { {2, {"a", "b", "c"}},
-                                        {3, {"d", "e", "f"}},
-                                        {4, {"g", "h", "i"}},
-                                        {5, {"j", "k", "l"}},
-                                        {6, {"m", "n", "o"}},
-                                        {7, {"p", "q", "r", "s"}},
-                                        {8, {"t", "u", "v"}},
-                                        {9, {"w", "x", "y", "z"}}};
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        ListNode* last = head, * del_node = head, *previous = nullptr;
+        if (head->next == nullptr) {
+            return nullptr;
+        }
+        for (int i = 1; i < n; i++) {
+            last = last->next;
+        }
 
-    vector<string> letterCombinations(string digits) {
-        vector<string> result;
-        if (digits.length() == 0) {
-            return result;
+        while (last->next != nullptr) {
+            previous = del_node;
+            del_node = del_node->next;
+            last = last->next;
         }
-        else if (digits.length() == 1) {
-            return keypad[digits[0] - '0'];
+        if (previous == nullptr) {
+            return head->next;
         }
-        else {
-            vector<string> child_substr = letterCombinations(digits.substr(1, digits.length()));
-            for (int i = 0; i < keypad[digits[0] - '0'].size(); i++) {
-                for (int j = 0; j < child_substr.size(); j++) {
-                    result.push_back(keypad[digits[0] - '0'][i] + child_substr[j]);
-                }
-            }
-        }
-        
-        return result;
+        previous->next = previous->next->next;
+        return head;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { -1,0,1,2,-1,-4 };
-    vector<string> r = s.letterCombinations("");
-    for (int i = 0; i < r.size(); i++) {
-        for (int j = 0; j < r[i].size(); j++) {
-            cout << r[i][j] << " ";
-        }
-        cout << endl;
+    ListNode* head = new ListNode(1, new ListNode(2));//, new ListNode(3, new ListNode(4, new ListNode(5)))
+    ListNode* head2 = s.removeNthFromEnd(head, 2);
+    while (head2 != nullptr) {
+        cout << head2->val << endl;
+        head2 = head2->next;
     }
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };

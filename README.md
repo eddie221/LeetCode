@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(96)](#easy)
-* [Median(12)](#median)
+* [Median(13)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -118,6 +118,8 @@ Leetcode
 10. [Permutations](https://leetcode.com/problems/permutations/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6d66006afdda3e4a86aed19140db0390b319f167/LeetCode.cpp "Solution Link")
 11. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0de20fb3f606a979e4ceaba34cb07dee21e91fb2/LeetCode.cpp "Solution Link")
 12. [3Sum](https://leetcode.com/problems/3sum/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/aa91cc3b0afff7560e38a7491448fc95bb67ae20/LeetCode.cpp "Solution Link")
+13. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/f16884db6989c25b4b454fac25abbf2b5c5bd96f/LeetCode.cpp "Solution Link")
+
 ### Hard  
 ------
 1. [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b0f3a9e47ad0bd5155acc9cdfcb94e8256567c1a/LeetCode.cpp "Solution Link")
