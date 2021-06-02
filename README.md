@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(96)](#easy)
-* [Median(13)](#median)
+* [Median(14)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -119,6 +119,7 @@ Leetcode
 11. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0de20fb3f606a979e4ceaba34cb07dee21e91fb2/LeetCode.cpp "Solution Link")
 12. [3Sum](https://leetcode.com/problems/3sum/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/aa91cc3b0afff7560e38a7491448fc95bb67ae20/LeetCode.cpp "Solution Link")
 13. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/f16884db6989c25b4b454fac25abbf2b5c5bd96f/LeetCode.cpp "Solution Link")
+14. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/3bf5385ae9019f2359d8f5455a17b6d9591011bc/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------
