@@ -1,43 +1,38 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
-#include <map>
-
+#include <unordered_set>
+#include <string>
 
 using namespace std;
 
 class Solution {
 public:
-    int countLargestGroup(int n) {
-        int count[37] = { 0 };
-        for (int i = 1; i <= n; i++) {
-            int sum = 0, num = i;
-            while (num != 0) {
-                sum += num % 10;
-                num = num / 10;
+    int numDifferentIntegers(string word) {
+        unordered_set<string> store;
+        bool number = false;
+        for (int i = 0, j = 0; i < word.length();i = ++j) {
+            while (isdigit(word[j])) {
+                j++;
             }
-            count[sum]++;
-        }
-        sort(count, count + 27);
-        reverse(count, count + 27);
-        int max = count[0], result = 1;
-        for (int i = 1; i < 27; i++) {
-            if (max == count[i]) {
-                result++;
+
+            while (word[i] == '0' && i + 1 < j) {
+                i++;
             }
-            else {
-                break;
+            if (i < j) {
+                string s = word.substr(i, j - i);
+                store.insert(s);
             }
+            
         }
 
-        return result;
+        return store.size();
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.countLargestGroup(13);
+    cout << s.numDifferentIntegers("0a0");
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
