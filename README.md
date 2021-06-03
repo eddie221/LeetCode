@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(97)](#easy)
+* [Easy(98)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -104,6 +104,7 @@ Leetcode
 95. [Missing Number](https://leetcode.com/problems/missing-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5179b7c26a88550cff8db9297dc1ca40cb4a12d8/LeetCode.cpp "Solution Link")
 96. [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/2fc2996e15e7aa1cb71220adfc22d418bcee718b/LeetCode.cpp "Solution Link")
 97. [Count Largest Group](https://leetcode.com/problems/count-largest-group/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0354522f17b68453664fbb4a7a487969f0e73f35/LeetCode.cpp "Solution Link")
+98. [Number of Different Integers in a String](https://leetcode.com/problems/number-of-different-integers-in-a-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b0b7ca8172730a80fe4b499a95b669040c9b43f4/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

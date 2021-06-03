@@ -7,32 +7,22 @@ using namespace std;
 
 class Solution {
 public:
-    int numDifferentIntegers(string word) {
-        unordered_set<string> store;
-        bool number = false;
-        for (int i = 0, j = 0; i < word.length();i = ++j) {
-            while (isdigit(word[j])) {
-                j++;
-            }
-
-            while (word[i] == '0' && i + 1 < j) {
-                i++;
-            }
-            if (i < j) {
-                string s = word.substr(i, j - i);
-                store.insert(s);
-            }
-            
+    int subtractProductAndSum(int n) {
+        int product = 1;
+        int sum = 0;
+        while (n != 0) {
+            product = product * (n % 10);
+            sum += (n % 10);
+            n = n / 10; 
         }
-
-        return store.size();
+        return product - sum;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.numDifferentIntegers("0a0");
+    cout << s.subtractProductAndSum(9999);
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
