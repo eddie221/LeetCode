@@ -6,25 +6,31 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> createTargetArray(vector<int>& nums, vector<int>& index) {
-        vector<int> result;
-        result.push_back(nums[0]);
-        for (int i = 1; i < nums.size(); i++) {
-            result.insert(result.begin() + index[i], nums[i]);
+    bool isPalindrome(string s) {
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] != s[s.length() - i - 1]) {
+                return false;
+            }
         }
-        return result;
+        return true;
+    }
+    bool validPalindrome(string s) {
+        for (int i = 0, j = s.length() - 1; i < j; i++, j--) {
+            if (s[i] != s[j]) {
+                if (isPalindrome(s.substr(i, j - i)) || isPalindrome(s.substr(i + 1, j - i))) {
+                    return true;
+                }
+                return false;
+            }
+        }
+        return true;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = { 0, 1, 2, 3, 4 };
-    vector<int> index = { 0 ,1, 2, 2, 1 };
-    vector<int> r = s.createTargetArray(nums, index);
-    for (int i = 0; i < r.size(); i++) {
-        cout << r[i] << endl;
-    }
+    cout << s.validPalindrome("abc");
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
