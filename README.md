@@ -108,7 +108,8 @@ Leetcode
 99. [Subtract the Product and Sum of Digits of an Integer](https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8044d2a17841a51cddee9cc96c59d0c0cd969ef8/LeetCode.cpp "Solution Link")
 100. [Create Target Array in the Given Order](https://leetcode.com/problems/create-target-array-in-the-given-order/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/f290dacb911cf94c65df7a052ed35bb045192007/LeetCode.cpp "Solution Link")
 101. [Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e52c7fb1d0f7812277a8d7b3822b71dc8056d7ed/LeetCode.cpp "Solution Link")
-102. [Valid Boomerang](https://leetcode.com/problems/valid-boomerang/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8044d2a17841a51cddee9cc96c59d0c0cd969ef8/LeetCode.cpp "Solution Link")
+102. [Valid Boomerang](https://leetcode.com/problems/valid-boomerang/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7b1e19cefdfd6fd199bd6dbc9e6650ac81be2497/LeetCode.cpp "Solution Link")
+103. [Number of Segments in a String](https://leetcode.com/problems/valid-boomerang/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/95904bc21d53742c2b3be57162efed7d3e5b63cf/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
