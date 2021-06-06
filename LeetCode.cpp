@@ -1,76 +1,30 @@
 #include <iostream>
-#include <unordered_set>
 #include <string>
-#include <unordered_map>
-#include <sstream> 
 
 using namespace std;
 
 class Solution {
 public:
-    bool wordPattern(string pattern, string s) {
-        unordered_map<char, string> _map;
-        unordered_set<string> ss;
-        stringstream st(s);
-        string word;
-        int i = 0;
-        while (st >> word) {
-            if (_map.find(pattern[i]) != _map.end()) {
-                if (_map[pattern[i]] != word) {
-                    return false;
-                }
+    int maxRepeating(string sequence, string word) {
+        int count = 0, max_count = 0;
+        for (int i = 0, j = 0; i < sequence.length(); i++) {
+            count = 0;
+            while (i + word.length() * count < sequence.length() && sequence.substr(i + word.length() * count, word.length()) == word) {
+                count++;
             }
-            else {
-                if (ss.find(word) != ss.end()) {
-                    return false;
-                }
-                _map[pattern[i]] = word;
-                ss.insert(word);
+            //i = i + word.length() * count;
+            if (max_count < count) {
+                max_count = count;
             }
-            i++;
         }
-        if (i != pattern.length()) {
-            return false;
-        }
-        return true;
-        //vector<string> s_v;
-        //map<string, char> idx;
-        //map<char, string> idx2;
-        //string tmp = "";
-        //// store s to vector
-        //for (int i = 0; i < s.size(); i++) {
-        //    if (s[i] == ' ') {
-        //        s_v.push_back(tmp);
-        //        tmp = "";
-        //    }
-        //    else {
-        //        tmp = tmp + s[i];
-        //    }
-        //}
-        //s_v.push_back(tmp);
-        //if (s_v.size() != pattern.length()) {
-        //    return false;
-        //}
-        //for (int i = 0; i < s_v.size(); i++) {
-        //    if (idx[s_v[i]] == 0 && idx2[pattern[i]] == "") {
-        //        idx[s_v[i]] = pattern[i];
-        //        idx2[pattern[i]] = s_v[i];
-        //    }
-        //    else {
-        //        if (idx[s_v[i]] != pattern[i] || idx2[pattern[i]] != s_v[i]) {
-        //            return false;
-        //        }
-        //    }
-        //}
-
-        //return true;
+        return max_count;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.wordPattern("dog", "dog");
+    cout << s.maxRepeating("aaabaaaabaaabaaaabaaaabaaaabaaaaba", "aaaba");
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
