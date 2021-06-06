@@ -113,6 +113,7 @@ Leetcode
 104. [First Bad Version](https://leetcode.com/problems/first-bad-version/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/2db35cab68ffd88bbf184f95d1ce817d5e4a4f27/LeetCode.cpp "Solution Link")
 105. [Word Pattern](https://leetcode.com/problems/word-pattern/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bfdb6c49489719ed104a80f8b0d2cacb2a5b34ef/LeetCode.cpp "Solution Link")
 106. [Maximum Repeating Substring](https://leetcode.com/problems/maximum-repeating-substring/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/827ddb72d43232596d1fbc0b8a0f91d00211ddeb/LeetCode.cpp "Solution Link")
+107. [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/19635fadf0942912b7ab485b7e63a5cd21630ad1/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

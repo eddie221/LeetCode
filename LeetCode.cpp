@@ -1,52 +1,44 @@
 #include <iostream>
-#include <string>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left),right(right) {}
-};
-
 class Solution {
 public:
-    int minDepth(TreeNode* root) {
-        if (root == nullptr) {
-            return 0;
-        }
-        if (root->left == nullptr && root->right == nullptr) {
-            return 1;
-        }
-        else {
-            int left = INT_MAX, right = INT_MAX;
-            if (root->left != nullptr) {
-                left = minDepth(root->left) + 1;
+    vector<int> findErrorNums(vector<int>& nums) {
+        vector<int> r = {0, 0};
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < nums.size(); i++) {
+            if (i + 1 < nums.size() && nums[i] == nums[i + 1]) {
+                r[0] = nums[i];
+                nums.erase(nums.begin() + i);
+                break;
             }
-            if (root->right != nullptr) {
-                right = minDepth(root->right) + 1;
-            }
-            cout << "left : " << left << " right : " << right << endl;
-            return min(left, right);
         }
-        return 0;
+        if (r[0] == 0) {
+            r[0] = nums[nums.size() - 1];
+            nums.erase(nums.end() - 1);
+        }
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != i + 1) {
+                r[1] = i + 1;
+                break;
+            }
+        }
+        if (r[1] == 0) {
+            r[1] = nums.size() + 1;
+        }
+        return r;
     }
 };
 
 int main()
 {
     Solution s;
-    TreeNode* head = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
-    cout << s.minDepth(head) << endl;
-    TreeNode* head2 = nullptr;
-    cout << s.minDepth(head2) << endl;
-    TreeNode* head3 = new TreeNode(3, new TreeNode(9, new TreeNode(20, new TreeNode(15, new TreeNode(7), nullptr), nullptr), nullptr), nullptr);
-    cout << s.minDepth(head3) << endl;
-    TreeNode* head4 = new TreeNode(3, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
-    cout << s.minDepth(head4) << endl;
+    vector<int> nums = {3, 2, 2};
+    vector<int> result = s.findErrorNums(nums);
+    cout << result[0] << " " << result[1];
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
