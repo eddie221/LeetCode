@@ -6,38 +6,32 @@ using namespace std;
 
 class Solution {
 public:
-    string maximumTime(string time) {
-        if (time[0] == '?') {
-            if (time[1] < '4' || time[1] == '?') {
-                time[0] = '2';
+    bool isUgly(int n) {
+        if (n <= 0) {
+            return false;
+        }
+        while (n != 1) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            }
+            else if (n % 3 == 0) {
+                n = n / 3;
+            }
+            else if (n % 5 == 0) {
+                n = n / 5;
             }
             else {
-                time[0] = '1';
+                return false;
             }
         }
-        if (time[1] == '?') {
-            if (time[0] == '2') {
-                time[1] = '3';
-            }
-            else {
-                time[1] = '9';
-            }
-        }
-        if (time[3] == '?') {
-            time[3] = '5';
-        }
-        if (time[4] == '?') {
-            time[4] = '9';
-        }
-        return time;
+        return true;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<int> nums = {3, 2, 2};
-    cout << s.maximumTime("1?:5?") << endl;
+    cout << s.isUgly(8) << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
