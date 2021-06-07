@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(106)](#easy)
+* [Easy(108)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -114,6 +114,7 @@ Leetcode
 105. [Word Pattern](https://leetcode.com/problems/word-pattern/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/bfdb6c49489719ed104a80f8b0d2cacb2a5b34ef/LeetCode.cpp "Solution Link")
 106. [Maximum Repeating Substring](https://leetcode.com/problems/maximum-repeating-substring/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/827ddb72d43232596d1fbc0b8a0f91d00211ddeb/LeetCode.cpp "Solution Link")
 107. [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/19635fadf0942912b7ab485b7e63a5cd21630ad1/LeetCode.cpp "Solution Link")
+108. [Set Mismatch](https://leetcode.com/problems/set-mismatch/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/54158695e8daf9e110a27bfeb4e913e103527e10/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

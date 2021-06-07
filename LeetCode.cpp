@@ -6,30 +6,27 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> findErrorNums(vector<int>& nums) {
-        vector<int> r = {0, 0};
-        sort(nums.begin(), nums.end());
-        for (int i = 0; i < nums.size(); i++) {
-            if (i + 1 < nums.size() && nums[i] == nums[i + 1]) {
-                r[0] = nums[i];
-                nums.erase(nums.begin() + i);
-                break;
+    bool checkOnesSegment(string s) {
+        bool meet_one = false;
+        for (int i = 0; i < s.length(); i++) {
+            while(i < s.length() && s[i] == '0') {
+                i++;
+            }
+            int start_i = i;
+            while (i < s.length() && s[i] == '1' && !meet_one) {
+                i++;
+            }
+            if (i != start_i) {
+                meet_one = true;
+            }
+            while (i < s.length() && s[i] == '0') {
+                i++;
+            }
+            if (i < s.length() && s[i] == '1' && meet_one) {
+                return false;
             }
         }
-        if (r[0] == 0) {
-            r[0] = nums[nums.size() - 1];
-            nums.erase(nums.end() - 1);
-        }
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] != i + 1) {
-                r[1] = i + 1;
-                break;
-            }
-        }
-        if (r[1] == 0) {
-            r[1] = nums.size() + 1;
-        }
-        return r;
+        return true;
     }
 };
 
@@ -37,8 +34,7 @@ int main()
 {
     Solution s;
     vector<int> nums = {3, 2, 2};
-    vector<int> result = s.findErrorNums(nums);
-    cout << result[0] << " " << result[1];
+    cout << s.checkOnesSegment("1001") << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
