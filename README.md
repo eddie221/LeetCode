@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(108)](#easy)
+* [Easy(109)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -115,6 +115,7 @@ Leetcode
 106. [Maximum Repeating Substring](https://leetcode.com/problems/maximum-repeating-substring/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/827ddb72d43232596d1fbc0b8a0f91d00211ddeb/LeetCode.cpp "Solution Link")
 107. [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/19635fadf0942912b7ab485b7e63a5cd21630ad1/LeetCode.cpp "Solution Link")
 108. [Set Mismatch](https://leetcode.com/problems/set-mismatch/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/54158695e8daf9e110a27bfeb4e913e103527e10/LeetCode.cpp "Solution Link")
+109. [Check if Binary String Has at Most One Segment of Ones](https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/3f8dd0d9ed745fff0e27d6490adcefa2f17bc029/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
