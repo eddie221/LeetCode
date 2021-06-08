@@ -118,6 +118,7 @@ Leetcode
 109. [Check if Binary String Has at Most One Segment of Ones](https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/3f8dd0d9ed745fff0e27d6490adcefa2f17bc029/LeetCode.cpp "Solution Link")
 110. [Latest Time by Replacing Hidden Digits](https://leetcode.com/problems/latest-time-by-replacing-hidden-digits/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8287444dcd9aa95c71265fa701842a596547e336/LeetCode.cpp "Solution Link")
 111. [Ugly Number](https://leetcode.com/problems/ugly-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/fe6fec1eea5c9bd3f9eaf529d906c6d61f7ec0c4/LeetCode.cpp "Solution Link")
+112. [Power of Four](https://leetcode.com/problems/power-of-four/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d1a391a23ded63c44a7a869ae101e7d64bd3c8a3/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
