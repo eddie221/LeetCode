@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(111)](#easy)
+* [Easy(113)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -119,6 +119,7 @@ Leetcode
 110. [Latest Time by Replacing Hidden Digits](https://leetcode.com/problems/latest-time-by-replacing-hidden-digits/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8287444dcd9aa95c71265fa701842a596547e336/LeetCode.cpp "Solution Link")
 111. [Ugly Number](https://leetcode.com/problems/ugly-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/fe6fec1eea5c9bd3f9eaf529d906c6d61f7ec0c4/LeetCode.cpp "Solution Link")
 112. [Power of Four](https://leetcode.com/problems/power-of-four/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d1a391a23ded63c44a7a869ae101e7d64bd3c8a3/LeetCode.cpp "Solution Link")
+113. [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5db4558141a070398047d11471153632545f94a3/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
