@@ -6,32 +6,24 @@ using namespace std;
 
 class Solution {
 public:
-    bool isUgly(int n) {
+    bool isPowerOfFour(int n) {
         if (n <= 0) {
             return false;
         }
-        while (n != 1) {
-            if (n % 2 == 0) {
-                n = n / 2;
-            }
-            else if (n % 3 == 0) {
-                n = n / 3;
-            }
-            else if (n % 5 == 0) {
-                n = n / 5;
-            }
-            else {
-                return false;
-            }
+        if ((n - 1) & n) {
+            return false;
         }
-        return true;
+        return !(n & 0xAAAAAAAA);
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.isUgly(8) << endl;
+    cout << s.isPowerOfFour(16) << endl;
+    cout << s.isPowerOfFour(2) << endl;
+    cout << s.isPowerOfFour(1) << endl;
+    cout << s.isPowerOfFour(0) << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
