@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(115)](#easy)
+* [Easy(116)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -122,6 +122,7 @@ Leetcode
 113. [Maximum Average Subarray I](https://leetcode.com/problems/maximum-average-subarray-i/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5db4558141a070398047d11471153632545f94a3/LeetCode.cpp "Solution Link")
 114. [Arranging Coins](https://leetcode.com/problems/arranging-coins/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cb53c297746bb28e8180b277a31e8f4ec2350ad9/LeetCode.cpp "Solution Link")
 115. [Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/581035f6efedae795d5884bfe40c7cca49ca568f/LeetCode.cpp "Solution Link")
+116. [Check If It Is a Straight Line](https://leetcode.com/problems/check-if-it-is-a-straight-line/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/876c721fe58fe4805f7091da24160f1b4e8aa3c6/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

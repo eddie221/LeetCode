@@ -5,32 +5,64 @@
 
 using namespace std;
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
-
-    bool checkStraightLine(vector<vector<int>>& coordinates) {
-        sort(coordinates.begin(), coordinates.end());
-        double slope = (double(coordinates[1][1] - coordinates[0][1]) / double(coordinates[1][0] - coordinates[0][0]));
-        for (int i = 2; i < coordinates.size(); i++) {
-            if (slope != (double(coordinates[i][1] - coordinates[0][1]) / double(coordinates[i][0] - coordinates[0][0]))) {
-                return false;
+    int findSecondMinimumValue(TreeNode* root) {
+        TreeNode* recent = root;
+        if (root == nullptr || root->left == nullptr) {
+            return -1;
+        }
+        int candidate = -1;
+        while (recent->left != nullptr) {
+            if (root->val == recent->left->val && root->val == recent->right->val) {
+                int left_min = findSecondMinimumValue(recent->left), right_min = findSecondMinimumValue(recent->right);
+                cout << "left_min : " << left_min << endl;
+                cout << "right_min : " << right_min << endl;
+                if (candidate == -1 && left_min != -1) {
+                    candidate = left_min;
+                }
+                if (candidate == -1 && right_min != -1) {
+                    candidate = right_min;
+                }
+                if (left_min != -1 && candidate != -1) {
+                    candidate = min(candidate, left_min);
+                }
+                if (right_min != -1 && candidate != -1) {
+                    candidate = min(candidate, right_min);
+                }
+                break;
+            }
+            else if (recent->left->val == root->val) {
+                if (candidate > recent->right->val || candidate == -1) {
+                    candidate = recent->right->val;
+                }
+                recent = recent->left;
+            }
+            else if (recent->right->val == root->val) {
+                if (candidate > recent->left->val || candidate == -1) {
+                    candidate = recent->left->val;
+                }
+                recent = recent->right;
             }
         }
-        return true;
+        return candidate;
     }
 };
 
 int main()
 {
     Solution s;
-    vector<vector<int>> coordinates = {{1, 1}, {2, 2}, {3, 4}, {4, 5}, {5, 6}, {7, 7}};
-    cout << s.checkStraightLine(coordinates) << endl;
-    vector<vector<int>> coordinates1 = { {0, 0}, {0, 1}, {0, -1}};
-    cout << s.checkStraightLine(coordinates1) << endl;
-    vector<vector<int>> coordinates2 = { {1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {7, 8} };
-    cout << s.checkStraightLine(coordinates2) << endl;
-    vector<vector<int>> coordinates3 = {{-17, 12}, {6, 4}, {-10, -12}, {-12, 12}, {5, 5}, {14, -14}, {-8, 5}, {-15, -12}, {-5, -15}, {-3, 13}, {7, 11}, {15, 14}, {4, 2}, {-6, 13}, {-4, 12}, {-3, 5}, {-7, -9}};
-    cout << s.checkStraightLine(coordinates3) << endl;
+    TreeNode* head = new TreeNode(1, new TreeNode(1, new TreeNode(1), new TreeNode(2)), new TreeNode(1, new TreeNode(1), new TreeNode(7)));
+    cout << s.findSecondMinimumValue(head) << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
