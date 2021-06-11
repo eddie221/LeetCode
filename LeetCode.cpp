@@ -5,64 +5,38 @@
 
 using namespace std;
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
 class Solution {
 public:
-    int findSecondMinimumValue(TreeNode* root) {
-        TreeNode* recent = root;
-        if (root == nullptr || root->left == nullptr) {
-            return -1;
+    bool containsPattern(vector<int>& arr, int m, int k) {
+        if (arr.size() < m * k) {
+            return false;
         }
-        int candidate = -1;
-        while (recent->left != nullptr) {
-            if (root->val == recent->left->val && root->val == recent->right->val) {
-                int left_min = findSecondMinimumValue(recent->left), right_min = findSecondMinimumValue(recent->right);
-                cout << "left_min : " << left_min << endl;
-                cout << "right_min : " << right_min << endl;
-                if (candidate == -1 && left_min != -1) {
-                    candidate = left_min;
+        for (int i = 0; i < arr.size() - m * k + 1; i++) {
+            int times = 0;
+            bool get_ans = true;
+            for (int j = 0; j < k; j++) {
+                for (int y = 0; y < m; y++) {
+                    cout << "i : " << i << " i + y : " << i + y << " j * m + y : " << j * m + y << endl;
+                    if (arr[i + y] != arr[j * m + y + i]) {
+                        cout << "false" << endl;
+                        get_ans = false;
+                        break;
+                    }
                 }
-                if (candidate == -1 && right_min != -1) {
-                    candidate = right_min;
-                }
-                if (left_min != -1 && candidate != -1) {
-                    candidate = min(candidate, left_min);
-                }
-                if (right_min != -1 && candidate != -1) {
-                    candidate = min(candidate, right_min);
-                }
-                break;
             }
-            else if (recent->left->val == root->val) {
-                if (candidate > recent->right->val || candidate == -1) {
-                    candidate = recent->right->val;
-                }
-                recent = recent->left;
-            }
-            else if (recent->right->val == root->val) {
-                if (candidate > recent->left->val || candidate == -1) {
-                    candidate = recent->left->val;
-                }
-                recent = recent->right;
+            if (get_ans) {
+                return true;
             }
         }
-        return candidate;
+        return false;
     }
 };
 
 int main()
 {
     Solution s;
-    TreeNode* head = new TreeNode(1, new TreeNode(1, new TreeNode(1), new TreeNode(2)), new TreeNode(1, new TreeNode(1), new TreeNode(7)));
-    cout << s.findSecondMinimumValue(head) << endl;
+    vector<int> arr = { 1, 3, 3, 4, 4, 4 };
+    cout << s.containsPattern(arr, 1, 3) << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
