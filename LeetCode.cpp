@@ -7,19 +7,47 @@ using namespace std;
 
 class Solution {
 public:
-    int dominantIndex(vector<int>& nums) {
-        int max_idx = 0;
-        for (int i = 1; i < nums.size(); i++) {
-            if (nums[max_idx] < nums[i]) {
-                max_idx = i;
+    string reorderSpaces(string text) {
+        int count = 0;
+        vector<string> str_list;
+        string tmp = "";
+        for (int i = 0; i < text.length(); i++) {
+            if (text[i] == ' ') {
+                count++;
+                if (tmp != "") {
+                    str_list.push_back(tmp);
+                }
+                tmp = "";
+            }
+            else {
+                tmp = tmp + text[i];
             }
         }
-        for (int i = 0; i < nums.size(); i++) {
-            if (nums[i] * 2 > nums[max_idx] && max_idx != i) {
-                return -1;
+        if (tmp != "") {
+            str_list.push_back(tmp);
+        }
+        int space, left;
+        if (str_list.size() != 1) {
+            space = count / (str_list.size() - 1);
+            left = count % (str_list.size() - 1);
+        }
+        else {
+            space = 0;
+            left = count;
+        }
+        string result = "";
+        for (int i = 0; i < str_list.size() - 1; i++) {
+            result = result + str_list[i];
+            cout << str_list[i] << endl;
+            for (int j = 0; j < space; j++) {
+                result = result + ' ';
             }
         }
-        return max_idx;
+        result = result + str_list.back();
+        for (int i = 0; i < left; i++) {
+            result = result + ' ';
+        }
+        return result;
     }
 };
 
@@ -27,7 +55,11 @@ int main()
 {
     Solution s;
     vector<int> nums = { 3,6,1,0 };
-    cout << s.dominantIndex(nums) << endl;
+    cout << s.reorderSpaces("  this   is  a sentence ") << endl;
+    cout << s.reorderSpaces(" practice   makes   perfect") << endl;
+    cout << s.reorderSpaces("hello   world") << endl;
+    cout << s.reorderSpaces("  walks  udp package   into  bar a") << endl;
+    cout << s.reorderSpaces("a") << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
