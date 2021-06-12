@@ -7,51 +7,35 @@ using namespace std;
 
 class Solution {
 public:
-    string licenseKeyFormatting(string s, int k) {
-        reverse(s.begin(), s.end());
-        for (int i = 0, count = 0; i < s.length(); i++) {
-            if (s[i] == '-' && count < k) {
-                s.erase(s.begin() + i);
-                i--;
-            }
-            else if(s[i] >= 'a' && s[i] <= 'z'){
-                count++;
-                s[i] = s[i] - ('a' - 'A');
-                if (count == k && i != s.length() - 1) {
-                    s.insert(s.begin() + i + 1, '-');
-                    i++;
-                    count = 0;
+    bool repeatedSubstringPattern(string s) {
+
+        for (int i = 1; i < s.length() / 2 + 1; i++) {
+            bool repeat = true;
+            if (s[0] == s[i] && s.length() % i == 0) {
+                //cout << start << " : " << i << endl;
+                for (int j = 0; j < s.length() - i; j++) {
+                    if (s[j] != s[j + i]) {
+                        repeat = false;
+                        break;
+                    }
                 }
-            }
-            else if (s[i] >= 'A' && s[i] <= 'Z') {
-                count++;
-                if (count == k && i != s.length() - 1) {
-                    s.insert(s.begin() + i + 1, '-');
-                    i++;
-                    count = 0;
-                }
-            }
-            else if (isdigit(s[i])) {
-                count++;
-                if (count == k && i != s.length() - 1) {
-                    s.insert(s.begin() + i + 1, '-');
-                    i++;
-                    count = 0;
+                if (repeat) {
+                    return true;
                 }
             }
         }
-        while (s != "" && s[s.length() - 1] == '-') {
-            s.erase(s.end() - 1);
-        }
-        reverse(s.begin(), s.end());
-        return s;
+        return false;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.licenseKeyFormatting("---", 3) << endl;
+    cout << s.repeatedSubstringPattern("ababba") << endl;
+    cout << s.repeatedSubstringPattern("abcabc") << endl;
+    cout << s.repeatedSubstringPattern("abcabcabc") << endl;
+    cout << s.repeatedSubstringPattern("abab") << endl;
+    cout << s.repeatedSubstringPattern("aabaaba") << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
