@@ -7,35 +7,27 @@ using namespace std;
 
 class Solution {
 public:
-    bool repeatedSubstringPattern(string s) {
-
-        for (int i = 1; i < s.length() / 2 + 1; i++) {
-            bool repeat = true;
-            if (s[0] == s[i] && s.length() % i == 0) {
-                //cout << start << " : " << i << endl;
-                for (int j = 0; j < s.length() - i; j++) {
-                    if (s[j] != s[j + i]) {
-                        repeat = false;
-                        break;
-                    }
-                }
-                if (repeat) {
-                    return true;
-                }
+    int dominantIndex(vector<int>& nums) {
+        int max_idx = 0;
+        for (int i = 1; i < nums.size(); i++) {
+            if (nums[max_idx] < nums[i]) {
+                max_idx = i;
             }
         }
-        return false;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] * 2 > nums[max_idx] && max_idx != i) {
+                return -1;
+            }
+        }
+        return max_idx;
     }
 };
 
 int main()
 {
     Solution s;
-    cout << s.repeatedSubstringPattern("ababba") << endl;
-    cout << s.repeatedSubstringPattern("abcabc") << endl;
-    cout << s.repeatedSubstringPattern("abcabcabc") << endl;
-    cout << s.repeatedSubstringPattern("abab") << endl;
-    cout << s.repeatedSubstringPattern("aabaaba") << endl;
+    vector<int> nums = { 3,6,1,0 };
+    cout << s.dominantIndex(nums) << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);

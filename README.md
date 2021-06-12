@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(119)](#easy)
+* [Easy(120)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -126,6 +126,7 @@ Leetcode
 117. [Second Minimum Node In a Binary Tree](https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b1e0faa78b56e1ac01991213dc72cbb0e30146bb/LeetCode.cpp "Solution Link")
 118. [Detect Pattern of Length M Repeated K or More Times](https://leetcode.com/problems/detect-pattern-of-length-m-repeated-k-or-more-times/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e678767d94f5e8eca00ca77a125a87ffabbd3931/LeetCode.cpp "Solution Link")
 119. [License Key Formatting](https://leetcode.com/problems/license-key-formatting/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/570e872bffcf9a5126be4b25cfb3fb42556b53c4/LeetCode.cpp "Solution Link")
+120. [Repeated Substring Pattern](https://leetcode.com/problems/repeated-substring-pattern/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/92064e9369c9209416385307b17cd00ed80c7368/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
