@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(125)](#easy)
+* [Easy(126)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -132,6 +132,7 @@ Leetcode
 123. [Moving Stones Until Consecutive](https://leetcode.com/problems/moving-stones-until-consecutive/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/18628830d412116beee14ab38a0b4780c8e2aa7f/LeetCode.cpp "Solution Link")
 124. [Power of Two](https://leetcode.com/problems/power-of-two/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/2e088da2702bcf22d85034299f0828132edad31d/LeetCode.cpp "Solution Link")
 125. [Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d313b5efca73db8dda855e5af5f1c703382352ba/LeetCode.cpp "Solution Link")
+126. [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/c146a08444e85dfeee168cce37cab2bdefb07432/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
