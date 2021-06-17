@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(127)](#easy)
+* [Easy(128)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -134,6 +134,7 @@ Leetcode
 125. [Find Mode in Binary Search Tree](https://leetcode.com/problems/find-mode-in-binary-search-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d313b5efca73db8dda855e5af5f1c703382352ba/LeetCode.cpp "Solution Link")
 126. [Check if Array Is Sorted and Rotated](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/c146a08444e85dfeee168cce37cab2bdefb07432/LeetCode.cpp "Solution Link")
 127. [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b164e444f98a9569eae76a0cec4737a005d60bd3/LeetCode.cpp "Solution Link")
+128. [Add Strings](https://leetcode.com/problems/add-strings/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d8db36f9b63f78542a037e62801141491a7ba2b1/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
