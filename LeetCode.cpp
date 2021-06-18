@@ -3,35 +3,42 @@
 
 using namespace std;
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
-    string toHex(int num) {
-        string result = "";
-        bitset<32> num_bit(num);
-        while (num_bit.any()) {
-            bitset<32> mask("1111");
-            cout << (num_bit & mask).to_ulong() << endl;
-            if ((num_bit & mask).to_ulong() <= 9) {
-                result = (char)((num_bit & mask).to_ulong() + '0') + result;
-            }
-            else {
-                result = (char)((num_bit & mask).to_ulong() - 10 + 'a') + result;
-            }
-            num_bit = num_bit >> 4;
+    int ans = 1;
+    int dfs(TreeNode* head) {  
+        if (head == nullptr) {
+            return 0;
         }
-        if (result == "") {
-            return "0";
+        int left_h = dfs(head->left);
+        int right_h = dfs(head->right);
+        if (abs(left_h - right_h) > 1) {
+            ans = 0;
+            return 0;
         }
-        return result;
+        return max(left_h, right_h) + 1;
+    }
+
+    bool isBalanced(TreeNode* root) {
+        dfs(root);
+        return ans;
     }
 };
 
 int main()
 {
     Solution s;
-    /*TreeNode* root = new TreeNode(3, new TreeNode(4, new TreeNode(1), new TreeNode(2)), new TreeNode(5));
-    TreeNode* subtree = new TreeNode(4, new TreeNode(1), new TreeNode(2));*/
-    cout << s.toHex(-1) << endl;
+    TreeNode* head = new TreeNode(1, new TreeNode(2, new TreeNode(3, new TreeNode(4), new TreeNode(4)), new TreeNode(3)), new TreeNode(2));
+    cout << s.isBalanced(head) << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
