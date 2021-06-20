@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(129)](#easy)
+* [Easy(130)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -136,6 +136,7 @@ Leetcode
 127. [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b164e444f98a9569eae76a0cec4737a005d60bd3/LeetCode.cpp "Solution Link")
 128. [Add Strings](https://leetcode.com/problems/add-strings/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d8db36f9b63f78542a037e62801141491a7ba2b1/LeetCode.cpp "Solution Link")
 129. [Convert a Number to Hexadecimal](https://leetcode.com/problems/convert-a-number-to-hexadecimal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6da189c6c475c4623b4e633dd1a229275984a914/LeetCode.cpp "Solution Link")
+130. [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/793e324ec6385aafd2e941cf89649936eb2e1c61/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
