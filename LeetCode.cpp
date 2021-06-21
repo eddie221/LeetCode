@@ -5,38 +5,50 @@
 
 using namespace std;
 
+int guess(int num) {
+    if (num > 6) {
+        return -1;
+    }
+    else if (num < 6) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
 class Solution {
 public:
-    string mostCommonWord(string paragraph, vector<string>& banned) {
-        string tmp = "";
-        int max = 0;
-        map<string, int> count;
-        for (int i = 0; i < paragraph.length(); i++) {
-            while (paragraph[i] == ' ' || paragraph[i] == ',' || paragraph[i] == '?' || paragraph[i] == '!' || paragraph[i] == '.' || paragraph[i] == ';' || paragraph[i] == '\'') {
-                if (find(banned.begin(), banned.end(), tmp) == banned.end() && tmp != "") {
-                    count[tmp] += 1;
-                }
-                tmp = "";
-                i++;
-            }
-            tmp += paragraph[i] | 32;
+    int guessNumber(int n) {
+        long int left = 1, right = n, middle = (1 + n) / 2;
+        if (guess(left) == 0) {
+            return left;
         }
-        for(map<string, int>::iterator iter = count.begin(); iter != count.end(); iter++){
-            if (max < iter->second) {
-                max = iter->second;
-                tmp = iter->first;
-            }
+        else if (guess(right) == 0) {
+            return right;
         }
-        return tmp;
+
+        while (guess(middle) != 0) {
+            switch (guess(middle)) {
+            case -1:
+                right = middle;
+                break;
+            case 1:
+                left = middle;
+                break;
+            case 0:
+                return middle;
+            }
+            middle = (left + right) / 2;
+        }
+        return middle;
     }
 };
 
 int main()
 {
     Solution s;
-    string paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
-    vector<string> banned = {""};
-    cout << s.mostCommonWord("a", banned) << endl;
+    cout << s.guessNumber(10) << endl;
     /* vector<bool> result;
      vector<int> nums = { 8,1,2,2,3 };
      result = s.intToRoman(nums);
