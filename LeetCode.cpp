@@ -1,58 +1,35 @@
 #include <iostream>
-#include <bitset>
 #include <vector>
-#include <map>
 
 using namespace std;
 
-int guess(int num) {
-    if (num > 6) {
-        return -1;
-    }
-    else if (num < 6) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-}
-
 class Solution {
 public:
-    int guessNumber(int n) {
-        long int left = 1, right = n, middle = (1 + n) / 2;
-        if (guess(left) == 0) {
-            return left;
-        }
-        else if (guess(right) == 0) {
-            return right;
-        }
-
-        while (guess(middle) != 0) {
-            switch (guess(middle)) {
-            case -1:
-                right = middle;
-                break;
-            case 1:
-                left = middle;
-                break;
-            case 0:
-                return middle;
+    int longestOnes(vector<int>& nums, int k) {
+        int result = 0;
+        for (int start = 0, end = 0, flip = 0; end < nums.size(); end++) {
+            if(!nums[end]){
+                flip++;
             }
-            middle = (left + right) / 2;
+
+            while (flip > k) {
+                if (!nums[start]) {
+                    flip--;
+                }
+                start++;
+            }
+            result = max(result, end - start + 1);
         }
-        return middle;
+        return result;
     }
 };
 
-int main()
-{
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    cout << s.guessNumber(10) << endl;
-    /* vector<bool> result;
-     vector<int> nums = { 8,1,2,2,3 };
-     result = s.intToRoman(nums);
-     for (double r : result) {
-         cout << r << endl;
-     }*/
+    vector<int> nums = { 0, 0, 0 ,1 };
+    cout << s.longestOnes(nums, 4) << endl;
+
+    return 0;
 }

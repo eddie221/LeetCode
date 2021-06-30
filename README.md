@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(131)](#easy)
+* [Easy(132)](#easy)
 * [Median(14)](#median)
 * [Hard(1)](#hard)
 
@@ -138,6 +138,7 @@ Leetcode
 129. [Convert a Number to Hexadecimal](https://leetcode.com/problems/convert-a-number-to-hexadecimal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6da189c6c475c4623b4e633dd1a229275984a914/LeetCode.cpp "Solution Link")
 130. [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/793e324ec6385aafd2e941cf89649936eb2e1c61/LeetCode.cpp "Solution Link")
 131. [Most Common Word](https://leetcode.com/problems/most-common-word/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/ba3bea13dee274cbe7d47f85ffe124e8509e9243/LeetCode.cpp "Solution Link")
+132. [Guess Number Higher or Lower](https://github.com/eddie221/LeetCode "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9aecd866eb6db21d4c77c943845c94eb68a0c1e0/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
