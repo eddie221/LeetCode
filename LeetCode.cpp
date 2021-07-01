@@ -5,22 +5,25 @@ using namespace std;
 
 class Solution {
 public:
-    int longestOnes(vector<int>& nums, int k) {
-        int result = 0;
-        for (int start = 0, end = 0, flip = 0; end < nums.size(); end++) {
-            if(!nums[end]){
-                flip++;
-            }
+    bool canBeIncreasing(vector<int>& nums) {
+        bool eliminate = false;
+        int previous = nums[0];
 
-            while (flip > k) {
-                if (!nums[start]) {
-                    flip--;
+        for (int i = 1; i < nums.size(); i++) {
+            if (previous >= nums[i]) {
+                if (eliminate) {
+                    return false;
                 }
-                start++;
+                eliminate = true;
+                if (i == 1 || nums[i - 2] < nums[i]) {
+                    previous = nums[i];
+                }
             }
-            result = max(result, end - start + 1);
+            else {
+                previous = nums[i];
+            }
         }
-        return result;
+        return true;
     }
 };
 
@@ -28,8 +31,10 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> nums = { 0, 0, 0 ,1 };
-    cout << s.longestOnes(nums, 4) << endl;
+    //vector<int> nums = { 105,924,32,968};
+    vector<int> nums = { 2, 3, 1, 2 };
+    cout << s.canBeIncreasing(nums);
+
 
     return 0;
 }

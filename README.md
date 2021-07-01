@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(132)](#easy)
-* [Median(14)](#median)
+* [Median(15)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -156,6 +156,7 @@ Leetcode
 12. [3Sum](https://leetcode.com/problems/3sum/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/aa91cc3b0afff7560e38a7491448fc95bb67ae20/LeetCode.cpp "Solution Link")
 13. [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/f16884db6989c25b4b454fac25abbf2b5c5bd96f/LeetCode.cpp "Solution Link")
 14. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/3bf5385ae9019f2359d8f5455a17b6d9591011bc/LeetCode.cpp "Solution Link")
+15. [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cdf0a07e7260db7537c230991d3bef83fbbc5746/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------
