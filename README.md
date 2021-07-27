@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(132)](#easy)
+* [Easy(134)](#easy)
 * [Median(15)](#median)
 * [Hard(1)](#hard)
 
@@ -140,6 +140,7 @@ Leetcode
 131. [Most Common Word](https://leetcode.com/problems/most-common-word/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/ba3bea13dee274cbe7d47f85ffe124e8509e9243/LeetCode.cpp "Solution Link")
 132. [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9aecd866eb6db21d4c77c943845c94eb68a0c1e0/LeetCode.cpp "Solution Link")
 133. [Remove One Element to Make the Array Strictly Increasing](https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/f8cc689e9745ab43a73614a4bb8a0a326ba8ac58/LeetCode.cpp "Solution Link")
+134. [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/aa1ff0f65211b6cf5842fb154adc4f6b301bac13/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
