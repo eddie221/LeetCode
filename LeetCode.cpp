@@ -1,29 +1,34 @@
 #include <iostream>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
-    vector<int> getRow(int rowIndex) {
-        vector<int> result, tmp = { 1, 1 };
-        if (rowIndex == 0) {
-            return { 1 };
+    void travel(TreeNode* root, vector<int>& result) {
+        if (root != nullptr) {
+            result.push_back(root->val);
+            travel(root->left, result);
+            travel(root->right, result);
         }
-        else if (rowIndex == 1) {
-            return { 1, 1 };
+    }
+ 
+    vector<int> preorderTraversal(TreeNode* root) {
+        vector<int> result;
+        if (root == nullptr) {
+            return {};
         }
-        else {
-            for (int i = 2; i <= rowIndex; i++) {
-                result.clear();
-                result.push_back(1);
-                for (int j = 1; j < i; j++) {
-                    result.push_back(tmp[j - 1] + tmp[j]);
-                }
-                result.push_back(1);
-                tmp = result;
-            }
-        }
+        travel(root, result);
         return result;
     }
 };
@@ -32,12 +37,10 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    //vector<int> nums = { 105,924,32,968};
-    vector<int> r = s.getRow(5);
+    TreeNode* root = new TreeNode(1, new TreeNode(5, new TreeNode(2), nullptr), new TreeNode(3));
+    vector<int> r = s.preorderTraversal(root);
     for (int i = 0; i < r.size(); i++) {
         cout << r[i] << endl;
     }
-
-
     return 0;
 }
