@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(135)](#easy)
+* [Easy(136)](#easy)
 * [Median(15)](#median)
 * [Hard(1)](#hard)
 
@@ -142,6 +142,7 @@ Leetcode
 133. [Remove One Element to Make the Array Strictly Increasing](https://leetcode.com/problems/remove-one-element-to-make-the-array-strictly-increasing/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/f8cc689e9745ab43a73614a4bb8a0a326ba8ac58/LeetCode.cpp "Solution Link")
 134. [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/aa1ff0f65211b6cf5842fb154adc4f6b301bac13/LeetCode.cpp "Solution Link")
 135. [Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5716eed62549d3025f2721daa6c5686e6dba9bcc/LeetCode.cpp "Solution Link")
+136. [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9ae3eca4d2f425d9c93093886b0417f53e9f3f3f/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

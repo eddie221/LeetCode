@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 struct TreeNode {
     int val;
     TreeNode *left;
@@ -15,32 +16,31 @@ struct TreeNode {
 
 class Solution {
 public:
-    void travel(TreeNode* root, vector<int>& result) {
-        if (root != nullptr) {
-            result.push_back(root->val);
-            travel(root->left, result);
-            travel(root->right, result);
+    bool travel(TreeNode* p, TreeNode* q) {
+        if (p == nullptr && q == nullptr) {
+            return true;
         }
+        else {
+            if (p == nullptr || q == nullptr) {
+                return false;
+            }
+            else if (p->val == q->val) {
+                return travel(p->right, q->right) && travel(p->left, q->left);
+            }
+        }
+        return false;
     }
- 
-    vector<int> preorderTraversal(TreeNode* root) {
-        vector<int> result;
-        if (root == nullptr) {
-            return {};
-        }
-        travel(root, result);
-        return result;
+
+    bool isSameTree(TreeNode* p, TreeNode* q) {
+        return travel(p, q);
     }
 };
-
 int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    TreeNode* root = new TreeNode(1, new TreeNode(5, new TreeNode(2), nullptr), new TreeNode(3));
-    vector<int> r = s.preorderTraversal(root);
-    for (int i = 0; i < r.size(); i++) {
-        cout << r[i] << endl;
-    }
+    TreeNode* root1 = new TreeNode(1, new TreeNode(5, new TreeNode(2), nullptr), new TreeNode(3));
+    TreeNode* root2 = new TreeNode(1, new TreeNode(5, new TreeNode(2), new TreeNode(3)), nullptr);
+    cout << s.isSameTree(root1, root2);
     return 0;
 }
