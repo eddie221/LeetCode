@@ -5,42 +5,33 @@
 using namespace std;
 
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
 class Solution {
 public:
-    bool travel(TreeNode* p, TreeNode* q) {
-        if (p == nullptr && q == nullptr) {
-            return true;
-        }
-        else {
-            if (p == nullptr || q == nullptr) {
-                return false;
-            }
-            else if (p->val == q->val) {
-                return travel(p->right, q->right) && travel(p->left, q->left);
-            }
-        }
-        return false;
-    }
+    vector<int> buildArray(vector<int>& nums) {
+        int replace_num = -1, replace_idx = -1;
 
-    bool isSameTree(TreeNode* p, TreeNode* q) {
-        return travel(p, q);
+        for (int i = 0; i < nums.size(); i++) {
+            cout << nums[nums[i]] * nums.size() << " : " << nums[i] << endl;
+            nums[i] += (nums[nums[i]] % nums.size()) * nums.size();
+            
+        }
+        
+        for (int i = 0; i < nums.size(); i++) {
+            nums[i] /= nums.size();
+        }
+        return nums;
     }
 };
+
+
 int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    TreeNode* root1 = new TreeNode(1, new TreeNode(5, new TreeNode(2), nullptr), new TreeNode(3));
-    TreeNode* root2 = new TreeNode(1, new TreeNode(5, new TreeNode(2), new TreeNode(3)), nullptr);
-    cout << s.isSameTree(root1, root2);
+    vector<int> nums = { 5,0,1,2,3,4 };
+    vector<int> r = s.buildArray(nums);
+    for (int i = 0; i < r.size(); i++) {
+        cout << r[i] << endl;
+    }
     return 0;
 }
