@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(138)](#easy)
+* [Easy(139)](#easy)
 * [Median(15)](#median)
 * [Hard(1)](#hard)
 
@@ -145,6 +145,7 @@ Leetcode
 136. [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/9ae3eca4d2f425d9c93093886b0417f53e9f3f3f/LeetCode.cpp "Solution Link")
 137. [Same Tree](https://leetcode.com/problems/same-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/1d2d44c7a4c817cdd47b23ef1f8ed6d2f54e8b16/LeetCode.cpp "Solution Link")
 138. [Build Array from Permutation](https://leetcode.com/problems/build-array-from-permutation/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/1329da7b38e5365fc7e79251186e56d4bd309e82/LeetCode.cpp "Solution Link")
+139. [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cea44ebe5659ba050716a4623406907f4e203ce8/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
