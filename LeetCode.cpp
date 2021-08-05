@@ -5,21 +5,32 @@
 using namespace std;
 
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
 class Solution {
 public:
-    vector<int> buildArray(vector<int>& nums) {
-        int replace_num = -1, replace_idx = -1;
-
-        for (int i = 0; i < nums.size(); i++) {
-            cout << nums[nums[i]] * nums.size() << " : " << nums[i] << endl;
-            nums[i] += (nums[nums[i]] % nums.size()) * nums.size();
-            
+    
+    vector<int> postorderTraversal(TreeNode* root) {
+        vector<int> result;
+        if (root == nullptr) {
+            return result;
         }
-        
-        for (int i = 0; i < nums.size(); i++) {
-            nums[i] /= nums.size();
+        else {
+            vector<int> tmp;
+            tmp = postorderTraversal(root->left);
+            result.insert(result.end(), tmp.begin(), tmp.end());
+            tmp = postorderTraversal(root->right);
+            result.insert(result.end(), tmp.begin(), tmp.end());
+            result.push_back(root->val);
         }
-        return nums;
+        return result;
     }
 };
 
@@ -28,8 +39,8 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> nums = { 5,0,1,2,3,4 };
-    vector<int> r = s.buildArray(nums);
+    TreeNode* root = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+    vector<int> r = s.postorderTraversal(root);
     for (int i = 0; i < r.size(); i++) {
         cout << r[i] << endl;
     }
