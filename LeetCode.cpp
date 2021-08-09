@@ -7,18 +7,12 @@ using namespace std;
 
 class Solution {
 public:
-    int numberOfSteps(int num) {
-        int step = 0;
-        while (num != 0) {
-            if (num % 2 == 0) {
-                num = num / 2;
-            }
-            else {
-                num = num - 1;
-            }
-            step++;
+    vector<int> decode(vector<int>& encoded, int first) {
+        vector<int> result = { first };
+        for (int i = 0; i < encoded.size(); i++) {
+            result.push_back(result[i] ^ encoded[i]);
         }
-        return step;
+        return result;
     }
 };
 
@@ -27,6 +21,10 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    cout << s.numberOfSteps(123);
+    vector<int> encoded = { 1,2,3 };
+    vector<int> r = s.decode(encoded, 1);
+    for (int i = 0; i < r.size(); i++) {
+        cout << r[i] << endl;
+    }
     return 0;
 }
