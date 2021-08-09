@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(141)](#easy)
+* [Easy(142)](#easy)
 * [Median(15)](#median)
 * [Hard(1)](#hard)
 
@@ -148,6 +148,7 @@ Leetcode
 139. [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cea44ebe5659ba050716a4623406907f4e203ce8/LeetCode.cpp "Solution Link")
 140. [Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/53f668afd7bad9431370af7db5257732375248b2/LeetCode.cpp "Solution Link")
 141. [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0237f7e12ff874643d4d55c2967fed6b497fb30b/LeetCode.cpp "Solution Link")
+142. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7082849a591695054de0bb1dda0f199ec9af5df3/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
