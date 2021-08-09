@@ -1,18 +1,18 @@
 #include <iostream>
 #include <vector>
-#include <stack>
+#include <map>
 
 using namespace std;
 
 
 class Solution {
 public:
-    vector<int> getConcatenation(vector<int>& nums) {
-        int n = nums.size();
-        for (int i = 0; i < n; i++) {
-            nums.push_back(nums[i]);
+    string restoreString(string s, vector<int>& indices) {
+        string result = s;
+        for (int i = 0; i < s.length(); i++) {
+            result[indices[i]] = s[i];
         }
-        return nums;
+        return result;
     }
 };
 
@@ -21,10 +21,9 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> nums = { 1, 2, 3, 1 };
-    vector<int> r = s.getConcatenation(nums);
-    for (int i = 0; i < r.size(); i++) {
-        cout << r[i] << endl;
-    }
+    vector<int> nums = { 3,1,4,2,0 };
+    string in_s = "aiohn";
+    string r = s.restoreString(in_s, nums);
+    cout << r << endl;
     return 0;
 }
