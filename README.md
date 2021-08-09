@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(146)](#easy)
+* [Easy(149)](#easy)
 * [Median(15)](#median)
 * [Hard(1)](#hard)
 
@@ -155,6 +155,7 @@ Leetcode
 146. [Decode XORed Array](https://leetcode.com/problems/decode-xored-array/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5cefd660fb14fa3c7628b77b67753d938ba0f596/LeetCode.cpp "Solution Link")
 147. [Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/c91c7d55cfb7585a1f48b78ddeb0d99daf9ebef2/LeetCode.cpp "Solution Link")
 148. [Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/03d1771d12dd38039b917dd7a41e645071e12f15/LeetCode.cpp "Solution Link")
+149. [Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/feb6ae19a14919d691c94f4a56a1bedf00ec0b3c/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

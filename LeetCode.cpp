@@ -4,18 +4,28 @@
 
 using namespace std;
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
+};
 
 class Solution {
 public:
-    int findCenter(vector<vector<int>>& edges) {
-        int center_node = 0;
-        if (edges[0][0] == edges[1][0] || edges[0][0] == edges[1][1]) {
-            center_node = edges[0][0];
+    
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (root == nullptr) {
+            return nullptr;
         }
-        else if (edges[0][1] == edges[1][0] || edges[0][1] == edges[1][1]) {
-            center_node = edges[0][1];
+        else if (root->val < q->val && root->val < p->val) {
+            return lowestCommonAncestor(root->right, p, q);
         }
-        return center_node;
+        else if (root->val > q->val && root->val > p->val) {
+            return lowestCommonAncestor(root->left, p, q);
+        }
+        return root;
     }
 };
 
@@ -24,7 +34,15 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<vector<int>> edges = { {1,2} ,{5,1},{1,3},{1,4} };
-    cout << s.findCenter(edges);
+    TreeNode* root = new TreeNode(6,
+        new TreeNode(2,
+            new TreeNode(0),
+            new TreeNode(4,
+                new TreeNode(3),
+                new TreeNode(5))),
+        new TreeNode(8,
+            new TreeNode(7),
+            new TreeNode(9)));
+    cout << s.lowestCommonAncestor(root, new TreeNode(2), new TreeNode(8))->val;
     return 0;
 }
