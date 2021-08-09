@@ -150,6 +150,7 @@ Leetcode
 141. [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0237f7e12ff874643d4d55c2967fed6b497fb30b/LeetCode.cpp "Solution Link")
 142. [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7082849a591695054de0bb1dda0f199ec9af5df3/LeetCode.cpp "Solution Link")
 143. [Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6f3622441ef5d0df735e8fc24a9cb7099c27d6e9/LeetCode.cpp "Solution Link")
+144. [Shuffle String](https://leetcode.com/problems/shuffle-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7c1f1734e5590b17251497e610408ef453a2f97a/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

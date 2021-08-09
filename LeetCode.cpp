@@ -7,12 +7,18 @@ using namespace std;
 
 class Solution {
 public:
-    string restoreString(string s, vector<int>& indices) {
-        string result = s;
-        for (int i = 0; i < s.length(); i++) {
-            result[indices[i]] = s[i];
+    int numberOfSteps(int num) {
+        int step = 0;
+        while (num != 0) {
+            if (num % 2 == 0) {
+                num = num / 2;
+            }
+            else {
+                num = num - 1;
+            }
+            step++;
         }
-        return result;
+        return step;
     }
 };
 
@@ -21,9 +27,6 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> nums = { 3,1,4,2,0 };
-    string in_s = "aiohn";
-    string r = s.restoreString(in_s, nums);
-    cout << r << endl;
+    cout << s.numberOfSteps(123);
     return 0;
 }
