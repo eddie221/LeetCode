@@ -7,21 +7,20 @@ using namespace std;
 
 class Solution {
 public:
-    string interpret(string command) {
-        string result = "";
-        for (int i = 0; i < command.length(); i++) {
-            if(command[i] == '(' && command[i + 1] == ')'){
-                result = result + 'o';
+    int balancedStringSplit(string s) {
+        int balanced = 0, count = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] == 'R') {
+                count--;
             }
-            else if (command[i] == '(' && command[i + 1] == 'a') {
-                result = result + "al";
-                i += 3;
+            else {
+                count++;
             }
-            else if (command[i] == 'G') {
-                result = result + "G";
+            if (count == 0) {
+                balanced++;
             }
         }
-        return result;
+        return balanced;
     }
 };
 
@@ -30,6 +29,6 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    cout << s.interpret("G()()()()(al)");
+    cout << s.balancedStringSplit("RLLLLRRRLR");
     return 0;
 }

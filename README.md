@@ -153,6 +153,7 @@ Leetcode
 144. [Shuffle String](https://leetcode.com/problems/shuffle-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7c1f1734e5590b17251497e610408ef453a2f97a/LeetCode.cpp "Solution Link")
 145. [Number of Steps to Reduce a Number to Zero](https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b409a0125bb5f75a687d844e9147cdc8f06575eb/LeetCode.cpp "Solution Link")
 146. [Decode XORed Array](https://leetcode.com/problems/decode-xored-array/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5cefd660fb14fa3c7628b77b67753d938ba0f596/LeetCode.cpp "Solution Link")
+147. [Goal Parser Interpretation](https://leetcode.com/problems/goal-parser-interpretation/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/c91c7d55cfb7585a1f48b78ddeb0d99daf9ebef2/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
