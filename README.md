@@ -157,6 +157,7 @@ Leetcode
 148. [Split a String in Balanced Strings](https://leetcode.com/problems/split-a-string-in-balanced-strings/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/03d1771d12dd38039b917dd7a41e645071e12f15/LeetCode.cpp "Solution Link")
 149. [Find Center of Star Graph](https://leetcode.com/problems/find-center-of-star-graph/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/feb6ae19a14919d691c94f4a56a1bedf00ec0b3c/LeetCode.cpp "Solution Link")
 150. [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d0615892e3dd88da7bbef7794a3c71b845832954/LeetCode.cpp "Solution Link")
+151. [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e29893f92387235e80f7dd24b5ad594ac2c2922f/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

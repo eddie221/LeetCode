@@ -1,21 +1,27 @@
 #include <iostream>
 #include <vector>
-#include <map>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
 public:
-
-    int minMoves(vector<int>& nums) {
-        int sum = 0, min = nums[0], n = nums.size();
-        for (int i = 0; i < n; i++) {
-            if (min > nums[i]) {
-                min = nums[i];
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        vector<string> index;
+        vector<vector<string>> result;
+        for (int i = 0; i < strs.size(); i++) {
+            string str_idx = strs[i];
+            sort(str_idx.begin(), str_idx.end());
+            if (find(index.begin(), index.end(), str_idx) == index.end()) {
+                index.push_back(str_idx);
+                result.push_back({ strs[i] });
             }
-            sum += nums[i];
+            else {
+                int idx = int(find(index.begin(), index.end(), str_idx) - index.begin());
+                result[idx].push_back(strs[i]);
+            }
         }
-        return sum - min * n;
+        return result;
     }
 };
 
@@ -24,7 +30,13 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> nums = { 1, 2, 100 };
-    cout << s.minMoves(nums);
+    vector<string> nums = { "eat","tea","tan","ate","nat","bat" };
+    vector<vector<string>> r = s.groupAnagrams(nums);
+    for (int i = 0; i < r.size(); i++) {
+        for (int j = 0; j < r[i].size(); j++) {
+            cout << r[i][j] << " ";
+        }
+        cout << endl;
+    }
     return 0;
 }
