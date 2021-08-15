@@ -6,41 +6,20 @@
 using namespace std;
 
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
 class Solution {
 public:
-
-    vector<string> binaryTreePaths(TreeNode* root) {
-        if (root == nullptr) {
-            return { "" };
-        }
-        vector<string> r, tmp;
-        cout << root->val << " ";
-        if (root->left == nullptr && root->right == nullptr) {
-            return { to_string(root->val) };
-        }
-
-        tmp = binaryTreePaths(root->left);
-        for (int i = 0; i < tmp.size(); i++) {
-            if (tmp[i] != "") {
-                r.push_back(to_string(root->val) + "->" + tmp[i]);
+    int addDigits(int num) {
+        
+        while (num / 10 != 0) {
+            int tmp = num, sum = 0;
+            while (tmp / 10 != 0) {
+                sum += tmp % 10;
+                tmp = tmp / 10;
             }
+            sum = tmp + sum;
+            num = sum;
         }
-        tmp = binaryTreePaths(root->right);
-        for (int i = 0; i < tmp.size(); i++) {
-            if (tmp[i] != "") {
-                r.push_back(to_string(root->val) + "->" + tmp[i]);
-            }
-        }
-        return r;
+        return num;
     }
 };
 
@@ -48,10 +27,6 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    TreeNode* root = new TreeNode(1, new TreeNode(2, new TreeNode(5), nullptr), new TreeNode(3));
-    vector<string> r = s.binaryTreePaths(root);
-    for (int i = 0; i < r.size(); i++) {
-        cout << r[i] << endl;
-    }
+    cout << s.addDigits(38) << endl;;
     return 0;
 }
