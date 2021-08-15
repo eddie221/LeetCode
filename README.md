@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(152)](#easy)
+* [Easy(153)](#easy)
 * [Median(17)](#median)
 * [Hard(1)](#hard)
 
@@ -159,6 +159,7 @@ Leetcode
 150. [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/d0615892e3dd88da7bbef7794a3c71b845832954/LeetCode.cpp "Solution Link")
 151. [Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e29893f92387235e80f7dd24b5ad594ac2c2922f/LeetCode.cpp "Solution Link")
 152. [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/51c46ed3d258e7d557b140e1762626046e66ed80/LeetCode.cpp "Solution Link")
+153. [Add Digits](https://leetcode.com/problems/add-digits/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/556dd4024d8006e1fcb307ad5d796864f058a7a2/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
