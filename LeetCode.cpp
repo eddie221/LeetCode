@@ -1,41 +1,37 @@
 #include <iostream>
-#include <vector>
-#include <string>
+#include <stack>
 
 using namespace std;
 
-class NumArray {
+class Solution {
 public:
-    vector<int> cumulate;
-    NumArray(vector<int>& nums) {
-        int last = 0;
-        for (int i = 0; i < nums.size(); i++) {
-            cumulate.push_back(nums[i] + last);
-            last = cumulate[i];
-        }
-    }
+    string reverseVowels(string s) {
+        int left = 0, right = s.length() - 1;
+        while (left < right) {
+            while ((left < right) && s[left] != 'a' && s[left] != 'e' && s[left] != 'i' && s[left] != 'o' && s[left] != 'u' && s[left] != 'A' && s[left] != 'E' && s[left] != 'I' && s[left] != 'O' && s[left] != 'U') {
+                left++;
+            }
 
-    int sumRange(int left, int right) {
-        if (left == 0) {
-            return cumulate[right];
+            while ((left < right) && s[right] != 'a' && s[right] != 'e' && s[right] != 'i' && s[right] != 'o' && s[right] != 'u' && s[right] != 'A' && s[right] != 'E' && s[right] != 'I' && s[right] != 'O' && s[right] != 'U') {
+                right--;
+            }
+            if (left < right) {
+                s[left] ^= s[right];
+                s[right] ^= s[left];
+                s[left] ^= s[right];
+            }
+            
+            left++;
+            right--;
         }
-        return cumulate[right] - cumulate[left - 1];
+        return s;
     }
 };
-
-/**
- * Your NumArray object will be instantiated and called as such:
- * NumArray* obj = new NumArray(nums);
- * int param_1 = obj->sumRange(left,right);
- */
 
 int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    vector<int> nums = { -2, 0, 3, -5, 2, -1 };
-    NumArray* obj = new NumArray(nums);
-    cout << obj->sumRange(0, 2) << endl;
-    cout << obj->sumRange(2, 5) << endl;
-    cout << obj->sumRange(0, 5) << endl;
+    Solution s;
+    cout << s.reverseVowels("aA");
     return 0;
 }
