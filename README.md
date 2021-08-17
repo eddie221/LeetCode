@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(156)](#easy)
+* [Easy(157)](#easy)
 * [Median(17)](#median)
 * [Hard(1)](#hard)
 
@@ -163,6 +163,7 @@ Leetcode
 154. [Nim Game](https://leetcode.com/problems/nim-game/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b608ecf3cb7bfcc2dd15f0337e9a14e8f7ae4a50/LeetCode.cpp "Solution Link")
 155. [Counting Bits](https://leetcode.com/problems/counting-bits/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/1b9d8d24a714245c5be10f6108842ff0d0f63bca/LeetCode.cpp "Solution Link")
 156. [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/633ce8d31295556bca88984c91958a593493f80e/LeetCode.cpp "Solution Link")
+157. [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/c6e7aca334519261ca055381ed49337aea8695f5/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

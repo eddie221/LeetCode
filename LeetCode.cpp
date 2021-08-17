@@ -1,30 +1,34 @@
 #include <iostream>
-#include <stack>
+#include <vector>
+#include <algorithm>
 
 using namespace std;
 
 class Solution {
 public:
-    string reverseVowels(string s) {
-        int left = 0, right = s.length() - 1;
-        while (left < right) {
-            while ((left < right) && s[left] != 'a' && s[left] != 'e' && s[left] != 'i' && s[left] != 'o' && s[left] != 'u' && s[left] != 'A' && s[left] != 'E' && s[left] != 'I' && s[left] != 'O' && s[left] != 'U') {
-                left++;
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        sort(nums1.begin(), nums1.end());
+        sort(nums2.begin(), nums2.end());
+        vector<int> r;
+        for (int i = 0, j = 0; i < nums1.size() && j < nums2.size();) {
+            if (nums1[i] == nums2[j]) {
+                if (r.empty()) {
+                    r.push_back(nums1[i]);
+                }
+                else if (r[r.size() - 1] != nums1[i]) {
+                    r.push_back(nums1[i]);
+                }
+                i++;
+                j++;
             }
-
-            while ((left < right) && s[right] != 'a' && s[right] != 'e' && s[right] != 'i' && s[right] != 'o' && s[right] != 'u' && s[right] != 'A' && s[right] != 'E' && s[right] != 'I' && s[right] != 'O' && s[right] != 'U') {
-                right--;
+            else if (nums1[i] > nums2[j]) {
+                j++;
             }
-            if (left < right) {
-                s[left] ^= s[right];
-                s[right] ^= s[left];
-                s[left] ^= s[right];
+            else {
+                i++;
             }
-            
-            left++;
-            right--;
         }
-        return s;
+        return r;
     }
 };
 
@@ -32,6 +36,11 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    cout << s.reverseVowels("aA");
+    vector<int> nums1 = {4, 9, 5};
+    vector<int> nums2 = { 9,4,9,8,4 };
+    vector<int> r = s.intersection(nums1, nums2);
+    for (auto x : r) {
+        cout << x << endl;
+    }
     return 0;
 }
