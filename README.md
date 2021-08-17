@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(153)](#easy)
+* [Easy(155)](#easy)
 * [Median(17)](#median)
 * [Hard(1)](#hard)
 
@@ -161,6 +161,7 @@ Leetcode
 152. [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/51c46ed3d258e7d557b140e1762626046e66ed80/LeetCode.cpp "Solution Link")
 153. [Add Digits](https://leetcode.com/problems/add-digits/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/556dd4024d8006e1fcb307ad5d796864f058a7a2/LeetCode.cpp "Solution Link")
 154. [Nim Game](https://leetcode.com/problems/nim-game/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/b608ecf3cb7bfcc2dd15f0337e9a14e8f7ae4a50/LeetCode.cpp "Solution Link")
+155. [Counting Bits](https://leetcode.com/problems/counting-bits/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/1b9d8d24a714245c5be10f6108842ff0d0f63bca/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
