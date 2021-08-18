@@ -6,29 +6,23 @@ using namespace std;
 
 class Solution {
 public:
-    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
-        sort(nums1.begin(), nums1.end());
-        sort(nums2.begin(), nums2.end());
-        vector<int> r;
-        for (int i = 0, j = 0; i < nums1.size() && j < nums2.size();) {
-            if (nums1[i] == nums2[j]) {
-                if (r.empty()) {
-                    r.push_back(nums1[i]);
-                }
-                else if (r[r.size() - 1] != nums1[i]) {
-                    r.push_back(nums1[i]);
-                }
+    bool canConstruct(string ransomNote, string magazine) {
+        sort(ransomNote.begin(), ransomNote.end());
+        sort(magazine.begin(), magazine.end());
+
+        for (int i = 0, j = 0; i < ransomNote.size() && j < magazine.size();) {
+            while (i < ransomNote.size() && j < magazine.size() && ransomNote[i] == magazine[j]) {
                 i++;
                 j++;
             }
-            else if (nums1[i] > nums2[j]) {
+            while (j < magazine.size() && magazine[j] < ransomNote[i]) {
                 j++;
             }
-            else {
-                i++;
+            if (magazine[j] != ransomNote[i] && i != ransomNote.size()) {
+                return false;
             }
         }
-        return r;
+        return true;
     }
 };
 
@@ -38,9 +32,6 @@ int main() {
     Solution s;
     vector<int> nums1 = {4, 9, 5};
     vector<int> nums2 = { 9,4,9,8,4 };
-    vector<int> r = s.intersection(nums1, nums2);
-    for (auto x : r) {
-        cout << x << endl;
-    }
+    cout << s.canConstruct("b", "a");
     return 0;
 }
