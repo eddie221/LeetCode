@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(158)](#easy)
+* [Easy(159)](#easy)
 * [Median(17)](#median)
 * [Hard(1)](#hard)
 
@@ -165,6 +165,7 @@ Leetcode
 156. [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/633ce8d31295556bca88984c91958a593493f80e/LeetCode.cpp "Solution Link")
 157. [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/c6e7aca334519261ca055381ed49337aea8695f5/LeetCode.cpp "Solution Link")
 158. [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0b74a26606111abb076ac08b7d9acb0c380b8ed4/LeetCode.cpp "Solution Link")
+159. [Ransom Note](https://leetcode.com/problems/ransom-note/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/5a1e9fd82216d9ffc5f26b6ba0f2037a2d3d3db1/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------

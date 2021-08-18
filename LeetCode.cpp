@@ -6,23 +6,15 @@ using namespace std;
 
 class Solution {
 public:
-    bool canConstruct(string ransomNote, string magazine) {
-        sort(ransomNote.begin(), ransomNote.end());
-        sort(magazine.begin(), magazine.end());
-
-        for (int i = 0, j = 0; i < ransomNote.size() && j < magazine.size();) {
-            while (i < ransomNote.size() && j < magazine.size() && ransomNote[i] == magazine[j]) {
-                i++;
-                j++;
-            }
-            while (j < magazine.size() && magazine[j] < ransomNote[i]) {
-                j++;
-            }
-            if (magazine[j] != ransomNote[i] && i != ransomNote.size()) {
-                return false;
+    char findTheDifference(string s, string t) {
+        sort(s.begin(), s.end());
+        sort(t.begin(), t.end());
+        for (int i = 0; i < s.length(); i++) {
+            if (s[i] != t[i]) {
+                return t[i];
             }
         }
-        return true;
+        return t[t.length() - 1];
     }
 };
 
@@ -30,8 +22,6 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> nums1 = {4, 9, 5};
-    vector<int> nums2 = { 9,4,9,8,4 };
-    cout << s.canConstruct("b", "a");
+    cout << s.findTheDifference("", "y");
     return 0;
 }
