@@ -6,15 +6,23 @@ using namespace std;
 
 class Solution {
 public:
-    char findTheDifference(string s, string t) {
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
-        for (int i = 0; i < s.length(); i++) {
-            if (s[i] != t[i]) {
-                return t[i];
+    bool isSubsequence(string s, string t) {
+        int i = 0;
+        for (int j = 0; i < s.length() && j < t.length();) {
+            while (i < s.length() && j < t.length() && s[i] != t[j]) {
+                j++;
+            }
+            if (s[i] == t[j]) {
+                i++;
+                j++;
             }
         }
-        return t[t.length() - 1];
+        if (i == s.length()) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 };
 
@@ -22,6 +30,7 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    cout << s.findTheDifference("", "y");
+    cout << s.isSubsequence("abc", "ahbgdc");
+    cout << s.isSubsequence("a", "c");
     return 0;
 }
