@@ -1,7 +1,7 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(164)](#easy)
+* [Easy(165)](#easy)
 * [Median(18)](#median)
 * [Hard(1)](#hard)
 
@@ -171,6 +171,7 @@ Leetcode
 163. [Longest Palindrome](https://leetcode.com/problems/longest-palindrome/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/725b400529611272a746a82329187dc0d760188f/LeetCode.cpp "Solution Link")
 164. [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0bb7e8e1f9c883262ddc783238e5737d71f05ecb/LeetCode.cpp "Solution Link")
 165. [XOR Operation in an Array](https://leetcode.com/problems/xor-operation-in-an-array/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/a184e0b13c6d626467914d77cc9195db45b50819/LeetCode.cpp "Solution Link")
+166. [Hamming Distance](https://leetcode.com/problems/hamming-distance/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/04bb4762e56b5b70fb63ba914fe9cf72c521a8e1/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
