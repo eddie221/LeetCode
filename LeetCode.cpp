@@ -1,38 +1,62 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
-class SubrectangleQueries {
+class Solution {
 public:
-    vector<vector<int>>* rectangle;
-    vector<vector<int>> changes;
-    SubrectangleQueries(vector<vector<int>>& rectangle) {
-        this->rectangle = &rectangle;
-    }
-
-    void updateSubrectangle(int row1, int col1, int row2, int col2, int newValue) {
-        changes.push_back({ row1, col1, row2, col2, newValue });
-    }
-
-    int getValue(int row, int col) {
-        for (int i = changes.size() - 1; i >= 0; i--) {
-            if (row >= changes[i][0] && row <= changes[i][2] && col >= changes[i][1] && col <= changes[i][3]) {
-                return changes[i][4];
+    void nextPermutation(vector<int>& nums) {
+        if (nums.size() == 1) {
+            return;
+        }
+        for (int i = nums.size() - 1; i > 0; i--) {
+            if (nums[i - 1] < nums[i]) {
+                int j = i;
+                while (j < nums.size() && nums[i - 1] < nums[j]) {
+                    j++;
+                }
+                cout << nums[j - 1] << endl;
+                nums[j - 1] = nums[i - 1] ^ nums[j - 1];
+                nums[i - 1] = nums[i - 1] ^ nums[j - 1];
+                nums[j - 1] = nums[i - 1] ^ nums[j - 1];
+                sort(nums.begin() + i , nums.end());
+                return;
             }
         }
-        return(*rectangle)[row][col];
+        sort(nums.begin(), nums.end());
+        
     }
 };
-
 
 int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    vector<vector<int>> rectangle = {{1, 2, 1}, { 4, 3, 4 }, { 3, 2, 1 }, { 1, 1, 1 }};
-    SubrectangleQueries* obj = new SubrectangleQueries(rectangle);
-    obj->updateSubrectangle(0, 0, 3, 2, 5);
-    int param_2 = obj->getValue(0, 2);
-    cout << param_2 << endl;
+    Solution s;
+    vector<int> nums = { 1,7,6,8,7 };
+    s.nextPermutation(nums);
+    for (auto x : nums) {
+        cout << x << " ";
+    }
+    cout << endl;
+
+    vector<int> nums1 = { 1,1, 5 };
+    s.nextPermutation(nums1);
+    for (auto x : nums1) {
+        cout << x << " ";
+    }
+    cout << endl;
+
+    vector<int> nums2 = {2, 3, 1 };
+    s.nextPermutation(nums2);
+    for (auto x : nums2) {
+        cout << x << " ";
+    }
+    cout << endl;
+    /*vector<int> nums2 = { 1,7,4,6,3 };
+    s.nextPermutation(nums2);
+    for (auto x : nums2) {
+        cout << x << " ";
+    }*/
     return 0;
 }
