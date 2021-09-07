@@ -6,26 +6,31 @@ using namespace std;
 
 class Solution {
 public:
-    void nextPermutation(vector<int>& nums) {
-        if (nums.size() == 1) {
-            return;
+    int findContentChildren(vector<int>& g, vector<int>& s) {
+        sort(g.begin(), g.end());
+        sort(s.begin(), s.end());
+        for (auto x : g) {
+            cout << x << " ";
         }
-        for (int i = nums.size() - 1; i > 0; i--) {
-            if (nums[i - 1] < nums[i]) {
-                int j = i;
-                while (j < nums.size() && nums[i - 1] < nums[j]) {
-                    j++;
-                }
-                cout << nums[j - 1] << endl;
-                nums[j - 1] = nums[i - 1] ^ nums[j - 1];
-                nums[i - 1] = nums[i - 1] ^ nums[j - 1];
-                nums[j - 1] = nums[i - 1] ^ nums[j - 1];
-                sort(nums.begin() + i , nums.end());
-                return;
+        cout << endl;
+        for (auto x : s) {
+            cout << x << " ";
+        }
+        cout << endl;
+        int count = 0;
+        for (int i = 0, j = 0; i < g.size() && j < s.size();) {
+            cout << i << " " << j << " " << count << endl;
+            while (i < g.size() && j < s.size() && g[i] <= s[j]) {
+                cout << "while 1 : " << i << " " << j << " " << count << endl;
+                count++;
+                i++;
+                j++;
+            }
+            while (i < g.size() && j < s.size() && g[i] > s[j]) {
+                j++;
             }
         }
-        sort(nums.begin(), nums.end());
-        
+        return count;
     }
 };
 
@@ -33,30 +38,9 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> nums = { 1,7,6,8,7 };
-    s.nextPermutation(nums);
-    for (auto x : nums) {
-        cout << x << " ";
-    }
-    cout << endl;
-
-    vector<int> nums1 = { 1,1, 5 };
-    s.nextPermutation(nums1);
-    for (auto x : nums1) {
-        cout << x << " ";
-    }
-    cout << endl;
-
-    vector<int> nums2 = {2, 3, 1 };
-    s.nextPermutation(nums2);
-    for (auto x : nums2) {
-        cout << x << " ";
-    }
-    cout << endl;
-    /*vector<int> nums2 = { 1,7,4,6,3 };
-    s.nextPermutation(nums2);
-    for (auto x : nums2) {
-        cout << x << " ";
-    }*/
+    vector<int> g = {10, 9, 8, 7 };
+    vector<int> ss = { 5, 6, 7, 8};
+    cout << s.findContentChildren(g, ss);
+    
     return 0;
 }

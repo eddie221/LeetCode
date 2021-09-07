@@ -1,8 +1,8 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(168)](#easy)
-* [Median(18)](#median)
+* [Easy(167)](#easy)
+* [Median(20)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -174,7 +174,6 @@ Leetcode
 166. [Hamming Distance](https://leetcode.com/problems/hamming-distance/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/04bb4762e56b5b70fb63ba914fe9cf72c521a8e1/LeetCode.cpp "Solution Link")
 167. [To Lower Case](https://leetcode.com/problems/to-lower-case/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/e8a4b56acedd55499e3be577a340fc2f85b3d9eb/LeetCode.cpp "Solution Link")
 168. [Number Complement](https://leetcode.com/problems/number-complement/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6ffbcfb5bd7defdcf531fc047cd3aa1cb664a776/LeetCode.cpp "Solution Link")
-169. [Subrectangle Queries](https://leetcode.com/problems/subrectangle-queries/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8428a23b06f4a30d06247be30e8041f260cdd674/LeetCode.cpp "Solution Link")
 
 ### Median  
 ------
@@ -196,6 +195,8 @@ Leetcode
 16. [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/f5196a608d954a01417be80bc595f28dcb8fe852/LeetCode.cpp "Solution Link")
 17. [Group Anagrams](https://leetcode.com/problems/group-anagrams/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0558b183936120e6e5e6c1406d4727ed961af309/LeetCode.cpp "Solution Link")
 18. [Moving Stones Until Consecutive](https://leetcode.com/problems/moving-stones-until-consecutive/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/18628830d412116beee14ab38a0b4780c8e2aa7f/LeetCode.cpp "Solution Link")
+19. [Subrectangle Queries](https://leetcode.com/problems/subrectangle-queries/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8428a23b06f4a30d06247be30e8041f260cdd674/LeetCode.cpp "Solution Link")
+20. [Next Permutation](https://leetcode.com/problems/next-permutation/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/ca6811ba22e9e45b55f7df83162c8d088ebac7cd/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------
