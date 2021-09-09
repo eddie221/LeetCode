@@ -1,36 +1,63 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
+#include <stack>
 
 using namespace std;
 
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
+
+
 class Solution {
 public:
-    int findContentChildren(vector<int>& g, vector<int>& s) {
-        sort(g.begin(), g.end());
-        sort(s.begin(), s.end());
-        for (auto x : g) {
-            cout << x << " ";
-        }
-        cout << endl;
-        for (auto x : s) {
-            cout << x << " ";
-        }
-        cout << endl;
-        int count = 0;
-        for (int i = 0, j = 0; i < g.size() && j < s.size();) {
-            cout << i << " " << j << " " << count << endl;
-            while (i < g.size() && j < s.size() && g[i] <= s[j]) {
-                cout << "while 1 : " << i << " " << j << " " << count << endl;
-                count++;
-                i++;
-                j++;
+    int deepestLeavesSum(TreeNode* root) {
+        stack<TreeNode*> container;
+        stack<int> height_container;
+        int max_h = 0;
+        container.push(root);
+        height_container.push(1);
+        while (!container.empty()) {
+            TreeNode* recent_node = container.top();
+            int height = height_container.top();
+            max_h = max(max_h, height);
+            container.pop();
+            height_container.pop();
+            if (recent_node->left != nullptr) {
+                container.push(recent_node->left);
+                height_container.push(height + 1);
             }
-            while (i < g.size() && j < s.size() && g[i] > s[j]) {
-                j++;
+            if (recent_node->right != nullptr) {
+                container.push(recent_node->right);
+                height_container.push(height + 1);
             }
         }
-        return count;
+        int result = 0;
+        container.push(root);
+        height_container.push(1);
+        while (!container.empty()) {
+            TreeNode* recent_node = container.top();
+            int height = height_container.top();
+            container.pop();
+            height_container.pop();
+            if (height == max_h) {
+                result += recent_node->val;
+            }
+            if (recent_node->left != nullptr) {
+                container.push(recent_node->left);
+                height_container.push(height + 1);
+            }
+            if (recent_node->right != nullptr) {
+                container.push(recent_node->right);
+                height_container.push(height + 1);
+            }
+        }
+        return result;
     }
 };
 
@@ -38,9 +65,8 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> g = {10, 9, 8, 7 };
-    vector<int> ss = { 5, 6, 7, 8};
-    cout << s.findContentChildren(g, ss);
+    TreeNode* root = new TreeNode(1, new TreeNode(2, new TreeNode(4, new TreeNode(7), nullptr), new TreeNode(5)), new TreeNode(3, nullptr, new TreeNode(6, nullptr, new TreeNode(8))));
+    cout << s.deepestLeavesSum(root);
     
     return 0;
 }
