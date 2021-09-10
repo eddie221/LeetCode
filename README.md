@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(168)](#easy)
-* [Median(21)](#median)
+* [Median(22)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -199,6 +199,7 @@ Leetcode
 19. [Subrectangle Queries](https://leetcode.com/problems/subrectangle-queries/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/8428a23b06f4a30d06247be30e8041f260cdd674/LeetCode.cpp "Solution Link")
 20. [Next Permutation](https://leetcode.com/problems/next-permutation/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/ca6811ba22e9e45b55f7df83162c8d088ebac7cd/LeetCode.cpp "Solution Link")
 21. [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/dfc013ac89964da94074d0eb470b81c061c24abe/LeetCode.cpp "Solution Link")
+22. [Find a Corresponding Node of a Binary Tree in a Clone of That Tree](https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/969c7fa83e9605e853c09e1022923c5bb913cbfd/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------
