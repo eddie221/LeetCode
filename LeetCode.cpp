@@ -8,56 +8,34 @@ struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+    TreeNode(int x, TreeNode* left, TreeNode* right) : val(x), left(left), right(right) {}
 };
-
 
 class Solution {
 public:
-    int deepestLeavesSum(TreeNode* root) {
-        stack<TreeNode*> container;
-        stack<int> height_container;
-        int max_h = 0;
-        container.push(root);
-        height_container.push(1);
-        while (!container.empty()) {
-            TreeNode* recent_node = container.top();
-            int height = height_container.top();
-            max_h = max(max_h, height);
-            container.pop();
-            height_container.pop();
-            if (recent_node->left != nullptr) {
-                container.push(recent_node->left);
-                height_container.push(height + 1);
+    TreeNode* getTargetCopy(TreeNode* original, TreeNode* cloned, TreeNode* target) {
+        stack<TreeNode*> con1, con2;
+        con1.push(original);
+        con2.push(cloned);
+        while (!con1.empty()) {
+            TreeNode* recent1 = con1.top();
+            TreeNode* recent2 = con2.top();
+            con1.pop();
+            con2.pop();
+            if (recent1 == target) {
+                return recent2;
             }
-            if (recent_node->right != nullptr) {
-                container.push(recent_node->right);
-                height_container.push(height + 1);
+            if (recent1->left != nullptr) {
+                con1.push(recent1->left);
+                con2.push(recent2->left);
             }
-        }
-        int result = 0;
-        container.push(root);
-        height_container.push(1);
-        while (!container.empty()) {
-            TreeNode* recent_node = container.top();
-            int height = height_container.top();
-            container.pop();
-            height_container.pop();
-            if (height == max_h) {
-                result += recent_node->val;
-            }
-            if (recent_node->left != nullptr) {
-                container.push(recent_node->left);
-                height_container.push(height + 1);
-            }
-            if (recent_node->right != nullptr) {
-                container.push(recent_node->right);
-                height_container.push(height + 1);
+            if (recent1->right != nullptr) {
+                con1.push(recent1->right);
+                con2.push(recent2->right);
             }
         }
-        return result;
+        return nullptr;
     }
 };
 
@@ -65,8 +43,10 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    TreeNode* root = new TreeNode(1, new TreeNode(2, new TreeNode(4, new TreeNode(7), nullptr), new TreeNode(5)), new TreeNode(3, nullptr, new TreeNode(6, nullptr, new TreeNode(8))));
-    cout << s.deepestLeavesSum(root);
+    TreeNode* target = new TreeNode(3, new TreeNode(6), new TreeNode(19));
+    TreeNode* root = new TreeNode(7, new TreeNode(4), target);
+    TreeNode* clone = new TreeNode(7, new TreeNode(4), new TreeNode(3, new TreeNode(6), new TreeNode(19)));
+    cout << s.getTargetCopy(root, clone, target);
     
     return 0;
 }
