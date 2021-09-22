@@ -1,30 +1,21 @@
 #include <iostream>
 #include <vector>
-#include <stack>
 
 using namespace std;
 
 class Solution {
 public:
-    int maxIncreaseKeepingSkyline(vector<vector<int>>& grid) {
-        vector<vector<int>> tmp;
-        vector<int> col_max(grid.size()), row_max(grid.size());
-        for (int i = 0; i < grid.size(); i++) {
-            int col_m = 0, row_m = 0;
-            for (int j = 0; j < grid.size(); j++) {
-                col_m = max(col_m, grid[i][j]);
-                row_m = max(row_m, grid[j][i]);
-            }
-            col_max[i] = col_m;
-            row_max[i] = row_m;
-        }
-        int res = 0;
-        for (int i = 0; i < col_max.size(); i++) {
-            for (int j = 0; j < row_max.size(); j++) {
-                res += min(col_max[i], row_max[j]) - grid[i][j];
+    vector<int> countPoints(vector<vector<int>>& points, vector<vector<int>>& queries) {
+        vector<int> result;
+        for (int i = 0; i < queries.size(); i++) {
+            result.push_back(0);
+            for (int j = 0; j < points.size(); j++) {
+                if (pow((points[j][0] - queries[i][0]), 2) + pow((points[j][1] - queries[i][1]), 2) <= pow(queries[i][2], 2)) {
+                    result[result.size() - 1]++;
+                }
             }
         }
-        return res;
+        return result;
     }
 };
 
@@ -32,7 +23,11 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<vector<int>> grid = {{3, 0, 8, 4}, {2, 4, 5, 7}, {9, 2, 6, 3}, {0, 3, 1, 0}};
-    cout << s.maxIncreaseKeepingSkyline(grid);
+    vector<vector<int>> points = {{1, 3}, {3, 3}, {5, 3}, {2, 2}};
+    vector<vector<int>> queries = { {2,3,1} ,{4,3,1},{1,1,2} };
+    vector<int> result = s.countPoints(points, queries);
+    for (auto x : result) {
+        cout << x << endl;
+    }
     return 0;
 }
