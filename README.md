@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(168)](#easy)
-* [Median(23)](#median)
+* [Median(24)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -201,6 +201,7 @@ Leetcode
 21. [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/dfc013ac89964da94074d0eb470b81c061c24abe/LeetCode.cpp "Solution Link")
 22. [Find a Corresponding Node of a Binary Tree in a Clone of That Tree](https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/969c7fa83e9605e853c09e1022923c5bb913cbfd/LeetCode.cpp "Solution Link")
 23. [Max Increase to Keep City Skyline](https://github.com/eddie221/LeetCode "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0bbe06f26562ffcfbbdfae4337536bd9db339e7e/LeetCode.cpp "Solution Link")
+24. [Queries on Number of Points Inside a Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7ff29e1e9af3769f840fe7b16c68216a8162efda/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------
