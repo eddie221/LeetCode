@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(168)](#easy)
-* [Median(25)](#median)
+* [Median(26)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -203,6 +203,7 @@ Leetcode
 23. [Max Increase to Keep City Skyline](https://github.com/eddie221/LeetCode "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/0bbe06f26562ffcfbbdfae4337536bd9db339e7e/LeetCode.cpp "Solution Link")
 24. [Queries on Number of Points Inside a Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7ff29e1e9af3769f840fe7b16c68216a8162efda/LeetCode.cpp "Solution Link")
 25. [Subsets](https://leetcode.com/problems/subsets/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7ac722b54e8d312433c55f2c330d5ba5744c10d2/LeetCode.cpp "Solution Link")
+26. [Rotate Image](https://leetcode.com/problems/rotate-image/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/766bda8eca79b2d19181aa405b75b91b005cdf52/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------

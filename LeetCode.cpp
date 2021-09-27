@@ -1,27 +1,27 @@
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 
 class Solution {
 public:
-    void rotate(vector<vector<int>>& matrix) {
-        int n = matrix.size();
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                matrix[i][j] = matrix[i][j] ^ matrix[j][i];
-                matrix[j][i] = matrix[i][j] ^ matrix[j][i];
-                matrix[i][j] = matrix[i][j] ^ matrix[j][i];
+    vector<vector<int>> groupThePeople(vector<int>& groupSizes) {
+        vector<vector<int>> result;
+        map<int, vector<int>> waiting;
+        for (int i = 0; i < groupSizes.size(); i++) {
+            if (groupSizes[i] == 1) {
+                result.push_back({i});
+            }
+            else {
+                waiting[groupSizes[i]].push_back(i);
+                if (waiting[groupSizes[i]].size() == groupSizes[i]) {
+                    result.push_back(waiting[groupSizes[i]]);
+                    waiting.erase(groupSizes[i]);
+                }
             }
         }
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n / 2; j++) {
-                matrix[i][j] = matrix[i][j] ^ matrix[i][n - j - 1];
-                matrix[i][n - j - 1] = matrix[i][j] ^ matrix[i][n - j - 1];
-                matrix[i][j] = matrix[i][j] ^ matrix[i][n - j - 1];
-            }
-        }
+        return result;
     }
 };
 
@@ -29,9 +29,9 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<vector<int>> matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} };
-    s.rotate(matrix);
-    for (auto x : matrix) {
+    vector<int> groupSizes = { 3,3,3,3,3,1,3 };
+    vector<vector<int>> result = s.groupThePeople(groupSizes);
+    for (auto x : result) {
         for (auto y : x) {
             cout << y << " ";
         }
