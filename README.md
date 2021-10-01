@@ -2,7 +2,7 @@ Leetcode
 ===========================
 ## Statistics
 * [Easy(168)](#easy)
-* [Median(27)](#median)
+* [Median(28)](#median)
 * [Hard(1)](#hard)
 
 ### Easy
@@ -205,6 +205,7 @@ Leetcode
 25. [Subsets](https://leetcode.com/problems/subsets/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7ac722b54e8d312433c55f2c330d5ba5744c10d2/LeetCode.cpp "Solution Link")
 26. [Rotate Image](https://leetcode.com/problems/rotate-image/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/766bda8eca79b2d19181aa405b75b91b005cdf52/LeetCode.cpp "Solution Link")
 27. [Group the People Given the Group Size They Belong To](https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6ae517d89142a087bfffe4a8ac70774cc17db4c9/LeetCode.cpp "Solution Link")
+28. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cc22a561092b8f1b3e37cc86996c2a0099df7c68/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------
