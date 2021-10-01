@@ -1,23 +1,38 @@
 #include <iostream>
 #include <vector>
-#include <map>
 
 using namespace std;
 
 class Solution {
 public:
-    vector<vector<int>> groupThePeople(vector<int>& groupSizes) {
-        vector<vector<int>> result;
-        map<int, vector<int>> waiting;
-        for (int i = 0; i < groupSizes.size(); i++) {
-            if (groupSizes[i] == 1) {
-                result.push_back({i});
-            }
-            else {
-                waiting[groupSizes[i]].push_back(i);
-                if (waiting[groupSizes[i]].size() == groupSizes[i]) {
-                    result.push_back(waiting[groupSizes[i]]);
-                    waiting.erase(groupSizes[i]);
+    vector<string> generateParenthesis(int n) {
+        vector<string> result;
+        if (n == 0) {
+            return {};
+        }
+        else if (n == 1) {
+            return { "()" };
+        }
+        else {
+            for (int i = 0; i < n; i++) {
+                vector<string> left = generateParenthesis(i);
+                vector<string> right = generateParenthesis(n - i - 1);
+                if (left.size() == 0) {
+                    for (int j = 0; j < right.size(); j++) {
+                        result.push_back("()" + right[j]);
+                    }
+                }
+                else if (right.size() == 0) {
+                    for (int j = 0; j < left.size(); j++) {
+                        result.push_back("(" + left[j] + ")");
+                    }
+                }
+                else {
+                    for (int j = 0; j < left.size(); j++) {
+                        for (int k = 0; k < right.size(); k++) {
+                            result.push_back("(" + left[j] + ")" + right[k]);
+                        }
+                    }
                 }
             }
         }
@@ -29,13 +44,10 @@ int main() {
 
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     Solution s;
-    vector<int> groupSizes = { 3,3,3,3,3,1,3 };
-    vector<vector<int>> result = s.groupThePeople(groupSizes);
+    vector<string> result = s.generateParenthesis(3);
+    cout << "ans : " << endl;
     for (auto x : result) {
-        for (auto y : x) {
-            cout << y << " ";
-        }
-        cout << endl;
+        cout << x << endl;
     }
     return 0;
 }
