@@ -1,9 +1,9 @@
 Leetcode
 ===========================
 ## Statistics
-* [Easy(168)](#easy)
-* [Median(28)](#median)
-* [Hard(1)](#hard)
+* [Easy](#easy)
+* [Median)](#median)
+* [Hard](#hard)
 
 ### Easy
 ------
@@ -207,6 +207,7 @@ Leetcode
 27. [Group the People Given the Group Size They Belong To](https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/6ae517d89142a087bfffe4a8ac70774cc17db4c9/LeetCode.cpp "Solution Link")
 28. [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/cc22a561092b8f1b3e37cc86996c2a0099df7c68/LeetCode.cpp "Solution Link")
 29. [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/7a312e86dc22422dae9cdbb5c454a59377c67b4f/LeetCode.cpp "Solution Link")
+30. [Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/ "Problem Link") [(My sol.)](https://github.com/eddie221/LeetCode/blob/1ccd3c22830cda35c2eca800887d609df28f4180/LeetCode.cpp "Solution Link")
 
 ### Hard  
 ------

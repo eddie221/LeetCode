@@ -5,44 +5,33 @@
 
 using namespace std;
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
 class Solution {
 public:
-    vector<int> store;
-    void dfs(TreeNode* root, int num) {
-        if (root->left == nullptr && root->right == nullptr) {
-            store.push_back(num * 10 + root->val);
+    int islandPerimeter(vector<vector<int>>& grid) {
+        int row = grid.size(), col = grid[0].size();
+        int island_count = 0, edge_cover = 0;
+        for (int r = 0; r < row; r++) {
+            for (int c = 0; c < col; c++) {
+                if (grid[r][c] == 1) {
+                    island_count++;
+                    if (r + 1 != row && grid[r + 1][c] == 1) {
+                        edge_cover++;
+                    }
+                    if (c + 1 != col && grid[r][c + 1] == 1) {
+                        edge_cover++;
+                    }
+                }
+            }
         }
-        if(root->left != nullptr){
-            dfs(root->left, num * 10 + root->val);
-        }
-        if (root->right != nullptr) {
-            dfs(root->right, num * 10 + root->val);
-        }
-    }
-
-    int sumNumbers(TreeNode* root) {
-        dfs(root, 0);
-        int sum = 0;
-        for (int i = 0; i < store.size(); i++) {
-            cout << store[i] << endl;
-            sum += store[i];
-        }
-        return sum;
+        cout << island_count << endl;
+        cout << edge_cover << endl;
+        return island_count * 4 - edge_cover * 2;
     }
 };
 
 int main() {   
     Solution s;
-    TreeNode* root = new TreeNode(4, new TreeNode(9, new TreeNode(5), new TreeNode(1)), new TreeNode(0));
-    cout << s.sumNumbers(root);
+    vector<vector<int>> grid = { {0, 1, 0, 0}, {1, 1, 1, 0}, {0, 1, 0, 0}, {1, 1, 0, 0} };
+    cout << s.islandPerimeter(grid);
     return 0;
 }
