@@ -1,5 +1,7 @@
 #include <iostream>
-#include <stack>
+#include <vector>
+#include <map>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,32 +16,33 @@ struct TreeNode {
 
 class Solution {
 public:
-    int kthSmallest(TreeNode* root, int k) {
-        stack<TreeNode*> container;
-        container.push(root);
-        while (!container.empty()) {
-            while (root != nullptr) {
-                container.push(root);
-                root = root->left;
-            }
-            root = container.top();
-            k--;
-            container.pop();
-            if (k == 0) {
-                return root->val;
-            }
-            root = root->right;
+    vector<int> store;
+    void dfs(TreeNode* root, int num) {
+        if (root->left == nullptr && root->right == nullptr) {
+            store.push_back(num * 10 + root->val);
         }
-        return 0;
+        if(root->left != nullptr){
+            dfs(root->left, num * 10 + root->val);
+        }
+        if (root->right != nullptr) {
+            dfs(root->right, num * 10 + root->val);
+        }
+    }
+
+    int sumNumbers(TreeNode* root) {
+        dfs(root, 0);
+        int sum = 0;
+        for (int i = 0; i < store.size(); i++) {
+            cout << store[i] << endl;
+            sum += store[i];
+        }
+        return sum;
     }
 };
 
-int main() {
-
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+int main() {   
     Solution s;
-    //TreeNode* root = new TreeNode(3, new TreeNode(1, nullptr, new TreeNode(2)), new TreeNode(4));
-    TreeNode* root = new TreeNode(5, new TreeNode(3, new TreeNode(2, new TreeNode(1), nullptr), new TreeNode(4)), new TreeNode(6));
-    cout << s.kthSmallest(root, 3);
+    TreeNode* root = new TreeNode(4, new TreeNode(9, new TreeNode(5), new TreeNode(1)), new TreeNode(0));
+    cout << s.sumNumbers(root);
     return 0;
 }
